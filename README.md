@@ -1,2 +1,2 @@
 # guess-ru
-Created with CodeSandbox
+This is just test garbage. Pay no mind
