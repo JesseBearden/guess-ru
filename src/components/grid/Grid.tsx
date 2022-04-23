@@ -1,17 +1,16 @@
-import { MAX_CHALLENGES } from "../../constants/settings";
 import { CompletedRow } from "./CompletedRow";
-import { CurrentRow } from "./CurrentRow";
-import { EmptyRow } from "./EmptyRow";
+import { DragRacer } from "../types/DragRacer";
 
 type Props = {
-  guesses: string[];
+  guesses: DragRacer[];
+  solution: DragRacer;
 };
 
-export const Grid = ({ guesses }: Props) => {
+export const Grid = ({ guesses, solution }: Props) => {
   return (
     <>
       {guesses.map((guess, i) => (
-        <CompletedRow key={i} guess={guess} />
+        <CompletedRow racer={guess} solution={solution} />
       ))}
     </>
   );

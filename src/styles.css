@@ -30,3 +30,11 @@
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
+.green {
+  background-color: #37be75 !important;
+}
+
+.yellow {
+  background-color: #f4e878 !important;
+}

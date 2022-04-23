@@ -16,6 +16,9 @@ import Modal from "@mui/material/Modal";
 import { useState, useEffect } from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import * as React from "react";
+import { DragRacer } from "./components/types/DragRacer";
+import { Grid } from "./components/grid/Grid";
+import Rand, { PRNG } from "rand-seed";
 
 function createData(
   queen: String,
@@ -32,22 +35,21 @@ const getQueenOfTheDay = () => {
   const epochMs = new Date(2022, 0).valueOf();
   const now = Date.now();
   const msInDay = 86400000;
-  const index = Math.floor((now - epochMs) / msInDay) % racers.length;
+  const seed = Math.floor((now - epochMs) / msInDay);
 
-  console.log("index" + index);
-  return racers[index].label;
-};
+  const rand = new Rand(seed.toString());
+  const index = Math.floor(rand.next() * racers.length);
+  console.log(index.toString());
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4
+  const solution: DragRacer = {
+    name: racers[index].label,
+    season: racers[index].season,
+    outcome: racers[index].outcome,
+    age: racers[index].age,
+    hometown: racers[index].hometown
+  };
+
+  return solution;
 };
 
 export default function App() {
@@ -58,25 +60,27 @@ export default function App() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [rows, setRows] = useState([]);
+  const [guesses, setGuesses] = useState<DragRacer[]>([]);
 
   const handleOnChangeText = (event, newValue) => {
-    console.log(getQueenOfTheDay());
+    const solution: DragRacer = getQueenOfTheDay();
+    console.log("Solution " + JSON.stringify(solution));
 
     if (newValue !== null) {
-      if (newValue.label === getQueenOfTheDay()) {
+      if (newValue.label === solution.name) {
         console.log("You're a winner baby!");
       }
-      setRows([
-        ...rows,
-        createData(
-          newValue.label,
-          newValue.season,
-          newValue.outcome,
-          newValue.age,
-          newValue.hometown
-        )
-      ]);
+
+      const currentGuess: DragRacer = {
+        name: newValue.label,
+        season: newValue.season,
+        outcome: newValue.outcome,
+        age: newValue.age,
+        hometown: newValue.hometown
+      };
+      console.log("Guess" + JSON.stringify(currentGuess));
+      setGuesses([...guesses, currentGuess]);
+      console.log("Guesses" + JSON.stringify(guesses));
     }
   };
 
@@ -114,35 +118,7 @@ export default function App() {
         renderInput={(params) => <TextField {...params} label="Drag Queen" />}
       />
 
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell />
-              <TableCell align="right">Season</TableCell>
-              <TableCell align="right">Outcome</TableCell>
-              <TableCell align="right">Age</TableCell>
-              <TableCell align="right">Hometown</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow
-                key={row.queen}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.queen}
-                </TableCell>
-                <TableCell align="right">{row.season}</TableCell>
-                <TableCell align="right">{row.outcome}</TableCell>
-                <TableCell align="right">{row.age}</TableCell>
-                <TableCell align="right">{row.hometown}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <Grid guesses={guesses} solution={getQueenOfTheDay()} />
     </div>
   );
 }
