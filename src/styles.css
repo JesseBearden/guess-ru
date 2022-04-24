@@ -41,4 +41,27 @@
 
 .grid-cell {
   padding: 14px 8px !important;
+  border: 1px solid #d3d6da;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+
+.grid-header-cell {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  height: 20px;
+}
+
+.grid-header {
+  border-bottom: 2px solid black;
+}
+
+#combo-box {
+  width: 300px;
 }

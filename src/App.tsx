@@ -12,12 +12,14 @@ const getQueenOfTheDay = () => {
   // January 1, 2022 Game Epoch
   const epochMs = new Date(2022, 0).valueOf();
   const now = Date.now();
-  const msInDay = 86400000;
+  const msInDay = 86400000 / 24;
   const seed = Math.floor((now - epochMs) / msInDay);
 
+  console.log("Random Seed " + seed.toString());
   const rand = new Rand(seed.toString());
   const index = Math.floor(rand.next() * racers.length);
-  console.log(index.toString());
+
+  console.log("Racer Index " + index.toString());
 
   const solution: DragRacer = {
     name: racers[index].label,
@@ -72,7 +74,8 @@ export default function App() {
         disablePortal
         id="combo-box-demo"
         options={racers}
-        sx={{ width: 300 }}
+        sx={{ width: 300, margin: "auto", paddingBottom: 3 }}
+        className="input-box"
         onChange={handleOnChangeText}
         renderInput={(params) => <TextField {...params} label="Drag Queen" />}
       />

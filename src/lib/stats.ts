@@ -6,6 +6,13 @@ import {
 } from "./localStorage";
 
 // In stats array elements 0-5 are successes in 1-6 trys
+const getSuccessRate = (gameStats: GameStats) => {
+  const { totalGames, gamesFailed } = gameStats;
+
+  return Math.round(
+    (100 * (totalGames - gamesFailed)) / Math.max(totalGames, 1)
+  );
+};
 
 export const addStatsForCompletedGame = (
   gameStats: GameStats,
@@ -46,12 +53,4 @@ const defaultStats: GameStats = {
 
 export const loadStats = () => {
   return loadStatsFromLocalStorage() || defaultStats;
-};
-
-const getSuccessRate = (gameStats: GameStats) => {
-  const { totalGames, gamesFailed } = gameStats;
-
-  return Math.round(
-    (100 * (totalGames - gamesFailed)) / Math.max(totalGames, 1)
-  );
 };
