@@ -705,15 +705,23 @@ export const racers = [
     age: 22,
     hometown: "Gloucester, Massachusetts",
     outcome: 11
+  },
+  {
+    season: 9,
+    label: "Sasha Velour",
+    age: 29,
+    hometown: "Brooklyn, New York",
+    outcome: 1
+  },
+  {
+    season: 9,
+    label: "Peppermint",
+    age: 37,
+    hometown: "New York City, New York",
+    outcome: 2
   }
 ];
 /**  {
-  
-  Season 8
-  
-  Season 9
-  Sasha Velour	29	Brooklyn, New York	Winner
-  Peppermint	37	New York City, New York	Runner-up
   Shea Couleé	27	Chicago, Illinois	3rd
   Trinity the Tuck	31	Orlando, Florida
   Alexis Michelle	33	New York City, New York	5th
@@ -726,6 +734,9 @@ export const racers = [
   Charlie Hides	52	London, England, UK	12th
   Kimora Blac	28	Las Vegas, Nevada	13th
   Jaymes Mansfield	26	Milwaukee, Wisconsin	14th
+  
+  
+  Season 9
   
   Season 10
   Aquaria	21	Brooklyn, New York	Winner
