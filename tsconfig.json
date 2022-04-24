@@ -21,7 +21,7 @@
         "noImplicitThis": true,
         "alwaysStrict": false,
         "noUnusedLocals": false,
-        "noUnusedParameters": true,
+        "noUnusedParameters": false,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
