@@ -10,25 +10,23 @@ type Props = {
 };
 
 const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
   color: theme.palette.text.secondary
 }));
 
 getSeasonItem = (racerSeason, solutionSeason) => {
-  let itemClass: string = "";
+  let itemClass: string = "grid-cell";
 
   console.log("Season Delta " + (racerSeason - solutionSeason).toString);
 
   if (racerSeason === solutionSeason) {
-    // Color Green
-    itemClass = "green";
+    itemClass += " green";
   } else if (
     racerSeason - solutionSeason < 2 &&
     racerSeason - solutionSeason > -2
   ) {
-    itemClass = "yellow";
+    itemClass += " yellow";
   }
 
   if (racerSeason > solutionSeason) {
@@ -43,16 +41,15 @@ getSeasonItem = (racerSeason, solutionSeason) => {
 };
 
 getOutcomeItem = (racerOutcome, solutionOutcome) => {
-  let itemClass: string = "";
+  let itemClass: string = "grid-cell";
 
   if (racerOutcome === solutionOutcome) {
-    // Color Green
-    itemClass = "green";
+    itemClass += " green";
   } else if (
     racerOutcome - solutionOutcome < 2 &&
     racerOutcome - solutionOutcome > -2
   ) {
-    itemClass = "yellow";
+    itemClass += " yellow";
   }
 
   if (racerOutcome > solutionOutcome) {
@@ -67,13 +64,12 @@ getOutcomeItem = (racerOutcome, solutionOutcome) => {
 };
 
 getAgeItem = (racerAge, solutionAge) => {
-  let itemClass: string = "";
+  let itemClass: string = "grid-cell";
 
   if (racerAge === solutionAge) {
-    // Color Green
-    itemClass = "green";
+    itemClass += " green";
   } else if (racerAge - solutionAge < 2 && racerAge - solutionAge > -2) {
-    itemClass = "yellow";
+    itemClass += " yellow";
   }
 
   if (racerAge > solutionAge) {
@@ -88,34 +84,42 @@ getAgeItem = (racerAge, solutionAge) => {
 };
 
 getNameItem = (racerName, solutionName) => {
-  let itemClass: string = "";
+  let itemClass: string = "grid-cell";
 
   if (racerName === solutionName) {
-    itemClass = "green";
+    itemClass += " green";
   }
 
   return <Item className={itemClass}>{racerName}</Item>;
 };
 
+getHometownItem = (racerHometown, solutionHometown) => {
+  let itemClass: string = "grid-cell";
+
+  if (racerHometown === solutionHometown) {
+    itemClass += " green";
+  }
+
+  return <Item className={itemClass}>{racerHometown}</Item>;
+};
+
 export const CompletedRow = ({ racer, solution, isRevealing }: Props) => {
   return (
-    <Grid container spacing={0.3}>
-      <Grid item xs={12} md={3}>
+    <Grid container spacing={0.5}>
+      <Grid item xs={12} md={3.5}>
         {getNameItem(racer.name, solution.name)}
       </Grid>
-      <Grid item xs={2} md={1}>
+      <Grid item xs={2} md={1.66}>
         {getSeasonItem(racer.season, solution.season)}
       </Grid>
-      <Grid item xs={2} md={1}>
+      <Grid item xs={2} md={1.66}>
         {getOutcomeItem(racer.outcome, solution.outcome)}
       </Grid>
-      <Grid item xs={2} md={1}>
+      <Grid item xs={2} md={1.66}>
         {getAgeItem(racer.age, solution.age)}
       </Grid>
-      <Grid item xs={6} md={3}>
-        <Item>
-          <div>{racer.hometown}</div>
-        </Item>
+      <Grid item xs={6} md={3.5}>
+        {getHometownItem(racer.hometown, solution.hometown)}
       </Grid>
     </Grid>
   );

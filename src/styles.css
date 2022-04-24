@@ -38,3 +38,7 @@
 .yellow {
   background-color: #f4e878 !important;
 }
+
+.grid-cell {
+  padding: 14px 8px !important;
+}
