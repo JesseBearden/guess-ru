@@ -41,7 +41,7 @@ export default function App() {
 
   const [guesses, setGuesses] = useState<DragRacer[]>([]);
 
-  const handleOnChangeText = (event, newValue) => {
+  const handleOnChangeText = (event: any, newValue) => {
     const solution: DragRacer = getQueenOfTheDay();
     console.log("Solution " + JSON.stringify(solution));
 
