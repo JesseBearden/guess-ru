@@ -35,8 +35,6 @@ export default function App() {
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   const [guesses, setGuesses] = useState<DragRacer[]>([]);
 
