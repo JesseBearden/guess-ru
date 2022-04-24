@@ -26,6 +26,7 @@
         "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
         "isolatedModules": true,
-        "noImplicitAny": false
+        "noImplicitAny": false,
+        "resolveJsonModule": true
     }
 }
