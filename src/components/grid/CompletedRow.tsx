@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary
 }));
 
-getSeasonItem = (racerSeason, solutionSeason) => {
+function getSeasonItem(racerSeason: number, solutionSeason: number) {
   let itemClass: string = "grid-cell";
 
   console.log("Season Delta " + (racerSeason - solutionSeason).toString);
@@ -33,14 +33,15 @@ getSeasonItem = (racerSeason, solutionSeason) => {
     return <Item className={itemClass}>{racerSeason} ↓</Item>;
   } else if (racerSeason < solutionSeason) {
     return <Item className={itemClass}>{racerSeason} ↑</Item>;
-  } else if (racerSeason == solutionSeason) {
+  } else if (racerSeason === solutionSeason) {
     return <Item className={itemClass}>{racerSeason}</Item>;
   } else {
     console.log("We got a problem");
+    return <Item />;
   }
-};
+}
 
-getOutcomeItem = (racerOutcome, solutionOutcome) => {
+function getOutcomeItem(racerOutcome: number, solutionOutcome: number) {
   let itemClass: string = "grid-cell";
 
   if (racerOutcome === solutionOutcome) {
@@ -56,14 +57,15 @@ getOutcomeItem = (racerOutcome, solutionOutcome) => {
     return <Item className={itemClass}>{racerOutcome} ↓</Item>;
   } else if (racerOutcome < solutionOutcome) {
     return <Item className={itemClass}>{racerOutcome} ↑</Item>;
-  } else if (racerOutcome == solutionOutcome) {
+  } else if (racerOutcome === solutionOutcome) {
     return <Item className={itemClass}>{racerOutcome}</Item>;
   } else {
     console.log("We got a problem");
+    return <Item />;
   }
-};
+}
 
-getAgeItem = (racerAge, solutionAge) => {
+function getAgeItem(racerAge: number, solutionAge: number) {
   let itemClass: string = "grid-cell";
 
   if (racerAge === solutionAge) {
@@ -76,14 +78,15 @@ getAgeItem = (racerAge, solutionAge) => {
     return <Item className={itemClass}>{racerAge} ↓</Item>;
   } else if (racerAge < solutionAge) {
     return <Item className={itemClass}>{racerAge} ↑</Item>;
-  } else if (racerAge == solutionAge) {
+  } else if (racerAge === solutionAge) {
     return <Item className={itemClass}>{racerAge}</Item>;
   } else {
     console.log("We got a problem");
+    return <Item />;
   }
-};
+}
 
-getNameItem = (racerName, solutionName) => {
+function getNameItem(racerName: string, solutionName: string) {
   let itemClass: string = "grid-cell";
 
   if (racerName === solutionName) {
@@ -91,9 +94,9 @@ getNameItem = (racerName, solutionName) => {
   }
 
   return <Item className={itemClass}>{racerName}</Item>;
-};
+}
 
-getHometownItem = (racerHometown, solutionHometown) => {
+function getHometownItem(racerHometown: string, solutionHometown: string) {
   let itemClass: string = "grid-cell";
 
   if (racerHometown === solutionHometown) {
@@ -101,7 +104,7 @@ getHometownItem = (racerHometown, solutionHometown) => {
   }
 
   return <Item className={itemClass}>{racerHometown}</Item>;
-};
+}
 
 export const CompletedRow = ({ racer, solution, isRevealing }: Props) => {
   return (
