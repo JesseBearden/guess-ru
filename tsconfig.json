@@ -26,6 +26,6 @@
         "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
         "isolatedModules": true,
-        "noImplicitAny": true
+        "noImplicitAny": false
     }
 }

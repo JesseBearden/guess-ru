@@ -4,7 +4,6 @@ import { TextField } from "@mui/material";
 import { racers } from "./constants/racers";
 import { useState } from "react";
 import { Navbar } from "./components/navbar/Navbar";
-import * as React from "react";
 import { DragRacer } from "./components/types/DragRacer";
 import { RuGrid } from "./components/grid/RuGrid";
 import Rand from "rand-seed";
@@ -41,7 +40,7 @@ export default function App() {
 
   const [guesses, setGuesses] = useState<DragRacer[]>([]);
 
-  const handleOnChangeText = (event: any, newValue) => {
+  const handleOnChangeText = (event: any, newValue: any) => {
     const solution: DragRacer = getQueenOfTheDay();
     console.log("Solution " + JSON.stringify(solution));
 
