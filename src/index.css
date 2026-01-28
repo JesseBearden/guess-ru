@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base layer customizations */
+@layer base {
+  body {
+    @apply font-body leading-relaxed text-text-dark bg-gradient-secondary min-h-screen;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+
+  * {
+    @apply box-border m-0 p-0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight mb-2;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  button {
+    font-family: inherit;
+    @apply border-none cursor-pointer transition-all duration-200 outline-none;
+  }
+
+  button:focus-visible {
+    @apply outline-2 outline-primary-pink outline-offset-2;
+  }
+
+  /* Ensure all interactive elements have visible focus states */
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-2 outline-primary-pink outline-offset-2;
+  }
+}
+
+/* Component layer for reusable patterns */
+@layer components {
+  /* Feedback color classes - WCAG AA compliant */
+  .feedback-correct {
+    @apply bg-feedback-correct text-white border-feedback-correct;
+  }
+
+  .feedback-close {
+    @apply bg-feedback-close text-white border-feedback-close;
+  }
+
+  .feedback-wrong {
+    @apply bg-feedback-wrong text-white border-feedback-wrong;
+  }
+
+  /* Minimum touch target size (44x44px per WCAG 2.1 AAA) */
+  .touch-target {
+    @apply min-w-[44px] min-h-[44px];
+  }
+
+  /* Larger touch target (48x48px for better accessibility) */
+  .touch-target-lg {
+    @apply min-w-[48px] min-h-[48px];
+  }
+
+  /* Skip link for keyboard navigation */
+  .skip-link {
+    @apply absolute -top-10 left-0 bg-primary-pink text-white px-4 py-2 z-[9999] transition-all duration-200;
+  }
+
+  .skip-link:focus {
+    @apply top-0;
+  }
+
+  /* Screen reader only content */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  /* Focus visible ring utility */
+  .focus-ring {
+    @apply focus-visible:outline-2 focus-visible:outline-primary-pink focus-visible:outline-offset-2;
+  }
+}
+
+/* Utility layer for custom utilities */
+@layer utilities {
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .feedback-correct {
+      @apply bg-green-800 border-2 border-white;
+    }
+
+    .feedback-close {
+      @apply bg-yellow-700 border-2 border-white;
+    }
+
+    .feedback-wrong {
+      @apply bg-gray-700 border-2 border-white;
+    }
+  }
+}

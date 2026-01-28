@@ -1,86 +1,144 @@
-import "./styles.css";
-import { Autocomplete } from "@mui/material";
-import { TextField } from "@mui/material";
-import { racers } from "./constants/racers";
-import { useState } from "react";
-import { Navbar } from "./components/navbar/Navbar";
-import { DragRacer } from "./components/types/DragRacer";
-import { RuGrid } from "./components/grid/RuGrid";
-import Rand from "rand-seed";
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import GuessInput from './components/GuessInput';
+import GuessHistory from './components/GuessHistory';
+import SilhouetteSection from './components/SilhouetteSection';
+import SilhouetteToggle from './components/SilhouetteToggle';
+import Timer from './components/Timer';
+import StatsModal from './components/StatsModal';
+import GameEndSection from './components/GameEndSection';
+import InstructionsModal from './components/InstructionsModal';
+import ErrorBoundary from './components/ErrorBoundary';
+import { useGameState } from './hooks/useGameState';
+import { useSilhouettePreference } from './hooks/useSilhouettePreference';
+import { getCurrentStatistics } from './utilities/statistics';
+import { loadPreferences, updatePreference } from './utilities/localStorage';
 
-const getQueenOfTheDay = () => {
-  // January 1, 2022 Game Epoch
-  const epochMs = new Date(2022, 0).valueOf();
-  const now = Date.now();
-  const msInDay = 86400000 / 24;
-  const seed = Math.floor((now - epochMs) / msInDay);
+function App() {
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [showStats, setShowStats] = useState(false);
+  
+  // Initialize game state
+  const { gameState, submitGuess, isGameComplete } = useGameState();
+  
+  // Initialize silhouette preference
+  const { showSilhouette, toggleSilhouette, isLoading: silhouetteLoading } = useSilhouettePreference();
 
-  console.log("Random Seed " + seed.toString());
-  const rand = new Rand(seed.toString());
-  const index = Math.floor(rand.next() * racers.length);
+  // Get current statistics
+  const statistics = getCurrentStatistics();
 
-  console.log("Racer Index " + index.toString());
+  // Check for first-time visitor and show instructions
+  useEffect(() => {
+    const preferences = loadPreferences();
+    if (!preferences.hasSeenInstructions) {
+      setShowInstructions(true);
+    }
+  }, []);
 
-  const solution: DragRacer = {
-    name: racers[index].label,
-    season: racers[index].season,
-    outcome: racers[index].outcome,
-    age: racers[index].age,
-    hometown: racers[index].hometown
+  const handleCloseInstructions = () => {
+    setShowInstructions(false);
+    // Mark that user has seen instructions
+    updatePreference('hasSeenInstructions', true);
   };
 
-  return solution;
-};
+  const handleShowInstructions = () => {
+    setShowInstructions(true);
+  };
 
-export default function App() {
-  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
-  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
-  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  const [guesses, setGuesses] = useState<DragRacer[]>([]);
-
-  const handleOnChangeText = (event: any, newValue: any) => {
-    const solution: DragRacer = getQueenOfTheDay();
-    console.log("Solution " + JSON.stringify(solution));
-
-    if (newValue !== null) {
-      if (newValue.label === solution.name) {
-        console.log("You're a winner baby!");
-      }
-
-      const currentGuess: DragRacer = {
-        name: newValue.label,
-        season: newValue.season,
-        outcome: newValue.outcome,
-        age: newValue.age,
-        hometown: newValue.hometown
-      };
-      console.log("Guess" + JSON.stringify(currentGuess));
-      setGuesses([...guesses, currentGuess]);
-      console.log("Guesses" + JSON.stringify(guesses));
-    }
+  const handleGuessSubmit = (contestant: any) => {
+    submitGuess(contestant.id);
   };
 
   return (
-    <div className="game h-screen flex flex-col">
-      <Navbar
-        setIsInfoModalOpen={setIsInfoModalOpen}
-        setIsStatsModalOpen={setIsStatsModalOpen}
-        setIsSettingsModalOpen={setIsSettingsModalOpen}
-      />
+    <ErrorBoundary>
+      <div className="min-h-screen flex flex-col">
+        {/* Skip link for keyboard navigation */}
+        <a 
+          href="#main-content" 
+          className="skip-link"
+          tabIndex={0}
+        >
+          Skip to main content
+        </a>
+        
+        <Header 
+          onShowInstructions={handleShowInstructions}
+          onShowStats={() => setShowStats(true)}
+        />
+        
+        <main 
+          id="main-content"
+          className="flex-1 max-w-[700px] mx-auto px-4 py-6 w-full"
+          role="main"
+          aria-label="GuessRu game area"
+        >
+          <ErrorBoundary>
+            <div className="bg-[#f5f0e8] rounded-xl p-6 shadow-heavy">
+              {/* Game End Section - shown inline when game is complete */}
+              {isGameComplete && (
+                <GameEndSection gameState={gameState} />
+              )}
 
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={racers}
-        sx={{ width: 300, margin: "auto", paddingBottom: 3 }}
-        className="input-box"
-        onChange={handleOnChangeText}
-        renderInput={(params) => <TextField {...params} label="Drag Queen" />}
-      />
+              {/* Silhouette Section - hidden when game is complete (headshot shown in GameEndSection) */}
+              {showSilhouette && !isGameComplete && (
+                <SilhouetteSection
+                  secretQueen={gameState.secretQueen}
+                  isVisible={showSilhouette}
+                  isGameWon={gameState.isWon}
+                  className={showSilhouette ? 'animate-slide-in' : 'animate-slide-out'}
+                />
+              )}
+              
+              {/* Controls Row - Silhouette Toggle and Timer */}
+              {!isGameComplete && (
+                <div className="flex justify-between items-center mb-4">
+                  <SilhouetteToggle
+                    isEnabled={showSilhouette}
+                    onToggle={toggleSilhouette}
+                    disabled={silhouetteLoading}
+                  />
+                  <Timer
+                    startTime={gameState.startTime}
+                    endTime={gameState.endTime}
+                    isGameComplete={isGameComplete}
+                  />
+                </div>
+              )}
 
-      <RuGrid guesses={guesses} solution={getQueenOfTheDay()} />
-    </div>
+              {/* Guess Input Section - hidden when game is complete */}
+              {!isGameComplete && (
+                <div className="mb-6">
+                  <GuessInput
+                    onGuessSubmit={handleGuessSubmit}
+                    previousGuesses={gameState.guesses.map(guess => guess.contestant)}
+                    disabled={isGameComplete}
+                    placeholder="Guess a queen..."
+                  />
+                </div>
+              )}
+              
+              {/* Guess History */}
+              <GuessHistory guesses={gameState.guesses} />
+            </div>
+          </ErrorBoundary>
+        </main>
+
+        {/* Modal overlay system */}
+        <InstructionsModal
+          isVisible={showInstructions}
+          onClose={handleCloseInstructions}
+        />
+
+        {showStats && (
+          <StatsModal
+            statistics={statistics}
+            isVisible={showStats}
+            onClose={() => setShowStats(false)}
+          />
+        )}
+      </div>
+    </ErrorBoundary>
   );
 }
+
+export default App;
