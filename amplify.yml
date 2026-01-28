@@ -3,16 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd guess-ru
         - npm ci
     build:
       commands:
-        - cd guess-ru
         - npm run build
   artifacts:
-    baseDirectory: guess-ru/build
+    baseDirectory: build
     files:
       - '**/*'
   cache:
     paths:
-      - guess-ru/node_modules/**/*
+      - node_modules/**/*
