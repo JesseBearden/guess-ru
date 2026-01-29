@@ -109,7 +109,7 @@ const Timer: React.FC<TimerProps> = ({
   return (
     <div 
       className={`flex items-center justify-center bg-white border-2 border-text-dark rounded-lg 
-        py-2 px-4 min-w-[110px] min-h-[44px] font-mono font-bold text-lg text-text-dark
+        px-4 min-w-[130px] font-mono font-bold text-lg text-text-dark
         ${className}`}
       role="timer" 
       aria-label={`Game timer: ${formatTime(elapsedTime)}`}

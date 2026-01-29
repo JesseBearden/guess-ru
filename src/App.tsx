@@ -89,30 +89,31 @@ function App() {
                 />
               )}
               
-              {/* Controls Row - Silhouette Toggle and Timer */}
-              {!isGameComplete && (
+              {/* Controls Row - Silhouette Toggle (hidden for now) */}
+              {/* {!isGameComplete && (
                 <div className="flex justify-between items-center mb-4">
                   <SilhouetteToggle
                     isEnabled={showSilhouette}
                     onToggle={toggleSilhouette}
                     disabled={silhouetteLoading}
                   />
-                  <Timer
-                    startTime={gameState.startTime}
-                    endTime={gameState.endTime}
-                    isGameComplete={isGameComplete}
-                  />
                 </div>
-              )}
+              )} */}
 
-              {/* Guess Input Section - hidden when game is complete */}
+              {/* Guess Input Section with Timer - hidden when game is complete */}
               {!isGameComplete && (
-                <div className="mb-6">
+                <div className="mb-6 flex gap-3 items-stretch">
                   <GuessInput
                     onGuessSubmit={handleGuessSubmit}
                     previousGuesses={gameState.guesses.map(guess => guess.contestant)}
                     disabled={isGameComplete}
                     placeholder="Guess a queen..."
+                  />
+                  <Timer
+                    startTime={gameState.startTime}
+                    endTime={gameState.endTime}
+                    isGameComplete={isGameComplete}
+                    className="flex-shrink-0"
                   />
                 </div>
               )}

@@ -50,6 +50,7 @@ export interface GameState {
   startTime: number;
   endTime?: number;
   gameDate: string;
+  statsRecorded?: boolean; // Flag to prevent duplicate stats recording on refresh
 }
 
 export interface ShareResults {

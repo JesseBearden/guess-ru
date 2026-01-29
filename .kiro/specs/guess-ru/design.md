@@ -13,9 +13,13 @@ The application is built as a single-page React application that runs entirely i
 ```
 App
 ├── InstructionsModal
+├── SettingsModal
+│   ├── FirstTenSeasonsToggle
+│   └── TopFiveOnlyToggle
 ├── Header
 │   ├── Logo
 │   ├── InfoButton
+│   ├── SettingsButton
 │   └── StatsButton
 ├── GameArea
 │   ├── SilhouetteSection
@@ -26,6 +30,8 @@ App
 │   └── GuessHistory
 │       └── GuessRow (multiple)
 ├── StatsModal
+│   ├── ModeSelector
+│   └── StatisticsDisplay
 #### GameEndModal Component
 - Displays win/loss results
 - Shows final time and guess count
@@ -33,6 +39,13 @@ App
 - Formats shareable results similar to Wordle format
 - Generates visual pattern using emojis (⬛ for wrong, 🟨 for close, 🟩 for correct)
 ```
+
+#### SettingsModal Component
+- Displays game mode settings
+- Contains toggle switches for "First 10 Seasons" and "Top 5 Only"
+- Styled consistently with InstructionsModal (cream background, black borders)
+- Persists mode selection to localStorage
+- Triggers game state switch when mode changes
 
 ### State Management
 The application uses React's built-in state management with useState and useEffect hooks. Key state includes:
@@ -115,6 +128,24 @@ interface Statistics {
   currentStreak: number;
   maxStreak: number;
   winDistribution: number[]; // Index represents guess number (0-7 for guesses 1-8)
+}
+```
+
+#### GameMode Interface
+```typescript
+interface GameMode {
+  firstTenSeasons: boolean;  // Limit to seasons 1-10
+  topFiveOnly: boolean;      // Limit to top 5 finishers
+}
+
+// Mode key for storage (e.g., "default", "first10", "top5", "first10-top5")
+type GameModeKey = 'default' | 'first10' | 'top5' | 'first10-top5';
+
+function getModeKey(mode: GameMode): GameModeKey {
+  if (mode.firstTenSeasons && mode.topFiveOnly) return 'first10-top5';
+  if (mode.firstTenSeasons) return 'first10';
+  if (mode.topFiveOnly) return 'top5';
+  return 'default';
 }
 ```
 ```
@@ -204,16 +235,44 @@ Format explanation:
 - Each row represents one guess with 4 columns (season, position, age, hometown)
 
 ### Daily Queen Selection
-The secret queen is determined using a deterministic algorithm based on the current date in Pacific Time. This ensures all players worldwide see the same queen each day while maintaining unpredictability.
+The secret queen is determined using a deterministic algorithm based on the current date in Pacific Time and the active game mode. This ensures all players worldwide see the same queen each day for each mode while maintaining unpredictability.
 
 ```typescript
-function getDailyQueen(date: Date): Contestant {
+function getDailyQueen(date: Date, mode: GameMode): Contestant {
   const pacificDate = new Date(date.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
   const daysSinceEpoch = Math.floor(pacificDate.getTime() / (1000 * 60 * 60 * 24));
-  const queenIndex = daysSinceEpoch % contestants.length;
-  return contestants[queenIndex];
+  
+  // Filter contestants based on mode
+  let eligibleContestants = contestants;
+  if (mode.firstTenSeasons) {
+    eligibleContestants = eligibleContestants.filter(c => c.season <= 10);
+  }
+  if (mode.topFiveOnly) {
+    eligibleContestants = eligibleContestants.filter(c => c.finishingPosition <= 5);
+  }
+  
+  // Use mode in seed to get different queen per mode
+  const modeOffset = (mode.firstTenSeasons ? 1000 : 0) + (mode.topFiveOnly ? 2000 : 0);
+  const queenIndex = (daysSinceEpoch + modeOffset) % eligibleContestants.length;
+  return eligibleContestants[queenIndex];
 }
 ```
+
+### Game Mode System
+The application supports four independent game modes based on two toggle settings:
+
+| Mode | First 10 Seasons | Top 5 Only | Description |
+|------|------------------|------------|-------------|
+| Default | Off | Off | All contestants from all seasons |
+| First 10 | On | Off | Only contestants from seasons 1-10 |
+| Top 5 | Off | On | Only contestants who placed top 5 |
+| First 10 + Top 5 | On | On | Top 5 finishers from seasons 1-10 |
+
+Each mode has:
+- Its own daily secret queen (deterministically selected)
+- Separate game state per day
+- Separate statistics tracking
+- Filtered autocomplete showing only eligible contestants
 
 ### Feedback Calculation
 The feedback system compares each guess attribute against the secret queen:
@@ -245,11 +304,24 @@ function calculateDistance(
 ### Local Storage Schema
 ```typescript
 interface StoredData {
-  gameState: GameState;
-  statistics: Statistics;
+  // Game states keyed by mode (4 possible states per day)
+  gameStates: {
+    default?: GameState;
+    first10?: GameState;
+    top5?: GameState;
+    'first10-top5'?: GameState;
+  };
+  // Statistics keyed by mode (4 separate stat trackers)
+  statistics: {
+    default: Statistics;
+    first10: Statistics;
+    top5: Statistics;
+    'first10-top5': Statistics;
+  };
   preferences: {
     hasSeenInstructions: boolean;
     showSilhouette: boolean;
+    currentMode: GameMode; // Last selected mode
   };
 }
 ```
@@ -348,6 +420,22 @@ interface StoredData {
 ### Property 23: Hometown Proximity Calculation
 *For any* two cities with valid coordinates, the distance calculation should correctly identify cities within 75 miles and return consistent results
 **Validates: Requirements 3.6, 4.7**
+
+### Property 24: Game Mode Filtering
+*For any* game mode configuration, the contestant pool should be correctly filtered to include only contestants matching the mode criteria (seasons 1-10 for First 10 Seasons, top 5 placement for Top 5 Only)
+**Validates: Requirements 15.2, 15.3, 15.8**
+
+### Property 25: Mode-Specific Daily Queen Selection
+*For any* date and game mode combination, the daily queen selection should be deterministic, different from other modes on the same day, and always select a contestant valid for that mode
+**Validates: Requirements 15.7**
+
+### Property 26: Mode State Independence
+*For any* game mode switch, the game state for each mode should be preserved independently, allowing players to switch between modes without losing progress
+**Validates: Requirements 15.5, 15.6, 15.10**
+
+### Property 27: Mode-Specific Statistics Isolation
+*For any* completed game, statistics should only be updated for the mode in which the game was played, leaving other mode statistics unchanged
+**Validates: Requirements 16.1, 16.3, 16.4**
 
 ## Error Handling
 

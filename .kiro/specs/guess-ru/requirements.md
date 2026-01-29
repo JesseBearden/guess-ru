@@ -157,6 +157,7 @@ GuessRu.com is a daily drag queen guessing game inspired by Wordle and Poeltl. P
 3. WHEN a Player clicks the information button, THE Game_System SHALL display the game instructions popup
 4. THE Game_System SHALL allow Players to close the instructions popup and return to gameplay
 5. THE Game_System SHALL remember that a Player has seen the initial instructions and not show the popup on subsequent visits
+6. THE Game_System SHALL mention in the instructions that game mode settings are available via the settings (gear) icon
 
 ### Requirement 12: Game Timer
 
@@ -197,17 +198,32 @@ GuessRu.com is a daily drag queen guessing game inspired by Wordle and Poeltl. P
 4. THE Game_System SHALL maintain the headshot reveal state if the Player refreshes the page after winning
 5. THE Game_System SHALL reset to silhouette mode when a new daily game begins
 
-### Requirement 13: Player Statistics
+### Requirement 15: Game Mode Settings
 
-**User Story:** As a player, I want to view my game statistics, so that I can track my performance over time.
+**User Story:** As a player, I want to customize my game experience with different modes, so that I can play multiple variations each day and adjust the difficulty.
 
 #### Acceptance Criteria
 
-1. THE Game_System SHALL provide a statistics button that displays the Player's game statistics
-2. THE Game_System SHALL track and display the total number of games played
-3. THE Game_System SHALL track and display the Player's current win streak
-4. THE Game_System SHALL track and display the Player's longest win streak achieved
-5. THE Game_System SHALL calculate and display the Player's win percentage
-6. THE Game_System SHALL track and display a breakdown of wins by number of guesses (1-8 guesses)
-7. THE Game_System SHALL persist all statistics data in Local_Storage
-8. WHEN a Player completes a game, THE Game_System SHALL update the relevant statistics immediately
+1. THE Game_System SHALL provide a settings button (gear icon) in the header that opens a settings modal
+2. THE Game_System SHALL provide a "First 10 Seasons" toggle that limits contestants to seasons 1-10 when enabled
+3. THE Game_System SHALL provide a "Top 5 Only" toggle that limits contestants to those who placed in the top 5 when enabled
+4. THE Game_System SHALL support all four combinations of these toggles as independent game modes
+5. WHEN a Player changes mode settings, THE Game_System SHALL switch to the game state for that mode combination
+6. THE Game_System SHALL maintain separate game states for each of the four mode combinations per day
+7. THE Game_System SHALL select a different deterministic Secret_Queen for each mode combination each day
+8. THE Game_System SHALL filter the autocomplete dropdown to show only contestants valid for the current mode
+9. THE Game_System SHALL persist the Player's current mode selection in Local_Storage
+10. THE Game_System SHALL allow Players to switch between modes at any time, preserving progress in each mode
+11. FOR new Players without saved preferences, THE Game_System SHALL default to both "First 10 Seasons" and "Top 5 Only" enabled
+
+### Requirement 16: Mode-Specific Statistics
+
+**User Story:** As a player, I want to track my statistics separately for each game mode, so that I can see my performance across different difficulty levels.
+
+#### Acceptance Criteria
+
+1. THE Game_System SHALL maintain separate statistics for each of the four game mode combinations
+2. THE Game_System SHALL display a mode selector in the statistics modal to view stats for different modes
+3. WHEN a Player completes a game in a specific mode, THE Game_System SHALL update only the statistics for that mode
+4. THE Game_System SHALL persist mode-specific statistics separately in Local_Storage
+5. THE Game_System SHALL display the currently selected mode's statistics by default in the stats modal

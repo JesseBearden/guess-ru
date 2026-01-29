@@ -196,13 +196,9 @@ const GuessInput: React.FC<GuessInputProps> = ({
   }, []);
 
   return (
-    <div className="w-full max-w-[500px] mx-auto relative">
-      <form onSubmit={handleSubmit} className="flex gap-2 items-start md:flex-col md:gap-3">
-        <div className="flex-1 relative flex items-center gap-2">
-          {/* Question mark icon */}
-          <div className="flex items-center justify-center w-10 h-10 bg-warning-yellow border-2 border-text-dark rounded-lg font-bold text-xl text-text-dark flex-shrink-0">
-            ?
-          </div>
+    <div className="w-full relative">
+      <form onSubmit={handleSubmit} className="flex gap-2 items-start">
+        <div className="flex-1 relative">
           <input
             ref={inputRef}
             type="text"
@@ -213,8 +209,7 @@ const GuessInput: React.FC<GuessInputProps> = ({
             disabled={disabled}
             className={`w-full py-3 px-4 text-base border-2 border-text-dark rounded-lg bg-white transition-all duration-200 font-body min-h-[48px]
               ${error ? 'border-error-red' : 'border-text-dark'}
-              focus:outline-none focus:border-primary-pink focus:shadow-[0_0_0_3px_rgba(255,107,157,0.1)]
-              focus-visible:outline-2 focus-visible:outline-primary-pink focus-visible:outline-offset-2
+              focus:outline-none
               disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed`}
             autoComplete="off"
             aria-label="Guess a drag queen"
@@ -261,19 +256,6 @@ const GuessInput: React.FC<GuessInputProps> = ({
             </div>
           )}
         </div>
-        
-        <button 
-          type="submit" 
-          disabled={disabled || !inputValue.trim()}
-          className="py-3 px-6 text-base font-semibold text-white bg-gradient-primary border-none rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap min-h-[48px] min-w-[48px] md:w-full
-            hover:enabled:bg-[linear-gradient(135deg,#ff5a8a,#b73e5e)] hover:enabled:-translate-y-0.5 hover:enabled:shadow-pink
-            active:enabled:translate-y-0
-            disabled:bg-gray-300 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none
-            focus-visible:outline-2 focus-visible:outline-primary-pink focus-visible:outline-offset-2"
-          aria-label="Submit guess"
-        >
-          Guess
-        </button>
       </form>
       
       {error && (

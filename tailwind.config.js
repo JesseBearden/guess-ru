@@ -61,6 +61,7 @@ module.exports = {
         'toggle-on': 'toggleOn 0.3s ease-out',
         'toggle-off': 'toggleOff 0.3s ease-out',
         'slide-in-left': 'slideInFromLeft 0.3s ease-out',
+        'wiggle': 'wiggle 2s ease-in-out infinite',
       },
       keyframes: {
         slideIn: {
@@ -106,6 +107,11 @@ module.exports = {
         slideInFromLeft: {
           from: { opacity: '0', transform: 'translateX(-20px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(-8deg)' },
+          '75%': { transform: 'rotate(8deg)' },
         },
       },
       minHeight: {

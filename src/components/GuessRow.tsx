@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowUp, ArrowDown } from 'lucide-react';
 import { Guess, FeedbackType, DirectionType } from '../types';
 
 interface GuessRowProps {
@@ -9,83 +10,52 @@ interface GuessRowProps {
 const GuessRow: React.FC<GuessRowProps> = ({ guess, index }) => {
   const { contestant, feedback } = guess;
 
-  const getFeedbackClasses = (feedbackType: FeedbackType): string => {
-    switch (feedbackType) {
-      case FeedbackType.CORRECT:
-        return 'bg-feedback-correct text-white';
-      case FeedbackType.CLOSE:
-        return 'bg-feedback-close text-white';
-      case FeedbackType.WRONG:
-        return 'bg-feedback-wrong text-white';
-      default:
-        return 'bg-feedback-wrong text-white';
-    }
-  };
-
-  const getDirectionArrow = (direction?: DirectionType): string => {
-    if (!direction) return '';
-    return direction === DirectionType.HIGHER ? '↑' : '↓';
-  };
-
   return (
     <div 
-      className="bg-white rounded-lg border-2 border-text-dark/80 shadow-md overflow-hidden
-                 animate-slide-in-left motion-reduce:animate-none
-                 border-l-4 border-l-warning-yellow"
+      className="rounded-lg border-2 border-text-dark overflow-hidden
+                 animate-slide-in-left motion-reduce:animate-none"
       role="row" 
       aria-label={`Guess ${index + 1}: ${contestant.name}`}
     >
-      {/* Queen name - always on top on mobile, inline on desktop */}
-      <div 
-        className="bg-gradient-to-r from-primary-pink/20 to-secondary-blue/20 
-                   px-3 py-2 border-b-2 border-text-dark/30
-                   sm:text-center"
-      >
-        <span className="font-bold text-text-dark text-base">
-          {contestant.name}
-        </span>
-      </div>
+      {/* 5 column grid matching header */}
+      <div className="grid grid-cols-5 gap-0">
+        {/* Name */}
+        <div 
+          className="flex items-center justify-center p-2 border-r border-text-dark bg-white min-h-[50px] rounded-l-md"
+          role="gridcell"
+        >
+          <span className="font-bold text-text-dark text-sm text-center">
+            {contestant.name}
+          </span>
+        </div>
 
-      {/* Feedback cells - 4 column grid */}
-      <div className="grid grid-cols-4 gap-0">
         {/* Season */}
         <FeedbackCell
-          label="Season"
           value={contestant.season}
           feedback={feedback.season}
           direction={feedback.seasonDirection}
-          getFeedbackClasses={getFeedbackClasses}
-          getDirectionArrow={getDirectionArrow}
         />
 
         {/* Position */}
         <FeedbackCell
-          label="Pos"
           value={contestant.finishingPosition}
           feedback={feedback.position}
           direction={feedback.positionDirection}
-          getFeedbackClasses={getFeedbackClasses}
-          getDirectionArrow={getDirectionArrow}
         />
 
         {/* Age */}
         <FeedbackCell
-          label="Age"
           value={contestant.ageAtShow}
           feedback={feedback.age}
           direction={feedback.ageDirection}
-          getFeedbackClasses={getFeedbackClasses}
-          getDirectionArrow={getDirectionArrow}
         />
 
         {/* Hometown */}
         <FeedbackCell
-          label="City"
           value={contestant.hometown}
           feedback={feedback.hometown}
-          getFeedbackClasses={getFeedbackClasses}
-          getDirectionArrow={getDirectionArrow}
           isHometown
+          isLast
         />
       </div>
     </div>
@@ -94,53 +64,56 @@ const GuessRow: React.FC<GuessRowProps> = ({ guess, index }) => {
 
 // Individual feedback cell component
 interface FeedbackCellProps {
-  label: string;
   value: string | number;
   feedback: FeedbackType;
   direction?: DirectionType;
-  getFeedbackClasses: (feedback: FeedbackType) => string;
-  getDirectionArrow: (direction?: DirectionType) => string;
   isHometown?: boolean;
+  isLast?: boolean;
 }
 
 const FeedbackCell: React.FC<FeedbackCellProps> = ({
-  label,
   value,
   feedback,
   direction,
-  getFeedbackClasses,
-  getDirectionArrow,
   isHometown = false,
+  isLast = false,
 }) => {
-  const arrow = getDirectionArrow(direction);
+  const feedbackLabel = feedback === FeedbackType.CORRECT ? ' - Correct' : feedback === FeedbackType.CLOSE ? ' - Close' : '';
+  
+  const getBgClass = () => {
+    switch (feedback) {
+      case FeedbackType.CORRECT:
+        return 'bg-feedback-correct text-white';
+      case FeedbackType.CLOSE:
+        return 'bg-feedback-close text-white';
+      default:
+        return 'bg-white text-text-dark';
+    }
+  };
+
+  const renderDirectionIcon = () => {
+    if (!direction) return null;
+    const IconComponent = direction === DirectionType.HIGHER ? ArrowUp : ArrowDown;
+    return (
+      <IconComponent 
+        size={20} 
+        strokeWidth={3}
+        className="ml-1 inline-block"
+      />
+    );
+  };
   
   return (
     <div 
-      className={`flex flex-col items-center justify-center p-2 border-r border-text-dark/20 last:border-r-0
-                  ${getFeedbackClasses(feedback)}
-                  min-h-[60px] sm:min-h-[70px]`}
+      className={`flex items-center justify-center p-2 ${isLast ? 'rounded-r-md' : 'border-r border-text-dark'}
+                  min-h-[50px] ${getBgClass()}`}
       role="gridcell"
-      aria-label={`${label}: ${value}${feedback === FeedbackType.CORRECT ? ' - Correct' : feedback === FeedbackType.CLOSE ? ' - Close' : ' - Wrong'}`}
+      aria-label={`${value}${feedbackLabel}`}
     >
-      {/* Label - visible on mobile */}
-      <span className="hidden sm:block text-[10px] uppercase tracking-wide opacity-80 mb-1">
-        {label}
-      </span>
-      
-      {/* Value */}
       <span className={`font-bold ${isHometown ? 'text-xs text-center leading-tight' : 'text-sm'}`}>
         {value}
       </span>
-      
-      {/* Direction arrow */}
-      {arrow && (
-        <span 
-          className="text-lg font-bold leading-none mt-1 animate-bounce-arrow motion-reduce:animate-none"
-          aria-label={`Go ${direction}`}
-        >
-          {arrow}
-        </span>
-      )}
+      {renderDirectionIcon()}
     </div>
   );
 };

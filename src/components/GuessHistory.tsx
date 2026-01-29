@@ -16,28 +16,30 @@ const GuessHistory: React.FC<GuessHistoryProps> = ({
 
   return (
     <div className="w-full" role="grid" aria-label="Guess history">
-      {/* Header row - comic book style */}
+      {/* Column headers - always visible at top */}
       <div 
-        className="grid grid-cols-4 gap-1 mb-3 py-2 border-b-2 border-dashed border-text-dark/30
-                   sm:hidden"
+        className="grid grid-cols-5 gap-0 mb-3 border-b-2 border-dashed border-text-dark/40"
         role="row"
       >
-        <div className="text-center text-sm font-bold text-text-dark uppercase tracking-wider" role="columnheader">
+        <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
+          Name
+        </div>
+        <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
           Season
         </div>
-        <div className="text-center text-sm font-bold text-text-dark uppercase tracking-wider" role="columnheader">
+        <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
           Position
         </div>
-        <div className="text-center text-sm font-bold text-text-dark uppercase tracking-wider" role="columnheader">
+        <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
           Age
         </div>
-        <div className="text-center text-sm font-bold text-text-dark uppercase tracking-wider" role="columnheader">
+        <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
           Hometown
         </div>
       </div>
 
       {/* Guess slots */}
-      <div className="space-y-2">
+      <div className="space-y-3">
         {slots.map((guess, index) => (
           guess ? (
             <GuessRow 
@@ -58,14 +60,23 @@ const GuessHistory: React.FC<GuessHistoryProps> = ({
 const PlaceholderRow: React.FC<{ number: number }> = ({ number }) => {
   return (
     <div 
-      className="border-2 border-dashed border-text-dark/30 rounded-lg py-6 flex items-center justify-center
+      className="grid grid-cols-5 gap-0 border-2 border-dashed border-text-dark/30 rounded-lg
                  bg-white/30 transition-all duration-200 hover:border-text-dark/50 hover:bg-white/50"
       role="row"
       aria-label={`Guess slot ${number} - empty`}
     >
-      <span className="text-2xl font-bold text-text-dark/40 select-none">
-        {number}
-      </span>
+      {[...Array(5)].map((_, i) => (
+        <div 
+          key={i} 
+          className={`py-4 flex items-center justify-center ${i < 4 ? 'border-r border-dashed border-text-dark/30' : ''}`}
+        >
+          {i === 0 && (
+            <span className="text-xl font-bold text-text-dark/40 select-none">
+              {number}
+            </span>
+          )}
+        </div>
+      ))}
     </div>
   );
 };

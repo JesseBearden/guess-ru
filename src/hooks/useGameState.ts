@@ -68,14 +68,16 @@ export const useGameState = (): UseGameStateReturn => {
       feedback.seasonDirection = guessedContestant.season < secretQueen.season ? DirectionType.HIGHER : DirectionType.LOWER;
     }
 
-    // Position feedback
+    // Position feedback (inverted - lower number = higher placement)
     if (guessedContestant.finishingPosition === secretQueen.finishingPosition) {
       feedback.position = FeedbackType.CORRECT;
     } else if (Math.abs(guessedContestant.finishingPosition - secretQueen.finishingPosition) <= 3) {
       feedback.position = FeedbackType.CLOSE;
-      feedback.positionDirection = guessedContestant.finishingPosition < secretQueen.finishingPosition ? DirectionType.HIGHER : DirectionType.LOWER;
+      // Inverted: if secret is lower number (better placement), show UP arrow
+      feedback.positionDirection = guessedContestant.finishingPosition > secretQueen.finishingPosition ? DirectionType.HIGHER : DirectionType.LOWER;
     } else {
-      feedback.positionDirection = guessedContestant.finishingPosition < secretQueen.finishingPosition ? DirectionType.HIGHER : DirectionType.LOWER;
+      // Inverted: if secret is lower number (better placement), show UP arrow
+      feedback.positionDirection = guessedContestant.finishingPosition > secretQueen.finishingPosition ? DirectionType.HIGHER : DirectionType.LOWER;
     }
 
     // Age feedback
@@ -166,7 +168,8 @@ export const useGameState = (): UseGameStateReturn => {
         guesses: [...prevState.guesses, newGuess],
         isComplete: isGameOver,
         isWon: isWin,
-        endTime: isGameOver ? Date.now() : undefined
+        endTime: isGameOver ? Date.now() : undefined,
+        statsRecorded: false // Will be set to true after stats are recorded
       };
     });
 
@@ -211,12 +214,13 @@ export const useGameState = (): UseGameStateReturn => {
    * Update statistics when game completes
    */
   useEffect(() => {
-    if (gameState.isComplete && gameState.endTime) {
-      // Only update statistics once per game completion
-      // We check for endTime to ensure the game just completed
+    if (gameState.isComplete && gameState.endTime && !gameState.statsRecorded) {
+      // Update statistics only once per game completion
       updateStatistics(gameState);
+      // Mark stats as recorded to prevent duplicate counting on refresh
+      setGameState(prev => ({ ...prev, statsRecorded: true }));
     }
-  }, [gameState]);
+  }, [gameState.isComplete, gameState.endTime, gameState.statsRecorded]);
 
   /**
    * Handle cross-tab synchronization
