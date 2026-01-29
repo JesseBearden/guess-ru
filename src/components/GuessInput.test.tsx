@@ -6,8 +6,8 @@ import GuessInput from './GuessInput';
 import { Contestant } from '../types';
 
 // Mock the contestant database
-jest.mock('../utilities/contestantDatabase', () => ({
-  contestants: [
+jest.mock('../utilities/contestantDatabase', () => {
+  const mockContestants = [
     {
       id: 'bianca-del-rio',
       name: 'Bianca Del Rio',
@@ -30,38 +30,33 @@ jest.mock('../utilities/contestantDatabase', () => ({
       headshotUrl: '/images/headshots/bob-the-drag-queen.jpg',
       silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg'
     }
-  ],
-  getContestantsByName: (name: string) => {
-    const searchTerm = name.toLowerCase();
-    const contestants = [
-      {
-        id: 'bianca-del-rio',
-        name: 'Bianca Del Rio',
-        season: 6,
-        finishingPosition: 1,
-        ageAtShow: 37,
-        hometown: 'New York, New York',
-        hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
-        headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-        silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
-      },
-      {
-        id: 'bob-the-drag-queen',
-        name: 'Bob the Drag Queen',
-        season: 8,
-        finishingPosition: 1,
-        ageAtShow: 29,
-        hometown: 'New York, New York',
-        hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
-        headshotUrl: '/images/headshots/bob-the-drag-queen.jpg',
-        silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg'
-      }
-    ];
-    return contestants.filter(contestant => 
-      contestant.name.toLowerCase().includes(searchTerm)
-    );
-  }
-}));
+  ];
+  
+  return {
+    contestants: mockContestants,
+    getContestantsByName: (name: string) => {
+      const searchTerm = name.toLowerCase();
+      return mockContestants.filter(contestant => 
+        contestant.name.toLowerCase().includes(searchTerm)
+      );
+    },
+    getContestantsByMode: (firstTenSeasons: boolean, topFiveOnly: boolean) => {
+      return mockContestants.filter(contestant => {
+        if (firstTenSeasons && contestant.season > 10) return false;
+        if (topFiveOnly && contestant.finishingPosition > 5) return false;
+        return true;
+      });
+    },
+    getContestantsByNameAndMode: (name: string, firstTenSeasons: boolean, topFiveOnly: boolean) => {
+      const searchTerm = name.toLowerCase();
+      return mockContestants.filter(contestant => {
+        if (firstTenSeasons && contestant.season > 10) return false;
+        if (topFiveOnly && contestant.finishingPosition > 5) return false;
+        return contestant.name.toLowerCase().includes(searchTerm);
+      });
+    }
+  };
+});
 
 describe('GuessInput Component', () => {
   const mockOnGuessSubmit = jest.fn();
@@ -180,10 +175,10 @@ describe('GuessInput Component', () => {
     render(<GuessInput {...defaultProps} />);
     
     const input = screen.getByRole('combobox');
-    const submitButton = screen.getByRole('button', { name: /submit guess/i });
     
     await userEvent.type(input, 'Invalid Name');
-    await userEvent.click(submitButton);
+    // Press Enter to attempt submission
+    await userEvent.keyboard('{Enter}');
     
     // The main requirement is that invalid names don't trigger submission
     expect(mockOnGuessSubmit).not.toHaveBeenCalled();
@@ -193,10 +188,8 @@ describe('GuessInput Component', () => {
     render(<GuessInput {...defaultProps} disabled={true} />);
     
     const input = screen.getByRole('combobox');
-    const submitButton = screen.getByRole('button', { name: /submit guess/i });
     
     expect(input).toBeDisabled();
-    expect(submitButton).toBeDisabled();
   });
 
   test('clears input after successful submission', async () => {
@@ -205,8 +198,12 @@ describe('GuessInput Component', () => {
     const input = screen.getByRole('combobox');
     await userEvent.type(input, 'Bianca Del Rio');
     
-    const submitButton = screen.getByRole('button', { name: /submit guess/i });
-    await userEvent.click(submitButton);
+    // Wait for dropdown to appear and click on the option
+    await waitFor(() => {
+      expect(screen.getByText('Bianca Del Rio')).toBeInTheDocument();
+    });
+    
+    await userEvent.click(screen.getByText('Bianca Del Rio'));
     
     expect(mockOnGuessSubmit).toHaveBeenCalledWith(biancaContestant);
     expect(input).toHaveValue('');
@@ -419,21 +416,27 @@ describe('Property 5: Guess Validation and Processing', () => {
         (validName) => {
           // Clean up before each property test iteration
           document.body.innerHTML = '';
+          mockOnGuessSubmit.mockClear();
           
           const { container } = render(<GuessInput {...defaultProps} />);
           const input = container.querySelector('input[role="combobox"]') as HTMLInputElement;
-          const submitButton = container.querySelector('button[type="submit"]') as HTMLButtonElement;
           
-          if (!input || !submitButton) {
+          if (!input) {
             return false;
           }
           
           // Type valid contestant name
           fireEvent.change(input, { target: { value: validName } });
-          fireEvent.click(submitButton);
           
-          // Valid names should trigger submission
-          return mockOnGuessSubmit.mock.calls.length > 0;
+          // Find and click the dropdown option
+          const option = container.querySelector('[role="option"]');
+          if (option) {
+            fireEvent.click(option);
+            // Valid names should trigger submission
+            return mockOnGuessSubmit.mock.calls.length > 0;
+          }
+          
+          return false;
         }
       ),
       { numRuns: 20 }
@@ -447,20 +450,22 @@ describe('Property 5: Guess Validation and Processing', () => {
         (invalidName) => {
           // Clean up before each property test iteration
           document.body.innerHTML = '';
+          mockOnGuessSubmit.mockClear();
           
           const { container } = render(<GuessInput {...defaultProps} />);
           const input = container.querySelector('input[role="combobox"]') as HTMLInputElement;
-          const submitButton = container.querySelector('button[type="submit"]') as HTMLButtonElement;
           
-          if (!input || !submitButton) {
+          if (!input) {
             return false;
           }
           
           // Type invalid contestant name
           fireEvent.change(input, { target: { value: invalidName } });
-          fireEvent.click(submitButton);
           
-          // Invalid names should not trigger submission
+          // Try to submit via Enter key
+          fireEvent.keyDown(input, { key: 'Enter', code: 'Enter' });
+          
+          // Invalid names should not trigger submission (no matching dropdown option)
           return mockOnGuessSubmit.mock.calls.length === 0;
         }
       ),
@@ -487,6 +492,7 @@ describe('Property 5: Guess Validation and Processing', () => {
         (duplicateName) => {
           // Clean up before each property test iteration
           document.body.innerHTML = '';
+          mockOnGuessSubmit.mockClear();
           
           const propsWithPreviousGuess = {
             ...defaultProps,
@@ -495,15 +501,19 @@ describe('Property 5: Guess Validation and Processing', () => {
           
           const { container } = render(<GuessInput {...propsWithPreviousGuess} />);
           const input = container.querySelector('input[role="combobox"]') as HTMLInputElement;
-          const submitButton = container.querySelector('button[type="submit"]') as HTMLButtonElement;
           
-          if (!input || !submitButton) {
+          if (!input) {
             return false;
           }
           
-          // Try to submit duplicate guess
+          // Type duplicate guess
           fireEvent.change(input, { target: { value: duplicateName } });
-          fireEvent.click(submitButton);
+          
+          // Find and click the dropdown option
+          const option = container.querySelector('[role="option"]');
+          if (option) {
+            fireEvent.click(option);
+          }
           
           // Duplicate guesses should not trigger submission
           return mockOnGuessSubmit.mock.calls.length === 0;
@@ -520,21 +530,27 @@ describe('Property 5: Guess Validation and Processing', () => {
         (validName) => {
           // Clean up before each property test iteration
           document.body.innerHTML = '';
+          mockOnGuessSubmit.mockClear();
           
           const { container } = render(<GuessInput {...defaultProps} />);
           const input = container.querySelector('input[role="combobox"]') as HTMLInputElement;
-          const submitButton = container.querySelector('button[type="submit"]') as HTMLButtonElement;
           
-          if (!input || !submitButton) {
+          if (!input) {
             return false;
           }
           
-          // Type valid contestant name and submit
+          // Type valid contestant name
           fireEvent.change(input, { target: { value: validName } });
-          fireEvent.click(submitButton);
           
-          // Input should be cleared after successful submission
-          return input.value === '';
+          // Find and click the dropdown option
+          const option = container.querySelector('[role="option"]');
+          if (option) {
+            fireEvent.click(option);
+            // Input should be cleared after successful submission
+            return input.value === '';
+          }
+          
+          return false;
         }
       ),
       { numRuns: 20 }
@@ -550,18 +566,20 @@ describe('Property 5: Guess Validation and Processing', () => {
         (invalidName) => {
           // Clean up before each property test iteration
           document.body.innerHTML = '';
+          mockOnGuessSubmit.mockClear();
           
           const { container } = render(<GuessInput {...defaultProps} />);
           const input = container.querySelector('input[role="combobox"]') as HTMLInputElement;
-          const submitButton = container.querySelector('button[type="submit"]') as HTMLButtonElement;
           
-          if (!input || !submitButton) {
+          if (!input) {
             return false;
           }
           
-          // Type invalid contestant name and submit
+          // Type invalid contestant name
           fireEvent.change(input, { target: { value: invalidName } });
-          fireEvent.click(submitButton);
+          
+          // Try to submit via Enter key
+          fireEvent.keyDown(input, { key: 'Enter', code: 'Enter' });
           
           // Invalid names should not trigger submission
           // The component should either show an error or simply not submit
@@ -579,18 +597,20 @@ describe('Property 5: Guess Validation and Processing', () => {
         (emptyInput) => {
           // Clean up before each property test iteration
           document.body.innerHTML = '';
+          mockOnGuessSubmit.mockClear();
           
           const { container } = render(<GuessInput {...defaultProps} />);
           const input = container.querySelector('input[role="combobox"]') as HTMLInputElement;
-          const submitButton = container.querySelector('button[type="submit"]') as HTMLButtonElement;
           
-          if (!input || !submitButton) {
+          if (!input) {
             return false;
           }
           
-          // Type empty/whitespace input and try to submit
+          // Type empty/whitespace input
           fireEvent.change(input, { target: { value: emptyInput } });
-          fireEvent.click(submitButton);
+          
+          // Try to submit via Enter key
+          fireEvent.keyDown(input, { key: 'Enter', code: 'Enter' });
           
           // Empty input should not trigger submission
           return mockOnGuessSubmit.mock.calls.length === 0;

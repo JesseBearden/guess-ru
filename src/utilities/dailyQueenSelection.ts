@@ -1,5 +1,5 @@
-import { Contestant } from '../types';
-import { contestants } from './contestantDatabase';
+import { Contestant, GameMode, getModeKey, DEFAULT_GAME_MODE } from '../types';
+import { contestants, getContestantsByMode } from './contestantDatabase';
 
 /**
  * Deterministic daily queen selection algorithm
@@ -73,29 +73,62 @@ export const getDaysSinceEpoch = (date: Date = new Date()): number => {
 };
 
 /**
- * Selects the daily queen based on Pacific Time date
+ * Selects the daily queen based on Pacific Time date and game mode
  * Uses a deterministic algorithm to ensure all players get the same queen each day
+ * Different modes get different queens by incorporating mode into the seed
  * @param date Optional date to select queen for, defaults to current date
- * @returns The contestant who is the secret queen for the given date
+ * @param mode Optional game mode, defaults to DEFAULT_GAME_MODE
+ * @returns The contestant who is the secret queen for the given date and mode
  */
-export const getDailyQueen = (date: Date = new Date()): Contestant => {
-  if (contestants.length === 0) {
-    throw new Error('Contestant database is empty');
+export const getDailyQueen = (date: Date = new Date(), mode: GameMode = DEFAULT_GAME_MODE): Contestant => {
+  // Get contestants filtered by mode
+  const modeContestants = getContestantsByMode(mode.firstTenSeasons, mode.topFiveOnly);
+  
+  if (modeContestants.length === 0) {
+    throw new Error('No contestants available for the selected game mode');
   }
   
   const daysSinceEpoch = getDaysSinceEpoch(date);
-  const queenIndex = daysSinceEpoch % contestants.length;
   
-  return contestants[queenIndex];
+  // Create a mode-specific offset to ensure different modes get different queens
+  // This uses a simple hash based on the mode key
+  const modeKey = getModeKey(mode);
+  let modeOffset = 0;
+  if (modeKey === 'first10') modeOffset = 7;
+  else if (modeKey === 'top5') modeOffset = 13;
+  else if (modeKey === 'first10-top5') modeOffset = 23;
+  
+  const queenIndex = (daysSinceEpoch + modeOffset) % modeContestants.length;
+  
+  return modeContestants[queenIndex];
 };
 
 /**
- * Gets the game number for a given date (days since epoch + 1)
+ * The launch date of GuessRu - January 28, 2026 Pacific Time
+ * Game numbers start from 1 on this date
+ */
+const LAUNCH_DATE = new Date(2026, 0, 28, 0, 0, 0, 0); // January 28, 2026
+
+/**
+ * Gets the game number for a given date (days since launch date + 1)
+ * Game #1 is January 28, 2026
  * @param date Optional date to get game number for, defaults to current date
  * @returns Game number for sharing results
  */
 export const getGameNumber = (date: Date = new Date()): number => {
-  return getDaysSinceEpoch(date) + 1;
+  const pacificDate = getPacificTimeDate(date);
+  const midnightPacific = new Date(
+    pacificDate.getFullYear(),
+    pacificDate.getMonth(),
+    pacificDate.getDate(),
+    0, 0, 0, 0
+  );
+  
+  const timeDiff = midnightPacific.getTime() - LAUNCH_DATE.getTime();
+  const daysSinceLaunch = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  
+  // Game number is 1-indexed, so add 1
+  return daysSinceLaunch + 1;
 };
 
 /**

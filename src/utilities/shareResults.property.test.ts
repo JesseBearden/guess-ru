@@ -138,8 +138,9 @@ describe('Feature: guessru-game, Property 20: Share Results Formatting', () => {
           const lines = shareText.split('\n');
           expect(lines.length).toBeGreaterThanOrEqual(4); // Header + empty + patterns + empty + link
           
-          // Verify header format
-          const headerRegex = /^GuessRu #\d+ (X\/8|\d+\/8) ⏱️ \d{2}:\d{2}$/;
+          // Verify header format (now includes mode icon between game number and result)
+          // Mode icons: 👑 (default), 🔟 (first10), 🔝 (top5), 🔟🔝 (first10-top5)
+          const headerRegex = /^GuessRu #\d+ [👑🔟🔝]+ (X\/8|\d+\/8) ⏱️ \d{2}:\d{2}$/;
           expect(lines[0]).toMatch(headerRegex);
           
           // Verify empty line after header
@@ -243,12 +244,12 @@ describe('Feature: guessru-game, Property 20: Share Results Formatting', () => {
           const headerLine = shareText.split('\n')[0];
           
           if (gameState.isWon) {
-            // Winning games should show guess count out of 8
-            expect(headerLine).toMatch(/GuessRu #\d+ \d+\/8 ⏱️ \d{2}:\d{2}/);
+            // Winning games should show guess count out of 8 (with mode icon)
+            expect(headerLine).toMatch(/GuessRu #\d+ [👑🔟🔝]+ \d+\/8 ⏱️ \d{2}:\d{2}/);
             expect(headerLine).not.toContain('X/8');
           } else {
-            // Losing games should show X/8
-            expect(headerLine).toMatch(/GuessRu #\d+ X\/8 ⏱️ \d{2}:\d{2}/);
+            // Losing games should show X/8 (with mode icon)
+            expect(headerLine).toMatch(/GuessRu #\d+ [👑🔟🔝]+ X\/8 ⏱️ \d{2}:\d{2}/);
           }
         }
       ),

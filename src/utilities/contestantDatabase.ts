@@ -2609,6 +2609,42 @@ export const getRandomContestant = (): Contestant => {
   return contestants[randomIndex];
 };
 
+/**
+ * Filter contestants by game mode settings
+ * @param firstTenSeasons - If true, only include seasons 1-10
+ * @param topFiveOnly - If true, only include contestants who placed in top 5
+ */
+export const getContestantsByMode = (
+  firstTenSeasons: boolean,
+  topFiveOnly: boolean
+): Contestant[] => {
+  return contestants.filter(contestant => {
+    // Filter by season if firstTenSeasons is enabled
+    if (firstTenSeasons && contestant.season > 10) {
+      return false;
+    }
+    // Filter by position if topFiveOnly is enabled
+    if (topFiveOnly && contestant.finishingPosition > 5) {
+      return false;
+    }
+    return true;
+  });
+};
+
+/**
+ * Get contestants by name filtered by game mode
+ */
+export const getContestantsByNameAndMode = (
+  name: string,
+  firstTenSeasons: boolean,
+  topFiveOnly: boolean
+): Contestant[] => {
+  const searchTerm = name.toLowerCase();
+  return getContestantsByMode(firstTenSeasons, topFiveOnly).filter(contestant =>
+    contestant.name.toLowerCase().includes(searchTerm)
+  );
+};
+
 // Validation function to ensure database integrity
 export const validateContestantDatabase = (): {
   isValid: boolean;

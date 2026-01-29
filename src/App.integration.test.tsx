@@ -102,9 +102,8 @@ describe('Integration Tests: Complete Game Flows', () => {
       // Type a contestant name
       await userEvent.type(input, contestants[0].name);
       
-      // Submit the guess
-      const submitButton = screen.getByRole('button', { name: /Submit guess/i });
-      await userEvent.click(submitButton);
+      // Submit the guess by pressing Enter (submit button was removed)
+      await userEvent.keyboard('{Enter}');
       
       // Input should be cleared
       await waitFor(() => {
@@ -124,10 +123,9 @@ describe('Integration Tests: Complete Game Flows', () => {
       
       const input = screen.getByPlaceholderText(/Guess a queen/i);
       
-      // Submit a guess
+      // Submit a guess by typing and pressing Enter
       await userEvent.type(input, contestants[1].name);
-      const submitButton = screen.getByRole('button', { name: /Submit guess/i });
-      await userEvent.click(submitButton);
+      await userEvent.keyboard('{Enter}');
       
       // Wait for guess to appear in history
       await waitFor(() => {
@@ -147,14 +145,14 @@ describe('Integration Tests: Complete Game Flows', () => {
       
       const input = screen.getByPlaceholderText(/Guess a queen/i);
       
-      // Submit a guess
+      // Submit a guess by typing and pressing Enter
       await userEvent.type(input, contestants[1].name);
-      const submitButton = screen.getByRole('button', { name: /Submit guess/i });
-      await userEvent.click(submitButton);
+      await userEvent.keyboard('{Enter}');
       
-      // Wait for state to be saved
+      // Wait for state to be saved (now uses mode-keyed storage)
       await waitFor(() => {
-        const savedState = localStorage.getItem('guessru_game_state');
+        // Default mode is first10=true, top5=true, so key is guessru_game_state_first10-top5
+        const savedState = localStorage.getItem('guessru_game_state_first10-top5');
         expect(savedState).not.toBeNull();
         
         const parsedState = JSON.parse(savedState!);
@@ -165,7 +163,7 @@ describe('Integration Tests: Complete Game Flows', () => {
     test('should restore game state on page reload', async () => {
       const today = getPacificDateString();
       
-      // Pre-populate localStorage with game state
+      // Pre-populate localStorage with game state using mode-keyed storage
       const mockGameState = {
         secretQueen: contestants[0],
         guesses: [{
@@ -183,7 +181,8 @@ describe('Integration Tests: Complete Game Flows', () => {
         gameDate: today
       };
       
-      localStorage.setItem('guessru_game_state', JSON.stringify(mockGameState));
+      // Use mode-keyed storage (default mode is first10=true, top5=true)
+      localStorage.setItem('guessru_game_state_first10-top5', JSON.stringify(mockGameState));
       localStorage.setItem('guessru_preferences', JSON.stringify({
         hasSeenInstructions: true,
         showSilhouette: false
@@ -212,8 +211,8 @@ describe('Integration Tests: Complete Game Flows', () => {
     });
   });
 
-  describe('Silhouette Toggle', () => {
-    test('should toggle silhouette visibility', async () => {
+  describe('Settings Modal', () => {
+    test('should open settings modal when settings button is clicked', async () => {
       localStorage.setItem('guessru_preferences', JSON.stringify({
         hasSeenInstructions: true,
         showSilhouette: false
@@ -221,17 +220,16 @@ describe('Integration Tests: Complete Game Flows', () => {
       
       render(<App />);
       
-      // Find the silhouette toggle button
-      const toggleButton = screen.getByRole('button', { name: /Show.*silhouette/i });
-      expect(toggleButton).toBeInTheDocument();
+      // Find and click the settings button
+      const settingsButton = screen.getByRole('button', { name: /Show game settings/i });
+      await userEvent.click(settingsButton);
       
-      // Click to show silhouette
-      await userEvent.click(toggleButton);
-      
-      // Verify preference is saved
+      // Settings modal should appear
       await waitFor(() => {
-        const prefs = JSON.parse(localStorage.getItem('guessru_preferences')!);
-        expect(prefs.showSilhouette).toBe(true);
+        const modal = screen.getByRole('dialog');
+        expect(modal).toBeInTheDocument();
+        // Modal title is "Settings" not "Game Settings"
+        expect(within(modal).getByRole('heading', { name: /Settings/i })).toBeInTheDocument();
       });
     });
   });
@@ -313,10 +311,9 @@ describe('Integration Tests: Complete Game Flows', () => {
       
       const input = screen.getByPlaceholderText(/Guess a queen/i);
       
-      // Submit a guess
+      // Submit a guess by typing and pressing Enter
       await userEvent.type(input, contestants[1].name);
-      const submitButton = screen.getByRole('button', { name: /Submit guess/i });
-      await userEvent.click(submitButton);
+      await userEvent.keyboard('{Enter}');
       
       // Guess should appear in history
       await waitFor(() => {
@@ -386,7 +383,7 @@ describe('Integration Tests: Complete Game Flows', () => {
       // The loadGameState function checks if the stored date matches today's date
       // and returns null (clearing the state) if it doesn't match
       
-      // Set up game state from a clearly old date
+      // Set up game state from a clearly old date using mode-keyed storage
       const oldGameState = {
         secretQueen: contestants[0],
         guesses: [{
@@ -404,7 +401,8 @@ describe('Integration Tests: Complete Game Flows', () => {
         gameDate: '2020-01-01' // A clearly old date that won't match today
       };
       
-      localStorage.setItem('guessru_game_state', JSON.stringify(oldGameState));
+      // Use mode-keyed storage (default mode is first10=true, top5=true)
+      localStorage.setItem('guessru_game_state_first10-top5', JSON.stringify(oldGameState));
       localStorage.setItem('guessru_preferences', JSON.stringify({
         hasSeenInstructions: true,
         showSilhouette: false
@@ -419,12 +417,10 @@ describe('Integration Tests: Complete Game Flows', () => {
       });
       
       // Verify the old game state was cleared from localStorage
-      const storedState = localStorage.getItem('guessru_game_state');
-      if (storedState) {
-        const parsedState = JSON.parse(storedState);
-        // If there's a stored state, it should be for today, not the old date
-        expect(parsedState.gameDate).not.toBe('2020-01-01');
-      }
+      // The loadGameState function removes old state and returns null, so the key should be removed
+      const storedState = localStorage.getItem('guessru_game_state_first10-top5');
+      // After loading, the old state should be removed (null) or replaced with today's date
+      expect(storedState === null || JSON.parse(storedState).gameDate !== '2020-01-01').toBe(true);
     });
   });
 

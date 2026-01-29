@@ -3,35 +3,38 @@ import Header from './components/Header';
 import GuessInput from './components/GuessInput';
 import GuessHistory from './components/GuessHistory';
 import SilhouetteSection from './components/SilhouetteSection';
-import SilhouetteToggle from './components/SilhouetteToggle';
 import Timer from './components/Timer';
 import StatsModal from './components/StatsModal';
 import GameEndSection from './components/GameEndSection';
 import InstructionsModal from './components/InstructionsModal';
+import SettingsModal from './components/SettingsModal';
 import ErrorBoundary from './components/ErrorBoundary';
 import { useGameState } from './hooks/useGameState';
 import { useSilhouettePreference } from './hooks/useSilhouettePreference';
-import { getCurrentStatistics } from './utilities/statistics';
 import { loadPreferences, updatePreference } from './utilities/localStorage';
+import { GameMode, DEFAULT_GAME_MODE, getModeKey } from './types';
 
 function App() {
   const [showInstructions, setShowInstructions] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [gameMode, setGameMode] = useState<GameMode>(DEFAULT_GAME_MODE);
   
-  // Initialize game state
-  const { gameState, submitGuess, isGameComplete } = useGameState();
+  // Initialize game state with current mode
+  const { gameState, submitGuess, isGameComplete } = useGameState(gameMode);
   
   // Initialize silhouette preference
-  const { showSilhouette, toggleSilhouette, isLoading: silhouetteLoading } = useSilhouettePreference();
-
-  // Get current statistics
-  const statistics = getCurrentStatistics();
+  const { showSilhouette } = useSilhouettePreference();
 
   // Check for first-time visitor and show instructions
   useEffect(() => {
     const preferences = loadPreferences();
     if (!preferences.hasSeenInstructions) {
       setShowInstructions(true);
+    }
+    // Load saved mode preference
+    if (preferences.currentMode) {
+      setGameMode(preferences.currentMode);
     }
   }, []);
 
@@ -43,6 +46,11 @@ function App() {
 
   const handleShowInstructions = () => {
     setShowInstructions(true);
+  };
+
+  const handleModeChange = (newMode: GameMode) => {
+    setGameMode(newMode);
+    updatePreference('currentMode', newMode);
   };
 
   const handleGuessSubmit = (contestant: any) => {
@@ -64,6 +72,7 @@ function App() {
         <Header 
           onShowInstructions={handleShowInstructions}
           onShowStats={() => setShowStats(true)}
+          onShowSettings={() => setShowSettings(true)}
         />
         
         <main 
@@ -88,17 +97,6 @@ function App() {
                   className={showSilhouette ? 'animate-slide-in' : 'animate-slide-out'}
                 />
               )}
-              
-              {/* Controls Row - Silhouette Toggle (hidden for now) */}
-              {/* {!isGameComplete && (
-                <div className="flex justify-between items-center mb-4">
-                  <SilhouetteToggle
-                    isEnabled={showSilhouette}
-                    onToggle={toggleSilhouette}
-                    disabled={silhouetteLoading}
-                  />
-                </div>
-              )} */}
 
               {/* Guess Input Section with Timer - hidden when game is complete */}
               {!isGameComplete && (
@@ -108,6 +106,7 @@ function App() {
                     previousGuesses={gameState.guesses.map(guess => guess.contestant)}
                     disabled={isGameComplete}
                     placeholder="Guess a queen..."
+                    mode={gameMode}
                   />
                   <Timer
                     startTime={gameState.startTime}
@@ -130,9 +129,16 @@ function App() {
           onClose={handleCloseInstructions}
         />
 
+        <SettingsModal
+          isVisible={showSettings}
+          onClose={() => setShowSettings(false)}
+          mode={gameMode}
+          onModeChange={handleModeChange}
+        />
+
         {showStats && (
           <StatsModal
-            statistics={statistics}
+            currentModeKey={getModeKey(gameMode)}
             isVisible={showStats}
             onClose={() => setShowStats(false)}
           />

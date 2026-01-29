@@ -1,4 +1,4 @@
-import { Statistics, GameState } from '../types';
+import { Statistics, GameState, GameModeKey } from '../types';
 import { loadStatistics, saveStatistics } from './localStorage';
 
 /**
@@ -11,7 +11,9 @@ export function updateStatistics(gameState: GameState): Statistics {
     throw new Error('Cannot update statistics for incomplete game');
   }
 
-  const currentStats = loadStatistics();
+  // Use the mode key from game state, or default
+  const modeKey: GameModeKey = gameState.modeKey || 'default';
+  const currentStats = loadStatistics(modeKey);
   const newStats: Statistics = { ...currentStats };
 
   // Increment games played
@@ -37,8 +39,8 @@ export function updateStatistics(gameState: GameState): Statistics {
     newStats.currentStreak = 0;
   }
 
-  // Save updated statistics
-  saveStatistics(newStats);
+  // Save updated statistics for this mode
+  saveStatistics(newStats, modeKey);
   
   return newStats;
 }
@@ -80,9 +82,10 @@ export function getMostCommonWinGuessCount(statistics: Statistics): number | nul
 
 /**
  * Reset all statistics to default values
+ * @param modeKey Optional mode key, defaults to 'default'
  * @returns Default statistics object
  */
-export function resetStatistics(): Statistics {
+export function resetStatistics(modeKey: GameModeKey = 'default'): Statistics {
   const defaultStats: Statistics = {
     gamesPlayed: 0,
     gamesWon: 0,
@@ -91,14 +94,15 @@ export function resetStatistics(): Statistics {
     winDistribution: [0, 0, 0, 0, 0, 0, 0, 0]
   };
 
-  saveStatistics(defaultStats);
+  saveStatistics(defaultStats, modeKey);
   return defaultStats;
 }
 
 /**
  * Get current statistics from localStorage
+ * @param modeKey Optional mode key, defaults to 'default'
  * @returns Current statistics object
  */
-export function getCurrentStatistics(): Statistics {
-  return loadStatistics();
+export function getCurrentStatistics(modeKey: GameModeKey = 'default'): Statistics {
+  return loadStatistics(modeKey);
 }

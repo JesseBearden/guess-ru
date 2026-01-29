@@ -1,4 +1,4 @@
-import { GameState, Statistics } from '../types/index';
+import { GameState, Statistics, GameMode, GameModeKey, DEFAULT_GAME_MODE } from '../types/index';
 import { getPacificDateString } from './dailyQueenSelection';
 
 // Storage keys
@@ -9,10 +9,17 @@ const STORAGE_KEYS = {
   LAST_CLEANUP: 'guessru_last_cleanup'
 } as const;
 
+// Helper to get mode-specific storage key
+const getModeStorageKey = (baseKey: string, modeKey: GameModeKey): string => {
+  if (modeKey === 'default') return baseKey;
+  return `${baseKey}_${modeKey}`;
+};
+
 // Preferences interface
 export interface Preferences {
   hasSeenInstructions: boolean;
   showSilhouette: boolean;
+  currentMode?: GameMode;
 }
 
 // Default values
@@ -26,7 +33,8 @@ const DEFAULT_STATISTICS: Statistics = {
 
 const DEFAULT_PREFERENCES: Preferences = {
   hasSeenInstructions: false,
-  showSilhouette: false
+  showSilhouette: false,
+  currentMode: DEFAULT_GAME_MODE
 };
 
 /**
@@ -85,17 +93,22 @@ function safeRemoveItem(key: string): boolean {
 
 /**
  * Save game state to localStorage
+ * @param gameState The game state to save
+ * @param modeKey Optional mode key, defaults to 'default'
  */
-export function saveGameState(gameState: GameState): boolean {
-  return safeSetItem(STORAGE_KEYS.GAME_STATE, gameState);
+export function saveGameState(gameState: GameState, modeKey: GameModeKey = 'default'): boolean {
+  const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
+  return safeSetItem(storageKey, { ...gameState, modeKey });
 }
 
 /**
  * Load game state from localStorage
  * Returns null if no valid game state found or if it's from a different day
+ * @param modeKey Optional mode key, defaults to 'default'
  */
-export function loadGameState(): GameState | null {
-  const stored = safeGetItem(STORAGE_KEYS.GAME_STATE);
+export function loadGameState(modeKey: GameModeKey = 'default'): GameState | null {
+  const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
+  const stored = safeGetItem(storageKey);
   if (!stored) {
     return null;
   }
@@ -109,7 +122,7 @@ export function loadGameState(): GameState | null {
   const today = getPacificDateString();
   if (gameState.gameDate !== today) {
     // Game state is from a different day, remove it
-    safeRemoveItem(STORAGE_KEYS.GAME_STATE);
+    safeRemoveItem(storageKey);
     return null;
   }
 
@@ -118,23 +131,30 @@ export function loadGameState(): GameState | null {
 
 /**
  * Clear game state from localStorage
+ * @param modeKey Optional mode key, defaults to 'default'
  */
-export function clearGameState(): boolean {
-  return safeRemoveItem(STORAGE_KEYS.GAME_STATE);
+export function clearGameState(modeKey: GameModeKey = 'default'): boolean {
+  const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
+  return safeRemoveItem(storageKey);
 }
 
 /**
  * Save statistics to localStorage
+ * @param statistics The statistics to save
+ * @param modeKey Optional mode key, defaults to 'default'
  */
-export function saveStatistics(statistics: Statistics): boolean {
-  return safeSetItem(STORAGE_KEYS.STATISTICS, statistics);
+export function saveStatistics(statistics: Statistics, modeKey: GameModeKey = 'default'): boolean {
+  const storageKey = getModeStorageKey(STORAGE_KEYS.STATISTICS, modeKey);
+  return safeSetItem(storageKey, statistics);
 }
 
 /**
  * Load statistics from localStorage
+ * @param modeKey Optional mode key, defaults to 'default'
  */
-export function loadStatistics(): Statistics {
-  const stored = safeGetItem(STORAGE_KEYS.STATISTICS);
+export function loadStatistics(modeKey: GameModeKey = 'default'): Statistics {
+  const storageKey = getModeStorageKey(STORAGE_KEYS.STATISTICS, modeKey);
+  const stored = safeGetItem(storageKey);
   return safeParseJSON(stored, DEFAULT_STATISTICS);
 }
 
@@ -175,12 +195,17 @@ export function performDailyCleanup(): void {
 
   // If we haven't cleaned up today, perform cleanup
   if (lastCleanup !== today) {
-    // Remove old game state (loadGameState already handles this, but let's be explicit)
-    const currentGameState = safeGetItem(STORAGE_KEYS.GAME_STATE);
-    if (currentGameState) {
-      const gameState = safeParseJSON<GameState | null>(currentGameState, null);
-      if (gameState && gameState.gameDate !== today) {
-        clearGameState();
+    // Clean up game states for all modes
+    const modeKeys: GameModeKey[] = ['default', 'first10', 'top5', 'first10-top5'];
+    
+    for (const modeKey of modeKeys) {
+      const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
+      const currentGameState = safeGetItem(storageKey);
+      if (currentGameState) {
+        const gameState = safeParseJSON<GameState | null>(currentGameState, null);
+        if (gameState && gameState.gameDate !== today) {
+          safeRemoveItem(storageKey);
+        }
       }
     }
 

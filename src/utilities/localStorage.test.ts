@@ -49,7 +49,13 @@ describe('localStorage utilities', () => {
       expect(saved).toBe(true);
 
       const loaded = loadGameState();
-      expect(loaded).toEqual(mockGameState);
+      // saveGameState adds modeKey to the saved state
+      expect(loaded).toBeDefined();
+      expect(loaded?.secretQueen).toEqual(mockGameState.secretQueen);
+      expect(loaded?.guesses).toEqual(mockGameState.guesses);
+      expect(loaded?.isComplete).toEqual(mockGameState.isComplete);
+      expect(loaded?.isWon).toEqual(mockGameState.isWon);
+      expect(loaded?.gameDate).toEqual(mockGameState.gameDate);
     });
 
     test('should return null when no game state exists', () => {
@@ -112,10 +118,10 @@ describe('localStorage utilities', () => {
 
     test('should return default preferences when none exist', () => {
       const loaded = loadPreferences();
-      expect(loaded).toEqual({
-        hasSeenInstructions: false,
-        showSilhouette: false
-      });
+      // Default preferences now include currentMode
+      expect(loaded.hasSeenInstructions).toBe(false);
+      expect(loaded.showSilhouette).toBe(false);
+      expect(loaded.currentMode).toBeDefined();
     });
 
     test('should update individual preference correctly', () => {
@@ -150,7 +156,14 @@ describe('localStorage utilities', () => {
       // Second cleanup (should not remove current game state)
       performDailyCleanup();
       
-      expect(loadGameState()).toEqual(mockGameState);
+      const loaded = loadGameState();
+      // saveGameState adds modeKey to the saved state
+      expect(loaded).toBeDefined();
+      expect(loaded?.secretQueen).toEqual(mockGameState.secretQueen);
+      expect(loaded?.guesses).toEqual(mockGameState.guesses);
+      expect(loaded?.isComplete).toEqual(mockGameState.isComplete);
+      expect(loaded?.isWon).toEqual(mockGameState.isWon);
+      expect(loaded?.gameDate).toEqual(mockGameState.gameDate);
     });
   });
 

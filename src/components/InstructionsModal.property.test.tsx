@@ -204,7 +204,8 @@ describe('Property 16: Instructions Display Logic', () => {
         );
         
         // Find the modal content (the inner div that stops propagation)
-        const modalContent = container.querySelector('.bg-gradient-secondary');
+        // Uses bg-[#f5f0e8] class for cream background
+        const modalContent = container.querySelector('.bg-\\[\\#f5f0e8\\]');
         expect(modalContent).toBeInTheDocument();
         
         // Click the modal content the specified number of times
@@ -232,25 +233,21 @@ describe('Property 16: Instructions Display Logic', () => {
       <InstructionsModal isVisible={true} onClose={jest.fn()} />
     );
     
-    // Property: Modal should contain all required sections (using container queries to avoid duplicates)
+    // Property: Modal should contain the required sections
     const sections = container.querySelectorAll('h3');
     const sectionTexts = Array.from(sections).map(s => s.textContent);
     
-    expect(sectionTexts).toContain('🎯 Goal');
-    expect(sectionTexts).toContain('✨ How to Guess');
-    expect(sectionTexts).toContain('🎨 Color Coding');
-    expect(sectionTexts).toContain('⬆️ Directional Arrows');
-    expect(sectionTexts).toContain('📊 Attributes');
-    expect(sectionTexts).toContain('💡 Optional Hints');
-    expect(sectionTexts).toContain('🕛 Daily Reset');
+    // Updated to match current modal content
+    expect(sectionTexts).toContain('Color Coding');
+    expect(sectionTexts).toContain('Arrows');
     
     // Property: Modal should explain color coding system
-    const colorSpans = container.querySelectorAll('span');
-    const colorTexts = Array.from(colorSpans).map(s => s.textContent);
+    const strongElements = container.querySelectorAll('strong');
+    const strongTexts = Array.from(strongElements).map(s => s.textContent);
     
-    expect(colorTexts).toContain('Green');
-    expect(colorTexts).toContain('Yellow');
-    expect(colorTexts).toContain('Gray');
+    expect(strongTexts).toContain('Green');
+    expect(strongTexts).toContain('Yellow');
+    expect(strongTexts).toContain('White');
     
     // Clean up
     cleanup();

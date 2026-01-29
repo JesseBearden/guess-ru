@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useRef, KeyboardEvent } from 'react';
-import { Contestant } from '../types';
-import { contestants, getContestantsByName } from '../utilities/contestantDatabase';
+import { Contestant, GameMode, DEFAULT_GAME_MODE } from '../types';
+import { getContestantsByNameAndMode, getContestantsByMode } from '../utilities/contestantDatabase';
 
 interface GuessInputProps {
   onGuessSubmit: (contestant: Contestant) => void;
   previousGuesses: Contestant[];
   disabled?: boolean;
   placeholder?: string;
+  mode?: GameMode;
 }
 
 const GuessInput: React.FC<GuessInputProps> = ({
   onGuessSubmit,
   previousGuesses,
   disabled = false,
-  placeholder = "Type a drag queen's name..."
+  placeholder = "Type a drag queen's name...",
+  mode = DEFAULT_GAME_MODE
 }) => {
   const [inputValue, setInputValue] = useState('');
   const [filteredContestants, setFilteredContestants] = useState<Contestant[]>([]);
@@ -24,7 +26,7 @@ const GuessInput: React.FC<GuessInputProps> = ({
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Filter contestants based on input value
+  // Filter contestants based on input value and mode
   useEffect(() => {
     if (inputValue.trim().length === 0) {
       setFilteredContestants([]);
@@ -33,11 +35,11 @@ const GuessInput: React.FC<GuessInputProps> = ({
       return;
     }
 
-    const matches = getContestantsByName(inputValue.trim());
+    const matches = getContestantsByNameAndMode(inputValue.trim(), mode.firstTenSeasons, mode.topFiveOnly);
     setFilteredContestants(matches);
     setShowDropdown(matches.length > 0);
     setSelectedIndex(-1);
-  }, [inputValue]);
+  }, [inputValue, mode.firstTenSeasons, mode.topFiveOnly]);
 
   // Clear error when input changes
   useEffect(() => {
@@ -110,8 +112,9 @@ const GuessInput: React.FC<GuessInputProps> = ({
       return;
     }
 
-    // Find exact match first
-    const exactMatch = contestants.find(
+    // Find exact match first (within mode-filtered contestants)
+    const modeContestants = getContestantsByMode(mode.firstTenSeasons, mode.topFiveOnly);
+    const exactMatch = modeContestants.find(
       contestant => contestant.name.toLowerCase() === trimmedInput.toLowerCase()
     );
 

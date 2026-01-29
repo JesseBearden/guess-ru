@@ -106,7 +106,13 @@ describe('Property 15: Client-Side Architecture', () => {
         expect(fetchCalls).toHaveLength(0);
         
         // Verify state was persisted correctly
-        expect(loadedState).toEqual(gameState);
+        // Note: saveGameState adds modeKey to the saved state, so we need to account for that
+        expect(loadedState).toBeDefined();
+        expect(loadedState?.secretQueen).toEqual(gameState.secretQueen);
+        expect(loadedState?.guesses).toEqual(gameState.guesses);
+        expect(loadedState?.isComplete).toEqual(gameState.isComplete);
+        expect(loadedState?.isWon).toEqual(gameState.isWon);
+        expect(loadedState?.gameDate).toEqual(gameState.gameDate);
       }),
       { numRuns: 100 }
     );
@@ -212,7 +218,12 @@ describe('Property 15: Client-Side Architecture', () => {
         const storedStats = JSON.parse(localStorage.getItem('guessru_statistics')!);
         const storedPrefs = JSON.parse(localStorage.getItem('guessru_preferences')!);
         
-        expect(storedGameState).toEqual(gameState);
+        // Note: saveGameState adds modeKey to the saved state
+        expect(storedGameState.secretQueen).toEqual(gameState.secretQueen);
+        expect(storedGameState.guesses).toEqual(gameState.guesses);
+        expect(storedGameState.isComplete).toEqual(gameState.isComplete);
+        expect(storedGameState.isWon).toEqual(gameState.isWon);
+        expect(storedGameState.gameDate).toEqual(gameState.gameDate);
         expect(storedStats).toEqual(statistics);
         expect(storedPrefs).toEqual({ hasSeenInstructions: true, showSilhouette: false });
       }),

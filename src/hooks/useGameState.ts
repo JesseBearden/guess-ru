@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { GameState, Contestant, Guess, FeedbackType, DirectionType } from '../types';
+import { GameState, Contestant, Guess, FeedbackType, DirectionType, GameMode, getModeKey, DEFAULT_GAME_MODE } from '../types';
 import { getDailyQueen, getPacificDateString } from '../utilities/dailyQueenSelection';
 import { getContestantById } from '../utilities/contestantDatabase';
 import { saveGameState, loadGameState, performDailyCleanup } from '../utilities/localStorage';
@@ -21,21 +21,24 @@ interface UseGameStateReturn {
 /**
  * Custom hook for managing game state
  * Handles guess submission, validation, feedback calculation, and win/loss conditions
+ * @param mode Optional game mode, defaults to DEFAULT_GAME_MODE
  */
-export const useGameState = (): UseGameStateReturn => {
+export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateReturn => {
+  const modeKey = getModeKey(mode);
+  
   const [gameState, setGameState] = useState<GameState>(() => {
     // Perform daily cleanup first
     performDailyCleanup();
     
-    // Try to load existing game state
-    const savedGameState = loadGameState();
+    // Try to load existing game state for this mode
+    const savedGameState = loadGameState(modeKey);
     if (savedGameState) {
       return savedGameState;
     }
     
     // Initialize new game state if no saved state found
     const today = getPacificDateString();
-    const secretQueen = getDailyQueen();
+    const secretQueen = getDailyQueen(new Date(), mode);
     
     return {
       secretQueen,
@@ -43,7 +46,8 @@ export const useGameState = (): UseGameStateReturn => {
       isComplete: false,
       isWon: false,
       startTime: Date.now(),
-      gameDate: today
+      gameDate: today,
+      modeKey
     };
   });
 
@@ -181,7 +185,7 @@ export const useGameState = (): UseGameStateReturn => {
    */
   const resetGame = useCallback(() => {
     const today = getPacificDateString();
-    const secretQueen = getDailyQueen();
+    const secretQueen = getDailyQueen(new Date(), mode);
     
     setGameState({
       secretQueen,
@@ -189,9 +193,10 @@ export const useGameState = (): UseGameStateReturn => {
       isComplete: false,
       isWon: false,
       startTime: Date.now(),
-      gameDate: today
+      gameDate: today,
+      modeKey
     });
-  }, []);
+  }, [mode, modeKey]);
 
   /**
    * Check if a new day has started and reset if needed
@@ -204,11 +209,39 @@ export const useGameState = (): UseGameStateReturn => {
   }, [gameState.gameDate, resetGame]);
 
   /**
+   * Reinitialize game state when mode changes
+   */
+  useEffect(() => {
+    // Check if mode has changed
+    if (gameState.modeKey !== modeKey) {
+      // Try to load existing game state for the new mode
+      const savedGameState = loadGameState(modeKey);
+      if (savedGameState) {
+        setGameState(savedGameState);
+      } else {
+        // Initialize new game state for this mode
+        const today = getPacificDateString();
+        const secretQueen = getDailyQueen(new Date(), mode);
+        
+        setGameState({
+          secretQueen,
+          guesses: [],
+          isComplete: false,
+          isWon: false,
+          startTime: Date.now(),
+          gameDate: today,
+          modeKey
+        });
+      }
+    }
+  }, [mode, modeKey, gameState.modeKey]);
+
+  /**
    * Save game state to localStorage whenever it changes
    */
   useEffect(() => {
-    saveGameState(gameState);
-  }, [gameState]);
+    saveGameState(gameState, modeKey);
+  }, [gameState, modeKey]);
 
   /**
    * Update statistics when game completes
@@ -220,6 +253,7 @@ export const useGameState = (): UseGameStateReturn => {
       // Mark stats as recorded to prevent duplicate counting on refresh
       setGameState(prev => ({ ...prev, statsRecorded: true }));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameState.isComplete, gameState.endTime, gameState.statsRecorded]);
 
   /**
@@ -234,7 +268,7 @@ export const useGameState = (): UseGameStateReturn => {
          newGameState.guesses.length !== gameState.guesses.length)) {
       setGameState(newGameState);
     }
-  }, [gameState]);
+  }, [gameState.startTime, gameState.endTime, gameState.guesses.length]);
 
   useTimerSync({ onGameStateChange: handleGameStateSync });
 

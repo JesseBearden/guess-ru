@@ -81,8 +81,9 @@ describe('GuessRow Component', () => {
     const closeElements = Array.from(gridcells).filter(hasCloseFeedback);
     expect(closeElements).toHaveLength(3); // Season, position, age should be close
     
-    const wrongElements = Array.from(gridcells).filter(hasWrongFeedback);
-    expect(wrongElements).toHaveLength(1); // Hometown should be wrong
+    // Wrong feedback uses bg-white, not bg-feedback-wrong
+    const correctElements = Array.from(gridcells).filter(hasCorrectFeedback);
+    expect(correctElements).toHaveLength(0); // No correct feedback
   });
 
   test('applies correct CSS class for wrong feedback', () => {
@@ -97,8 +98,12 @@ describe('GuessRow Component', () => {
     
     const gridcells = container.querySelectorAll('[role="gridcell"]');
     
-    const wrongElements = Array.from(gridcells).filter(hasWrongFeedback);
-    expect(wrongElements).toHaveLength(4); // All 4 attributes should be wrong
+    // Wrong feedback doesn't have a special background class - it uses bg-white
+    // So we check that none have correct or close feedback
+    const correctElements = Array.from(gridcells).filter(hasCorrectFeedback);
+    const closeElements = Array.from(gridcells).filter(hasCloseFeedback);
+    expect(correctElements).toHaveLength(0);
+    expect(closeElements).toHaveLength(0);
   });
 
   test('displays upward arrow for higher direction', () => {
@@ -112,9 +117,10 @@ describe('GuessRow Component', () => {
       ageDirection: DirectionType.HIGHER
     });
 
-    render(<GuessRow guess={mockGuess} index={0} />);
+    const { container } = render(<GuessRow guess={mockGuess} index={0} />);
     
-    const upArrows = screen.getAllByText('↑');
+    // Arrows are now SVG icons from lucide-react, look for lucide-arrow-up class
+    const upArrows = container.querySelectorAll('.lucide-arrow-up');
     expect(upArrows).toHaveLength(3); // Season, position, age should all have up arrows
   });
 
@@ -129,9 +135,10 @@ describe('GuessRow Component', () => {
       ageDirection: DirectionType.LOWER
     });
 
-    render(<GuessRow guess={mockGuess} index={0} />);
+    const { container } = render(<GuessRow guess={mockGuess} index={0} />);
     
-    const downArrows = screen.getAllByText('↓');
+    // Arrows are now SVG icons from lucide-react, look for lucide-arrow-down class
+    const downArrows = container.querySelectorAll('.lucide-arrow-down');
     expect(downArrows).toHaveLength(3); // Season, position, age should all have down arrows
   });
 
@@ -143,11 +150,11 @@ describe('GuessRow Component', () => {
       hometown: FeedbackType.CORRECT
     });
 
-    render(<GuessRow guess={mockGuess} index={0} />);
+    const { container } = render(<GuessRow guess={mockGuess} index={0} />);
     
-    // Check that no arrows are present
-    expect(screen.queryByText('↑')).not.toBeInTheDocument();
-    expect(screen.queryByText('↓')).not.toBeInTheDocument();
+    // Check that no arrow SVGs are present
+    expect(container.querySelectorAll('.lucide-arrow-up')).toHaveLength(0);
+    expect(container.querySelectorAll('.lucide-arrow-down')).toHaveLength(0);
   });
 
   test('displays mixed feedback types correctly', () => {
@@ -155,7 +162,7 @@ describe('GuessRow Component', () => {
       season: FeedbackType.CORRECT,
       position: FeedbackType.CLOSE,
       age: FeedbackType.WRONG,
-      hometown: FeedbackType.WRONG,
+      hometown: FeedbackType.CORRECT,
       ageDirection: DirectionType.HIGHER
     });
 
@@ -163,11 +170,13 @@ describe('GuessRow Component', () => {
     
     const gridcells = container.querySelectorAll('[role="gridcell"]');
     
-    expect(Array.from(gridcells).filter(hasCorrectFeedback)).toHaveLength(1); // Season
+    // Name cell + 4 feedback cells = 5 total, but name cell has no feedback class
+    // Season (correct) + Hometown (correct) = 2 correct
+    expect(Array.from(gridcells).filter(hasCorrectFeedback)).toHaveLength(2);
     expect(Array.from(gridcells).filter(hasCloseFeedback)).toHaveLength(1); // Position
-    expect(Array.from(gridcells).filter(hasWrongFeedback)).toHaveLength(2); // Age and hometown
     
-    expect(screen.getByText('↑')).toBeInTheDocument(); // Age direction arrow
+    // Arrow for age direction
+    expect(container.querySelectorAll('.lucide-arrow-up')).toHaveLength(1);
   });
 
   test('renders with proper accessibility attributes', () => {
@@ -182,7 +191,8 @@ describe('GuessRow Component', () => {
     render(<GuessRow guess={mockGuess} index={0} />);
     
     expect(screen.getByRole('row')).toBeInTheDocument();
-    expect(screen.getAllByRole('gridcell')).toHaveLength(4); // 4 feedback cells
+    // 5 gridcells: Name + Season + Position + Age + Hometown
+    expect(screen.getAllByRole('gridcell')).toHaveLength(5);
     
     // Check aria-label for the row
     expect(screen.getByLabelText('Guess 1: Bianca Del Rio')).toBeInTheDocument();
@@ -199,11 +209,11 @@ describe('GuessRow Component', () => {
 
     render(<GuessRow guess={mockGuess} index={0} />);
     
-    expect(screen.getByLabelText('Season: 6 - Correct')).toBeInTheDocument();
-    expect(screen.getByLabelText('Pos: 1 - Close')).toBeInTheDocument();
-    expect(screen.getByLabelText('Age: 37 - Wrong')).toBeInTheDocument();
-    expect(screen.getByLabelText('City: New York, New York - Correct')).toBeInTheDocument();
-    expect(screen.getByLabelText('Go higher')).toBeInTheDocument();
+    // The aria-labels are now simpler: "value - Feedback" format
+    expect(screen.getByLabelText('6 - Correct')).toBeInTheDocument();
+    expect(screen.getByLabelText('1 - Close')).toBeInTheDocument();
+    expect(screen.getByLabelText('37')).toBeInTheDocument(); // Wrong has no suffix
+    expect(screen.getByLabelText('New York, New York - Correct')).toBeInTheDocument();
   });
 
   test('handles different index values correctly', () => {

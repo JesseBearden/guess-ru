@@ -1,5 +1,26 @@
-import { GameState, ShareResults, FeedbackType } from '../types';
+import { GameState, ShareResults, FeedbackType, GameModeKey } from '../types';
 import { getGameNumber } from './dailyQueenSelection';
+
+/**
+ * Mode icons for share results
+ * 👑 = All Queens (hardest - crown worthy)
+ * 🔟 = First 10 Seasons
+ * 🔝 = Top 5 Only
+ */
+const getModeIcon = (modeKey: GameModeKey): string => {
+  switch (modeKey) {
+    case 'default':
+      return '👑'; // All queens - hardest mode gets the crown
+    case 'first10':
+      return '🔟'; // First 10 seasons only
+    case 'top5':
+      return '🔝'; // Top 5 only
+    case 'first10-top5':
+      return '🔟🔝'; // Both filters
+    default:
+      return '';
+  }
+};
 
 /**
  * Formats elapsed time from milliseconds to MM:SS format
@@ -63,6 +84,7 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
   const gameNumber = getGameNumber(gameDate);
   const guessCount = gameState.guesses.length;
   const timeElapsed = formatElapsedTime(gameState.startTime, gameState.endTime);
+  const modeKey = gameState.modeKey || 'default';
   
   // Generate pattern for each guess
   const guessPattern = gameState.guesses.map(guess => generateGuessPattern(guess));
@@ -72,7 +94,8 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
     guessCount,
     totalGuesses: 8,
     timeElapsed,
-    guessPattern
+    guessPattern,
+    modeKey
   };
 };
 
@@ -83,11 +106,12 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
  * @returns Formatted text string ready for sharing
  */
 export const formatShareText = (shareResults: ShareResults, isWon: boolean): string => {
-  const { gameNumber, guessCount, totalGuesses, timeElapsed, guessPattern } = shareResults;
+  const { gameNumber, guessCount, totalGuesses, timeElapsed, guessPattern, modeKey } = shareResults;
   
-  // Header line with game number and result
+  // Header line with game number, mode icon, and result
   const resultText = isWon ? `${guessCount}/${totalGuesses}` : 'X/8';
-  const header = `GuessRu #${gameNumber} ${resultText} ⏱️ ${timeElapsed}`;
+  const modeIcon = getModeIcon(modeKey || 'default');
+  const header = `GuessRu #${gameNumber} ${modeIcon} ${resultText} ⏱️ ${timeElapsed}`;
   
   // Empty line
   const emptyLine = '';
