@@ -16,12 +16,12 @@ const GuessHistory: React.FC<GuessHistoryProps> = ({
 
   return (
     <div className="w-full" role="grid" aria-label="Guess history">
-      {/* Column headers - always visible at top */}
+      {/* Column headers - Desktop: 5 columns with Name | Mobile: 4 columns without Name */}
       <div 
-        className="grid grid-cols-5 gap-0 mb-3 border-b-2 border-dashed border-text-dark/40"
+        className="grid grid-cols-4 md:grid-cols-5 gap-0 mb-3 border-b-2 border-dashed border-text-dark/40"
         role="row"
       >
-        <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
+        <div className="hidden md:block text-center text-sm font-bold text-text-dark py-2" role="columnheader">
           Name
         </div>
         <div className="text-center text-sm font-bold text-text-dark py-2" role="columnheader">
@@ -60,18 +60,25 @@ const GuessHistory: React.FC<GuessHistoryProps> = ({
 const PlaceholderRow: React.FC<{ number: number }> = ({ number }) => {
   return (
     <div 
-      className="grid grid-cols-5 gap-0 border-2 border-dashed border-text-dark/30 rounded-lg
+      className="grid grid-cols-4 md:grid-cols-5 gap-0 border-2 border-dashed border-text-dark/30 rounded-lg
                  bg-white/30 transition-all duration-200 hover:border-text-dark/50 hover:bg-white/50"
       role="row"
       aria-label={`Guess slot ${number} - empty`}
     >
-      {[...Array(5)].map((_, i) => (
+      {/* Desktop: 5 columns | Mobile: 4 columns */}
+      <div className="hidden md:flex py-4 items-center justify-center border-r border-dashed border-text-dark/30">
+        <span className="text-xl font-bold text-text-dark/40 select-none">
+          {number}
+        </span>
+      </div>
+      {[...Array(4)].map((_, i) => (
         <div 
           key={i} 
-          className={`py-4 flex items-center justify-center ${i < 4 ? 'border-r border-dashed border-text-dark/30' : ''}`}
+          className={`py-4 flex items-center justify-center ${i < 3 ? 'border-r border-dashed border-text-dark/30' : ''}`}
         >
+          {/* Show number in first cell on mobile only */}
           {i === 0 && (
-            <span className="text-xl font-bold text-text-dark/40 select-none">
+            <span className="md:hidden text-xl font-bold text-text-dark/40 select-none">
               {number}
             </span>
           )}

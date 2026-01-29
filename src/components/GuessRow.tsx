@@ -17,11 +17,18 @@ const GuessRow: React.FC<GuessRowProps> = ({ guess, index }) => {
       role="row" 
       aria-label={`Guess ${index + 1}: ${contestant.name}`}
     >
-      {/* 5 column grid matching header */}
-      <div className="grid grid-cols-5 gap-0">
-        {/* Name */}
+      {/* Mobile: Name above the row - centered */}
+      <div className="md:hidden bg-white border-b-2 border-text-dark px-3 py-2 text-center">
+        <span className="font-bold text-text-dark text-sm">
+          {contestant.name}
+        </span>
+      </div>
+
+      {/* Desktop: 5 column grid with name | Mobile: 4 column grid without name */}
+      <div className="grid grid-cols-4 md:grid-cols-5 gap-0">
+        {/* Name - Desktop only */}
         <div 
-          className="flex items-center justify-center p-2 border-r border-text-dark bg-white min-h-[50px] rounded-l-md"
+          className="hidden md:flex items-center justify-center p-2 border-r border-text-dark bg-white min-h-[50px] rounded-l-md"
           role="gridcell"
         >
           <span className="font-bold text-text-dark text-sm text-center">

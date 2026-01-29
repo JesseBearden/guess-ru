@@ -127,9 +127,9 @@ describe('Integration Tests: Complete Game Flows', () => {
       await userEvent.type(input, contestants[1].name);
       await userEvent.keyboard('{Enter}');
       
-      // Wait for guess to appear in history
+      // Wait for guess to appear in history - name appears twice (mobile + desktop)
       await waitFor(() => {
-        expect(screen.getByText(contestants[1].name)).toBeInTheDocument();
+        expect(screen.getAllByText(contestants[1].name).length).toBeGreaterThanOrEqual(1);
       });
     });
   });
@@ -190,9 +190,9 @@ describe('Integration Tests: Complete Game Flows', () => {
       
       render(<App />);
       
-      // Verify guess is restored - the contestant name should appear
+      // Verify guess is restored - the contestant name should appear (twice: mobile + desktop)
       await waitFor(() => {
-        expect(screen.getByText(contestants[1].name)).toBeInTheDocument();
+        expect(screen.getAllByText(contestants[1].name).length).toBeGreaterThanOrEqual(1);
       });
     });
   });
@@ -315,9 +315,9 @@ describe('Integration Tests: Complete Game Flows', () => {
       await userEvent.type(input, contestants[1].name);
       await userEvent.keyboard('{Enter}');
       
-      // Guess should appear in history
+      // Guess should appear in history - name appears twice (mobile + desktop)
       await waitFor(() => {
-        expect(screen.getByText(contestants[1].name)).toBeInTheDocument();
+        expect(screen.getAllByText(contestants[1].name).length).toBeGreaterThanOrEqual(1);
       });
     });
   });

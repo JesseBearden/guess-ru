@@ -42,7 +42,8 @@ describe('GuessRow Component', () => {
 
     render(<GuessRow guess={mockGuess} index={0} />);
     
-    expect(screen.getByText('Bianca Del Rio')).toBeInTheDocument();
+    // Name appears twice (mobile + desktop), so use getAllByText
+    expect(screen.getAllByText('Bianca Del Rio').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('6')).toBeInTheDocument(); // Season
     expect(screen.getByText('1')).toBeInTheDocument(); // Position
     expect(screen.getByText('37')).toBeInTheDocument(); // Age
@@ -250,7 +251,8 @@ describe('GuessRow Component', () => {
 
     render(<GuessRow guess={mockGuess} index={0} />);
     
-    expect(screen.getByText('A Very Long Drag Queen Name That Might Wrap')).toBeInTheDocument();
+    // Name appears twice (mobile + desktop), so use getAllByText
+    expect(screen.getAllByText('A Very Long Drag Queen Name That Might Wrap').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('A Very Long City Name, A Very Long State Name')).toBeInTheDocument();
   });
 

@@ -59,15 +59,15 @@ describe('GuessHistory Component', () => {
   test('displays 8 placeholder boxes when no guesses provided', () => {
     render(<GuessHistory guesses={[]} />);
     
-    // Should show 8 placeholder slots
-    expect(screen.getByText('1')).toBeInTheDocument();
-    expect(screen.getByText('2')).toBeInTheDocument();
-    expect(screen.getByText('3')).toBeInTheDocument();
-    expect(screen.getByText('4')).toBeInTheDocument();
-    expect(screen.getByText('5')).toBeInTheDocument();
-    expect(screen.getByText('6')).toBeInTheDocument();
-    expect(screen.getByText('7')).toBeInTheDocument();
-    expect(screen.getByText('8')).toBeInTheDocument();
+    // Should show 8 placeholder slots - numbers appear twice (mobile + desktop), so use getAllByText
+    expect(screen.getAllByText('1').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('2').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('3').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('4').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('5').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('6').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('7').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('8').length).toBeGreaterThanOrEqual(1);
   });
 
   test('displays header row with correct column labels', () => {
@@ -120,10 +120,10 @@ describe('GuessHistory Component', () => {
 
     render(<GuessHistory guesses={mockGuesses} />);
     
-    // Check that all contestant names are displayed
-    expect(screen.getByText('Bianca Del Rio')).toBeInTheDocument();
-    expect(screen.getByText('Bob the Drag Queen')).toBeInTheDocument();
-    expect(screen.getByText('Trixie Mattel')).toBeInTheDocument();
+    // Check that all contestant names are displayed - names appear twice (mobile + desktop)
+    expect(screen.getAllByText('Bianca Del Rio').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Bob the Drag Queen').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Trixie Mattel').length).toBeGreaterThanOrEqual(1);
   });
 
   test('shows remaining placeholder slots after guesses', () => {
@@ -233,8 +233,8 @@ describe('GuessHistory Responsive Behavior', () => {
 
     render(<GuessHistory guesses={mockGuesses} />);
     
-    // All essential elements should still be present
-    expect(screen.getByText('Bianca Del Rio')).toBeInTheDocument();
+    // All essential elements should still be present - names appear twice (mobile + desktop)
+    expect(screen.getAllByText('Bianca Del Rio').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('37')).toBeInTheDocument();
     expect(screen.getByText('New York, New York')).toBeInTheDocument();
   });
