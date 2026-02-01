@@ -70,15 +70,15 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isVisible, onClos
             <h3 className="font-bold text-sm mb-2">Color Coding</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-feedback-correct rounded border border-text-dark" aria-hidden="true"></div>
+                <div className="w-6 h-6 bg-feedback-correct rounded border border-text-dark flex-shrink-0" aria-hidden="true"></div>
                 <span className="text-sm"><strong>Green</strong> — Exact match!</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-feedback-close rounded border border-text-dark" aria-hidden="true"></div>
-                <span className="text-sm"><strong>Yellow</strong> — Close (within 3 for numbers, 75 miles for hometown)</span>
+                <div className="w-6 h-6 bg-feedback-close rounded border border-text-dark flex-shrink-0" aria-hidden="true"></div>
+                <span className="text-sm"><strong>Yellow</strong> — Close (within 3 for numbers, 150 miles for hometown)</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-white rounded border border-text-dark" aria-hidden="true"></div>
+                <div className="w-6 h-6 bg-white rounded border border-text-dark flex-shrink-0" aria-hidden="true"></div>
                 <span className="text-sm"><strong>White</strong> — Not a match</span>
               </div>
             </div>

@@ -94,13 +94,13 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
       feedback.ageDirection = guessedContestant.ageAtShow < secretQueen.ageAtShow ? DirectionType.HIGHER : DirectionType.LOWER;
     }
 
-    // Hometown feedback (exact match or within 75 miles)
+    // Hometown feedback (exact match or within 150 miles)
     if (guessedContestant.hometown === secretQueen.hometown) {
       feedback.hometown = FeedbackType.CORRECT;
     } else if (
       guessedContestant.hometownCoordinates && 
       secretQueen.hometownCoordinates &&
-      isWithinProximity(guessedContestant.hometownCoordinates, secretQueen.hometownCoordinates, 75)
+      isWithinProximity(guessedContestant.hometownCoordinates, secretQueen.hometownCoordinates, 150)
     ) {
       feedback.hometown = FeedbackType.CLOSE;
     }

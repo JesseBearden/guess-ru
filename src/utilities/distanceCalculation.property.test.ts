@@ -7,7 +7,7 @@ import { HometownCoordinates } from '../types';
  * Property 23: Hometown Proximity Calculation
  * 
  * For any two cities with valid coordinates, the distance calculation should 
- * correctly identify cities within 75 miles and return consistent results.
+ * correctly identify cities within 150 miles and return consistent results.
  * 
  * **Validates: Requirements 3.6, 4.7**
  */
@@ -62,13 +62,13 @@ describe('Property 23: Hometown Proximity Calculation', () => {
     );
   });
 
-  it('should correctly identify cities within 75 miles as proximate', () => {
+  it('should correctly identify cities within 150 miles as proximate', () => {
     fc.assert(
       fc.property(coordinatesArb, coordinatesArb, (coord1, coord2) => {
         const distance = calculateDistance(coord1, coord2);
-        const isProximate = isWithinProximity(coord1, coord2, 75);
+        const isProximate = isWithinProximity(coord1, coord2, 150);
         
-        if (distance <= 75) {
+        if (distance <= 150) {
           return isProximate === true;
         } else {
           return isProximate === false;
@@ -120,14 +120,14 @@ describe('Property 23: Hometown Proximity Calculation', () => {
       const fortLauderdale: HometownCoordinates = { latitude: 26.1224, longitude: -80.1373 };
       const miami: HometownCoordinates = { latitude: 25.7617, longitude: -80.1918 };
       
-      expect(isWithinProximity(fortLauderdale, miami, 75)).toBe(true);
+      expect(isWithinProximity(fortLauderdale, miami, 150)).toBe(true);
     });
 
     it('should identify distant cities as not within proximity', () => {
       const nyc: HometownCoordinates = { latitude: 40.7128, longitude: -74.0060 };
       const la: HometownCoordinates = { latitude: 34.0522, longitude: -118.2437 };
       
-      expect(isWithinProximity(nyc, la, 75)).toBe(false);
+      expect(isWithinProximity(nyc, la, 150)).toBe(false);
     });
   });
 });

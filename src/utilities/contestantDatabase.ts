@@ -106,7 +106,8 @@ export const contestants: Contestant[] = [
     hometown: 'Minneapolis, Minnesota',
     hometownCoordinates: cityCoordinates['Minneapolis, Minnesota'],
     headshotUrl: '/images/headshots/bebe-zahara-benet.jpg',
-    silhouetteUrl: '/images/silhouettes/bebe-zahara-benet.jpg'
+    silhouetteUrl: '/images/silhouettes/bebe-zahara-benet.jpg',
+    entranceQuote: '****, nice to meet you!'
   },
   {
     id: 'nina-flowers',
@@ -117,7 +118,8 @@ export const contestants: Contestant[] = [
     hometown: 'Bayamón, Puerto Rico',
     hometownCoordinates: cityCoordinates['Bayamón, Puerto Rico'],
     headshotUrl: '/images/headshots/nina-flowers.jpg',
-    silhouetteUrl: '/images/silhouettes/nina-flowers.jpg'
+    silhouetteUrl: '/images/silhouettes/nina-flowers.jpg',
+    entranceQuote: 'Hi'
   },
   {
     id: 'rebecca-glasscock',
@@ -128,7 +130,8 @@ export const contestants: Contestant[] = [
     hometown: 'Fort Lauderdale, Florida',
     hometownCoordinates: cityCoordinates['Fort Lauderdale, Florida'],
     headshotUrl: '/images/headshots/rebecca-glasscock.jpg',
-    silhouetteUrl: '/images/silhouettes/rebecca-glasscock.jpg'
+    silhouetteUrl: '/images/silhouettes/rebecca-glasscock.jpg',
+    entranceQuote: 'Hello, what\'s up?'
   },
   {
     id: 'shannel',
@@ -139,7 +142,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/shannel.jpg',
-    silhouetteUrl: '/images/silhouettes/shannel.jpg'
+    silhouetteUrl: '/images/silhouettes/shannel.jpg',
+    entranceQuote: 'Wooh, my God! Look at this! Wow, crazy, crazy, crazy!'
   },
   {
     id: 'ongina',
@@ -150,7 +154,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/ongina.jpg',
-    silhouetteUrl: '/images/silhouettes/ongina.jpg'
+    silhouetteUrl: '/images/silhouettes/ongina.jpg',
+    entranceQuote: 'Hi, you guys are fabulous'
   },
   {
     id: 'jade-s1',
@@ -161,7 +166,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/jade-s1.jpg',
-    silhouetteUrl: '/images/silhouettes/jade-s1.jpg'
+    silhouetteUrl: '/images/silhouettes/jade-s1.jpg',
+    entranceQuote: 'Hi'
   },
   {
     id: 'akashia',
@@ -172,7 +178,8 @@ export const contestants: Contestant[] = [
     hometown: 'Cleveland, Ohio',
     hometownCoordinates: cityCoordinates['Cleveland, Ohio'],
     headshotUrl: '/images/headshots/akashia.jpg',
-    silhouetteUrl: '/images/silhouettes/akashia.jpg'
+    silhouetteUrl: '/images/silhouettes/akashia.jpg',
+    entranceQuote: 'Ow!'
   },
   {
     id: 'tammie-brown',
@@ -183,7 +190,8 @@ export const contestants: Contestant[] = [
     hometown: 'Glen Burnie, Maryland',
     hometownCoordinates: cityCoordinates['Glen Burnie, Maryland'],
     headshotUrl: '/images/headshots/tammie-brown.jpg',
-    silhouetteUrl: '/images/silhouettes/tammie-brown.jpg'
+    silhouetteUrl: '/images/silhouettes/tammie-brown.jpg',
+    entranceQuote: '👍'
   },
   {
     id: 'victoria-porkchop-parker',
@@ -194,7 +202,8 @@ export const contestants: Contestant[] = [
     hometown: 'Raleigh, North Carolina',
     hometownCoordinates: cityCoordinates['Raleigh, North Carolina'],
     headshotUrl: '/images/headshots/victoria-porkchop-parker.jpg',
-    silhouetteUrl: '/images/silhouettes/victoria-porkchop-parker.jpg'
+    silhouetteUrl: '/images/silhouettes/victoria-porkchop-parker.jpg',
+    entranceQuote: 'Hey girls, what\'s going on?'
   },
 
   // Season 2
@@ -207,7 +216,8 @@ export const contestants: Contestant[] = [
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
     headshotUrl: '/images/headshots/tyra-sanchez.jpg',
-    silhouetteUrl: '/images/silhouettes/tyra-sanchez.jpg'
+    silhouetteUrl: '/images/silhouettes/tyra-sanchez.jpg',
+    entranceQuote: '(walks in)'
   },
   {
     id: 'raven',
@@ -218,7 +228,8 @@ export const contestants: Contestant[] = [
     hometown: 'Riverside, California',
     hometownCoordinates: cityCoordinates['Riverside, California'],
     headshotUrl: '/images/headshots/raven.jpg',
-    silhouetteUrl: '/images/silhouettes/raven.jpg'
+    silhouetteUrl: '/images/silhouettes/raven.jpg',
+    entranceQuote: 'What\'s up bitches?'
   },
   {
     id: 'jujubee',
@@ -229,7 +240,8 @@ export const contestants: Contestant[] = [
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
     headshotUrl: '/images/headshots/jujubee.jpg',
-    silhouetteUrl: '/images/silhouettes/jujubee.jpg'
+    silhouetteUrl: '/images/silhouettes/jujubee.jpg',
+    entranceQuote: 'What a sin!'
   },
   {
     id: 'tatianna',
@@ -240,7 +252,8 @@ export const contestants: Contestant[] = [
     hometown: 'Falls Church, Virginia',
     hometownCoordinates: cityCoordinates['Falls Church, Virginia'],
     headshotUrl: '/images/headshots/tatianna.jpg',
-    silhouetteUrl: '/images/silhouettes/tatianna.jpg'
+    silhouetteUrl: '/images/silhouettes/tatianna.jpg',
+    entranceQuote: '(walks in)'
   },
   {
     id: 'pandora-boxx',
@@ -251,7 +264,8 @@ export const contestants: Contestant[] = [
     hometown: 'Rochester, New York',
     hometownCoordinates: cityCoordinates['Rochester, New York'],
     headshotUrl: '/images/headshots/pandora-boxx.jpg',
-    silhouetteUrl: '/images/silhouettes/pandora-boxx.jpg'
+    silhouetteUrl: '/images/silhouettes/pandora-boxx.jpg',
+    entranceQuote: 'Hey fake ladies!'
   },
   {
     id: 'jessica-wild',
@@ -262,7 +276,8 @@ export const contestants: Contestant[] = [
     hometown: 'San Juan, Puerto Rico',
     hometownCoordinates: cityCoordinates['San Juan, Puerto Rico'],
     headshotUrl: '/images/headshots/jessica-wild.jpg',
-    silhouetteUrl: '/images/silhouettes/jessica-wild.jpg'
+    silhouetteUrl: '/images/silhouettes/jessica-wild.jpg',
+    entranceQuote: 'Oh my God!'
   },
   {
     id: 'sahara-davenport',
@@ -273,7 +288,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/sahara-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/sahara-davenport.jpg'
+    silhouetteUrl: '/images/silhouettes/sahara-davenport.jpg',
+    entranceQuote: '(screaming)'
   },
   {
     id: 'morgan-mcmichaels',
@@ -284,7 +300,8 @@ export const contestants: Contestant[] = [
     hometown: 'Scotland Neck, North Carolina',
     hometownCoordinates: cityCoordinates['Scotland Neck, North Carolina'],
     headshotUrl: '/images/headshots/morgan-mcmichaels.jpg',
-    silhouetteUrl: '/images/silhouettes/morgan-mcmichaels.jpg'
+    silhouetteUrl: '/images/silhouettes/morgan-mcmichaels.jpg',
+    entranceQuote: 'Bitch!'
   },
   {
     id: 'sonique',
@@ -295,7 +312,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/sonique.jpg',
-    silhouetteUrl: '/images/silhouettes/sonique.jpg'
+    silhouetteUrl: '/images/silhouettes/sonique.jpg',
+    entranceQuote: '(walks in)'
   },
   {
     id: 'mystique-summers-madison',
@@ -306,7 +324,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/mystique-summers-madison.jpg',
-    silhouetteUrl: '/images/silhouettes/mystique-summers-madison.jpg'
+    silhouetteUrl: '/images/silhouettes/mystique-summers-madison.jpg',
+    entranceQuote: 'I\'m ****'
   },
   {
     id: 'nicole-paige-brooks',
@@ -317,7 +336,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/nicole-paige-brooks.jpg',
-    silhouetteUrl: '/images/silhouettes/nicole-paige-brooks.jpg'
+    silhouetteUrl: '/images/silhouettes/nicole-paige-brooks.jpg',
+    entranceQuote: 'Holy shit. I\'m first'
   },
   {
     id: 'shangela',
@@ -328,7 +348,8 @@ export const contestants: Contestant[] = [
     hometown: 'Paris, Texas',
     hometownCoordinates: cityCoordinates['Paris, Texas'],
     headshotUrl: '/images/headshots/shangela.jpg',
-    silhouetteUrl: '/images/silhouettes/shangela.jpg'
+    silhouetteUrl: '/images/silhouettes/shangela.jpg',
+    entranceQuote: 'Hello somebody!'
   },
 
   // Season 3
@@ -341,7 +362,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/raja.jpg',
-    silhouetteUrl: '/images/silhouettes/raja.jpg'
+    silhouetteUrl: '/images/silhouettes/raja.jpg',
+    entranceQuote: '(no words)'
   },
   {
     id: 'manila-luzon',
@@ -352,7 +374,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/manila-luzon.jpg',
-    silhouetteUrl: '/images/silhouettes/manila-luzon.jpg'
+    silhouetteUrl: '/images/silhouettes/manila-luzon.jpg',
+    entranceQuote: 'Hello!'
   },
   {
     id: 'alexis-mateo',
@@ -363,7 +386,8 @@ export const contestants: Contestant[] = [
     hometown: 'St. Petersburg, Florida',
     hometownCoordinates: cityCoordinates['St. Petersburg, Florida'],
     headshotUrl: '/images/headshots/alexis-mateo.jpg',
-    silhouetteUrl: '/images/silhouettes/alexis-mateo.jpg'
+    silhouetteUrl: '/images/silhouettes/alexis-mateo.jpg',
+    entranceQuote: 'Hey, hey, hey! How\'s everybody doing?'
   },
   {
     id: 'yara-sofia',
@@ -374,7 +398,8 @@ export const contestants: Contestant[] = [
     hometown: 'Manati, Puerto Rico',
     hometownCoordinates: cityCoordinates['Manati, Puerto Rico'],
     headshotUrl: '/images/headshots/yara-sofia.jpg',
-    silhouetteUrl: '/images/silhouettes/yara-sofia.jpg'
+    silhouetteUrl: '/images/silhouettes/yara-sofia.jpg',
+    entranceQuote: 'Hi'
   },
   {
     id: 'carmen-carrera',
@@ -385,7 +410,8 @@ export const contestants: Contestant[] = [
     hometown: 'Elmwood Park, New Jersey',
     hometownCoordinates: cityCoordinates['Elmwood Park, New Jersey'],
     headshotUrl: '/images/headshots/carmen-carrera.jpg',
-    silhouetteUrl: '/images/silhouettes/carmen-carrera.jpg'
+    silhouetteUrl: '/images/silhouettes/carmen-carrera.jpg',
+    entranceQuote: '(walks in)'
   },
   {
     id: 'delta-work',
@@ -396,7 +422,8 @@ export const contestants: Contestant[] = [
     hometown: 'Norwalk, California',
     hometownCoordinates: cityCoordinates['Norwalk, California'],
     headshotUrl: '/images/headshots/delta-work.jpg',
-    silhouetteUrl: '/images/silhouettes/delta-work.jpg'
+    silhouetteUrl: '/images/silhouettes/delta-work.jpg',
+    entranceQuote: '(walks in)'
   },
   {
     id: 'stacy-layne-matthews',
@@ -407,7 +434,8 @@ export const contestants: Contestant[] = [
     hometown: 'Back Swamp, North Carolina',
     hometownCoordinates: cityCoordinates['Back Swamp, North Carolina'],
     headshotUrl: '/images/headshots/stacy-layne-matthews.jpg',
-    silhouetteUrl: '/images/silhouettes/stacy-layne-matthews.jpg'
+    silhouetteUrl: '/images/silhouettes/stacy-layne-matthews.jpg',
+    entranceQuote: 'Hi'
   },
   {
     id: 'mariah',
@@ -418,7 +446,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/mariah.jpg',
-    silhouetteUrl: '/images/silhouettes/mariah.jpg'
+    silhouetteUrl: '/images/silhouettes/mariah.jpg',
+    entranceQuote: 'Hey'
   },
   {
     id: 'india-ferrah',
@@ -429,7 +458,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dayton, Ohio',
     hometownCoordinates: cityCoordinates['Dayton, Ohio'],
     headshotUrl: '/images/headshots/india-ferrah.jpg',
-    silhouetteUrl: '/images/silhouettes/india-ferrah.jpg'
+    silhouetteUrl: '/images/silhouettes/india-ferrah.jpg',
+    entranceQuote: 'Prison honey'
   },
   {
     id: 'mimi-imfurst',
@@ -440,7 +470,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/mimi-imfurst.jpg',
-    silhouetteUrl: '/images/silhouettes/mimi-imfurst.jpg'
+    silhouetteUrl: '/images/silhouettes/mimi-imfurst.jpg',
+    entranceQuote: 'Welcome to my party! I brought cookies!'
   },
   {
     id: 'phoenix',
@@ -451,7 +482,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/phoenix.jpg',
-    silhouetteUrl: '/images/silhouettes/phoenix.jpg'
+    silhouetteUrl: '/images/silhouettes/phoenix.jpg',
+    entranceQuote: 'Hi, what\'s going on?'
   },
   {
     id: 'venus-d-lite',
@@ -462,7 +494,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/venus-d-lite.jpg',
-    silhouetteUrl: '/images/silhouettes/venus-d-lite.jpg'
+    silhouetteUrl: '/images/silhouettes/venus-d-lite.jpg',
+    entranceQuote: 'Hello'
   },
 
   // Season 4
@@ -475,7 +508,8 @@ export const contestants: Contestant[] = [
     hometown: 'Pittsburgh, Pennsylvania',
     hometownCoordinates: cityCoordinates['Pittsburgh, Pennsylvania'],
     headshotUrl: '/images/headshots/sharon-needles.jpg',
-    silhouetteUrl: '/images/silhouettes/sharon-needles.jpg'
+    silhouetteUrl: '/images/silhouettes/sharon-needles.jpg',
+    entranceQuote: 'I look spooky, but I\'m really nice!'
   },
   {
     id: 'chad-michaels',
@@ -486,7 +520,8 @@ export const contestants: Contestant[] = [
     hometown: 'San Diego, California',
     hometownCoordinates: cityCoordinates['San Diego, California'],
     headshotUrl: '/images/headshots/chad-michaels.jpg',
-    silhouetteUrl: '/images/silhouettes/chad-michaels.jpg'
+    silhouetteUrl: '/images/silhouettes/chad-michaels.jpg',
+    entranceQuote: 'Morning bitches!'
   },
   {
     id: 'phi-phi-ohara',
@@ -497,7 +532,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/phi-phi-ohara.jpg',
-    silhouetteUrl: '/images/silhouettes/phi-phi-ohara.jpg'
+    silhouetteUrl: '/images/silhouettes/phi-phi-ohara.jpg',
+    entranceQuote: 'Well, hello, hello! How are y\'all doing?'
   },
   {
     id: 'latrice-royale',
@@ -508,7 +544,8 @@ export const contestants: Contestant[] = [
     hometown: 'South Beach, Florida',
     hometownCoordinates: cityCoordinates['South Beach, Florida'],
     headshotUrl: '/images/headshots/latrice-royale.jpg',
-    silhouetteUrl: '/images/silhouettes/latrice-royale.jpg'
+    silhouetteUrl: '/images/silhouettes/latrice-royale.jpg',
+    entranceQuote: 'Eat it!'
   },
   {
     id: 'kenya-michaels',
@@ -519,7 +556,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dorado, Puerto Rico',
     hometownCoordinates: cityCoordinates['Dorado, Puerto Rico'],
     headshotUrl: '/images/headshots/kenya-michaels.jpg',
-    silhouetteUrl: '/images/silhouettes/kenya-michaels.jpg'
+    silhouetteUrl: '/images/silhouettes/kenya-michaels.jpg',
+    entranceQuote: 'Hi girls!'
   },
   {
     id: 'dida-ritz',
@@ -530,7 +568,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/dida-ritz.jpg',
-    silhouetteUrl: '/images/silhouettes/dida-ritz.jpg'
+    silhouetteUrl: '/images/silhouettes/dida-ritz.jpg',
+    entranceQuote: 'Bonjour ladies!'
   },
   {
     id: 'willam',
@@ -541,7 +580,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/willam.jpg',
-    silhouetteUrl: '/images/silhouettes/willam.jpg'
+    silhouetteUrl: '/images/silhouettes/willam.jpg',
+    entranceQuote: '(laughs)'
   },
   {
     id: 'jiggly-caliente',
@@ -552,7 +592,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/jiggly-caliente.jpg',
-    silhouetteUrl: '/images/silhouettes/jiggly-caliente.jpg'
+    silhouetteUrl: '/images/silhouettes/jiggly-caliente.jpg',
+    entranceQuote: 'Hi ladies!'
   },
   {
     id: 'milan',
@@ -563,7 +604,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/milan.jpg',
-    silhouetteUrl: '/images/silhouettes/milan.jpg'
+    silhouetteUrl: '/images/silhouettes/milan.jpg',
+    entranceQuote: 'Hey, there\'s a new girl in town! Let\'s get to business!'
   },
   {
     id: 'madame-laqueer',
@@ -574,7 +616,8 @@ export const contestants: Contestant[] = [
     hometown: 'Carolina, Puerto Rico',
     hometownCoordinates: cityCoordinates['Carolina, Puerto Rico'],
     headshotUrl: '/images/headshots/madame-laqueer.jpg',
-    silhouetteUrl: '/images/silhouettes/madame-laqueer.jpg'
+    silhouetteUrl: '/images/silhouettes/madame-laqueer.jpg',
+    entranceQuote: 'Hiya!'
   },
   {
     id: 'the-princess',
@@ -585,7 +628,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/the-princess.jpg',
-    silhouetteUrl: '/images/silhouettes/the-princess.jpg'
+    silhouetteUrl: '/images/silhouettes/the-princess.jpg',
+    entranceQuote: 'Hello!'
   },
   {
     id: 'lashauwn-beyond',
@@ -596,7 +640,8 @@ export const contestants: Contestant[] = [
     hometown: 'Fort Lauderdale, Florida',
     hometownCoordinates: cityCoordinates['Fort Lauderdale, Florida'],
     headshotUrl: '/images/headshots/lashauwn-beyond.jpg',
-    silhouetteUrl: '/images/silhouettes/lashauwn-beyond.jpg'
+    silhouetteUrl: '/images/silhouettes/lashauwn-beyond.jpg',
+    entranceQuote: 'Hi queen one!'
   },
   {
     id: 'alisa-summers',
@@ -607,7 +652,8 @@ export const contestants: Contestant[] = [
     hometown: 'Tampa, Florida',
     hometownCoordinates: cityCoordinates['Tampa, Florida'],
     headshotUrl: '/images/headshots/alisa-summers.jpg',
-    silhouetteUrl: '/images/silhouettes/alisa-summers.jpg'
+    silhouetteUrl: '/images/silhouettes/alisa-summers.jpg',
+    entranceQuote: 'Hello, how y\'all doing?'
   },
 
   // Season 5
@@ -620,7 +666,8 @@ export const contestants: Contestant[] = [
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
     headshotUrl: '/images/headshots/jinkx-monsoon.jpg',
-    silhouetteUrl: '/images/silhouettes/jinkx-monsoon.jpg'
+    silhouetteUrl: '/images/silhouettes/jinkx-monsoon.jpg',
+    entranceQuote: 'You know, I can hear the cackling from down the street!'
   },
   {
     id: 'alaska',
@@ -631,7 +678,8 @@ export const contestants: Contestant[] = [
     hometown: 'Pittsburgh, Pennsylvania',
     hometownCoordinates: cityCoordinates['Pittsburgh, Pennsylvania'],
     headshotUrl: '/images/headshots/alaska.jpg',
-    silhouetteUrl: '/images/silhouettes/alaska.jpg'
+    silhouetteUrl: '/images/silhouettes/alaska.jpg',
+    entranceQuote: '(neighs) Hiiieeeee!'
   },
   {
     id: 'roxxxy-andrews',
@@ -642,7 +690,8 @@ export const contestants: Contestant[] = [
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
     headshotUrl: '/images/headshots/roxxxy-andrews.jpg',
-    silhouetteUrl: '/images/silhouettes/roxxxy-andrews.jpg'
+    silhouetteUrl: '/images/silhouettes/roxxxy-andrews.jpg',
+    entranceQuote: 'Mash! Are you kidding?'
   },
   {
     id: 'detox',
@@ -653,7 +702,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/detox.jpg',
-    silhouetteUrl: '/images/silhouettes/detox.jpg'
+    silhouetteUrl: '/images/silhouettes/detox.jpg',
+    entranceQuote: 'Holy shit, we\'re here!'
   },
   {
     id: 'coco-montrese',
@@ -664,7 +714,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/coco-montrese.jpg',
-    silhouetteUrl: '/images/silhouettes/coco-montrese.jpg'
+    silhouetteUrl: '/images/silhouettes/coco-montrese.jpg',
+    entranceQuote: 'Oh boys, the diva has arrived!'
   },
   {
     id: 'alyssa-edwards',
@@ -675,7 +726,8 @@ export const contestants: Contestant[] = [
     hometown: 'Mesquite, Texas',
     hometownCoordinates: cityCoordinates['Mesquite, Texas'],
     headshotUrl: '/images/headshots/alyssa-edwards.jpg',
-    silhouetteUrl: '/images/silhouettes/alyssa-edwards.jpg'
+    silhouetteUrl: '/images/silhouettes/alyssa-edwards.jpg',
+    entranceQuote: '(no words)'
   },
   {
     id: 'ivy-winters',
@@ -686,7 +738,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/ivy-winters.jpg',
-    silhouetteUrl: '/images/silhouettes/ivy-winters.jpg'
+    silhouetteUrl: '/images/silhouettes/ivy-winters.jpg',
+    entranceQuote: 'Hey hey hey ladies! Aahhhhh!'
   },
   {
     id: 'jade-jolie',
@@ -697,7 +750,8 @@ export const contestants: Contestant[] = [
     hometown: 'Gainesville, Florida',
     hometownCoordinates: cityCoordinates['Gainesville, Florida'],
     headshotUrl: '/images/headshots/jade-jolie.jpg',
-    silhouetteUrl: '/images/silhouettes/jade-jolie.jpg'
+    silhouetteUrl: '/images/silhouettes/jade-jolie.jpg',
+    entranceQuote: 'Hey girls hey! What\'s going on pussycats?'
   },
   {
     id: 'lineysha-sparx',
@@ -708,7 +762,8 @@ export const contestants: Contestant[] = [
     hometown: 'San Juan, Puerto Rico',
     hometownCoordinates: cityCoordinates['San Juan, Puerto Rico'],
     headshotUrl: '/images/headshots/lineysha-sparx.jpg',
-    silhouetteUrl: '/images/silhouettes/lineysha-sparx.jpg'
+    silhouetteUrl: '/images/silhouettes/lineysha-sparx.jpg',
+    entranceQuote: '(no words)'
   },
   {
     id: 'honey-mahogany',
@@ -719,7 +774,8 @@ export const contestants: Contestant[] = [
     hometown: 'San Francisco, California',
     hometownCoordinates: cityCoordinates['San Francisco, California'],
     headshotUrl: '/images/headshots/honey-mahogany.jpg',
-    silhouetteUrl: '/images/silhouettes/honey-mahogany.jpg'
+    silhouetteUrl: '/images/silhouettes/honey-mahogany.jpg',
+    entranceQuote: 'Hey sisters!'
   },
   {
     id: 'vivienne-pinay',
@@ -730,7 +786,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/vivienne-pinay.jpg',
-    silhouetteUrl: '/images/silhouettes/vivienne-pinay.jpg'
+    silhouetteUrl: '/images/silhouettes/vivienne-pinay.jpg',
+    entranceQuote: 'Hey y\'all!'
   },
   {
     id: 'monica-beverly-hillz',
@@ -741,7 +798,8 @@ export const contestants: Contestant[] = [
     hometown: 'Owensboro, Kentucky',
     hometownCoordinates: cityCoordinates['Owensboro, Kentucky'],
     headshotUrl: '/images/headshots/monica-beverly-hillz.jpg',
-    silhouetteUrl: '/images/silhouettes/monica-beverly-hillz.jpg'
+    silhouetteUrl: '/images/silhouettes/monica-beverly-hillz.jpg',
+    entranceQuote: 'Hello girls.'
   },
   {
     id: 'serena-chacha',
@@ -752,7 +810,8 @@ export const contestants: Contestant[] = [
     hometown: 'Tallahassee, Florida',
     hometownCoordinates: cityCoordinates['Tallahassee, Florida'],
     headshotUrl: '/images/headshots/serena-chacha.jpg',
-    silhouetteUrl: '/images/silhouettes/serena-chacha.jpg'
+    silhouetteUrl: '/images/silhouettes/serena-chacha.jpg',
+    entranceQuote: 'This is the best quinceanera present ever!'
   },
   {
     id: 'penny-tration',
@@ -763,7 +822,8 @@ export const contestants: Contestant[] = [
     hometown: 'Cincinnati, Ohio',
     hometownCoordinates: cityCoordinates['Cincinnati, Ohio'],
     headshotUrl: '/images/headshots/penny-tration.jpg',
-    silhouetteUrl: '/images/silhouettes/penny-tration.jpg'
+    silhouetteUrl: '/images/silhouettes/penny-tration.jpg',
+    entranceQuote: 'Hello boys!'
   },
 
   // Season 6
@@ -776,7 +836,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-    silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
+    silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg',
+    entranceQuote: 'Well well well, I hope you bitches are ready.'
   },
   {
     id: 'adore-delano',
@@ -787,7 +848,8 @@ export const contestants: Contestant[] = [
     hometown: 'Azusa, California',
     hometownCoordinates: cityCoordinates['Azusa, California'],
     headshotUrl: '/images/headshots/adore-delano.jpg',
-    silhouetteUrl: '/images/silhouettes/adore-delano.jpg'
+    silhouetteUrl: '/images/silhouettes/adore-delano.jpg',
+    entranceQuote: 'I\'m home! Fuck yeah, I\'m the first one!'
   },
   {
     id: 'courtney-act',
@@ -798,7 +860,8 @@ export const contestants: Contestant[] = [
     hometown: 'West Hollywood, California',
     hometownCoordinates: cityCoordinates['West Hollywood, California'],
     headshotUrl: '/images/headshots/courtney-act.jpg',
-    silhouetteUrl: '/images/silhouettes/courtney-act.jpg'
+    silhouetteUrl: '/images/silhouettes/courtney-act.jpg',
+    entranceQuote: 'Is this America\'s Next Top Model? Oh, sorry… just kidding!'
   },
   {
     id: 'darienne-lake',
@@ -809,7 +872,8 @@ export const contestants: Contestant[] = [
     hometown: 'Rochester, New York',
     hometownCoordinates: cityCoordinates['Rochester, New York'],
     headshotUrl: '/images/headshots/darienne-lake.jpg',
-    silhouetteUrl: '/images/silhouettes/darienne-lake.jpg'
+    silhouetteUrl: '/images/silhouettes/darienne-lake.jpg',
+    entranceQuote: 'They better widen the doorways and reinforce the runways, because the big girl\'s in the house!'
   },
   {
     id: 'bendelacreme',
@@ -820,7 +884,8 @@ export const contestants: Contestant[] = [
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
     headshotUrl: '/images/headshots/bendelacreme.jpg',
-    silhouetteUrl: '/images/silhouettes/bendelacreme.jpg'
+    silhouetteUrl: '/images/silhouettes/bendelacreme.jpg',
+    entranceQuote: 'Hi everybody, it\'s me, ****! Ooh, there\'s one!'
   },
   {
     id: 'joslyn-fox',
@@ -831,7 +896,8 @@ export const contestants: Contestant[] = [
     hometown: 'Worcester, Massachusetts',
     hometownCoordinates: cityCoordinates['Worcester, Massachusetts'],
     headshotUrl: '/images/headshots/joslyn-fox.jpg',
-    silhouetteUrl: '/images/silhouettes/joslyn-fox.jpg'
+    silhouetteUrl: '/images/silhouettes/joslyn-fox.jpg',
+    entranceQuote: '(laughs)'
   },
   {
     id: 'trinity-k-bonet',
@@ -842,7 +908,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/trinity-k-bonet.jpg',
-    silhouetteUrl: '/images/silhouettes/trinity-k-bonet.jpg'
+    silhouetteUrl: '/images/silhouettes/trinity-k-bonet.jpg',
+    entranceQuote: 'Hi'
   },
   {
     id: 'laganja-estranja',
@@ -853,7 +920,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/laganja-estranja.jpg',
-    silhouetteUrl: '/images/silhouettes/laganja-estranja.jpg'
+    silhouetteUrl: '/images/silhouettes/laganja-estranja.jpg',
+    entranceQuote: 'Oh, y\'all wanted a twist, ey? Come on Season 6, let\'s get sickening! Yassss!'
   },
   {
     id: 'milk',
@@ -864,7 +932,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/milk.jpg',
-    silhouetteUrl: '/images/silhouettes/milk.jpg'
+    silhouetteUrl: '/images/silhouettes/milk.jpg',
+    entranceQuote: '****! She does a body good, girl!'
   },
   {
     id: 'gia-gunn',
@@ -875,7 +944,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/gia-gunn.jpg',
-    silhouetteUrl: '/images/silhouettes/gia-gunn.jpg'
+    silhouetteUrl: '/images/silhouettes/gia-gunn.jpg',
+    entranceQuote: '(no words)'
   },
   {
     id: 'april-carrion',
@@ -886,7 +956,8 @@ export const contestants: Contestant[] = [
     hometown: 'Guaynabo, Puerto Rico',
     hometownCoordinates: cityCoordinates['Guaynabo, Puerto Rico'],
     headshotUrl: '/images/headshots/april-carrion.jpg',
-    silhouetteUrl: '/images/silhouettes/april-carrion.jpg'
+    silhouetteUrl: '/images/silhouettes/april-carrion.jpg',
+    entranceQuote: 'Reporting for duty, **** is in the house!'
   },
   {
     id: 'vivacious',
@@ -897,7 +968,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/vivacious.jpg',
-    silhouetteUrl: '/images/silhouettes/vivacious.jpg'
+    silhouetteUrl: '/images/silhouettes/vivacious.jpg',
+    entranceQuote: 'Mother has arrived!'
   },
   {
     id: 'kelly-mantle',
@@ -908,7 +980,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/kelly-mantle.jpg',
-    silhouetteUrl: '/images/silhouettes/kelly-mantle.jpg'
+    silhouetteUrl: '/images/silhouettes/kelly-mantle.jpg',
+    entranceQuote: 'Hey bitches, y\'all ready to rock and roll? Woooh!'
   },
   {
     id: 'magnolia-crawford',
@@ -919,7 +992,8 @@ export const contestants: Contestant[] = [
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
     headshotUrl: '/images/headshots/magnolia-crawford.jpg',
-    silhouetteUrl: '/images/silhouettes/magnolia-crawford.jpg'
+    silhouetteUrl: '/images/silhouettes/magnolia-crawford.jpg',
+    entranceQuote: 'Oh wow!'
   },
 
   // Season 7
@@ -932,7 +1006,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/violet-chachki.jpg',
-    silhouetteUrl: '/images/silhouettes/violet-chachki.jpg'
+    silhouetteUrl: '/images/silhouettes/violet-chachki.jpg',
+    entranceQuote: 'Ooh la la la la la la la la'
   },
   {
     id: 'ginger-minj',
@@ -943,7 +1018,8 @@ export const contestants: Contestant[] = [
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
     headshotUrl: '/images/headshots/ginger-minj.jpg',
-    silhouetteUrl: '/images/silhouettes/ginger-minj.jpg'
+    silhouetteUrl: '/images/silhouettes/ginger-minj.jpg',
+    entranceQuote: 'Hi fellas!'
   },
   {
     id: 'pearl',
@@ -954,7 +1030,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/pearl.jpg',
-    silhouetteUrl: '/images/silhouettes/pearl.jpg'
+    silhouetteUrl: '/images/silhouettes/pearl.jpg',
+    entranceQuote: 'Sup'
   },
   {
     id: 'kennedy-davenport',
@@ -965,7 +1042,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
     headshotUrl: '/images/headshots/kennedy-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/kennedy-davenport.jpg'
+    silhouetteUrl: '/images/silhouettes/kennedy-davenport.jpg',
+    entranceQuote: 'Well hello!'
   },
   {
     id: 'katya',
@@ -976,7 +1054,8 @@ export const contestants: Contestant[] = [
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
     headshotUrl: '/images/headshots/katya.jpg',
-    silhouetteUrl: '/images/silhouettes/katya.jpg'
+    silhouetteUrl: '/images/silhouettes/katya.jpg',
+    entranceQuote: 'Давай cезон семь!'
   },
   {
     id: 'trixie-mattel',
@@ -987,7 +1066,8 @@ export const contestants: Contestant[] = [
     hometown: 'Milwaukee, Wisconsin',
     hometownCoordinates: cityCoordinates['Milwaukee, Wisconsin'],
     headshotUrl: '/images/headshots/trixie-mattel.jpg',
-    silhouetteUrl: '/images/silhouettes/trixie-mattel.jpg'
+    silhouetteUrl: '/images/silhouettes/trixie-mattel.jpg',
+    entranceQuote: 'This isn\'t Maury Povich!'
   },
   {
     id: 'miss-fame',
@@ -998,7 +1078,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/miss-fame.jpg',
-    silhouetteUrl: '/images/silhouettes/miss-fame.jpg'
+    silhouetteUrl: '/images/silhouettes/miss-fame.jpg',
+    entranceQuote: 'Greetings earth queens, I come in peace'
   },
   {
     id: 'jaidynn-diore-fierce',
@@ -1009,7 +1090,8 @@ export const contestants: Contestant[] = [
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
     headshotUrl: '/images/headshots/jaidynn-diore-fierce.jpg',
-    silhouetteUrl: '/images/silhouettes/jaidynn-diore-fierce.jpg'
+    silhouetteUrl: '/images/silhouettes/jaidynn-diore-fierce.jpg',
+    entranceQuote: 'How y\'all doing?'
   },
   {
     id: 'max',
@@ -1020,7 +1102,8 @@ export const contestants: Contestant[] = [
     hometown: 'Hudson, Wisconsin',
     hometownCoordinates: cityCoordinates['Hudson, Wisconsin'],
     headshotUrl: '/images/headshots/max.jpg',
-    silhouetteUrl: '/images/silhouettes/max.jpg'
+    silhouetteUrl: '/images/silhouettes/max.jpg',
+    entranceQuote: 'Well, it\'s about time!'
   },
   {
     id: 'kandy-ho',
@@ -1031,7 +1114,8 @@ export const contestants: Contestant[] = [
     hometown: 'Cayey, Puerto Rico',
     hometownCoordinates: cityCoordinates['Cayey, Puerto Rico'],
     headshotUrl: '/images/headshots/kandy-ho.jpg',
-    silhouetteUrl: '/images/silhouettes/kandy-ho.jpg'
+    silhouetteUrl: '/images/silhouettes/kandy-ho.jpg',
+    entranceQuote: 'I hope you got a sweet tooth, because ****\'s in the motherfucking house!'
   },
   {
     id: 'mrs-kasha-davis',
@@ -1042,7 +1126,8 @@ export const contestants: Contestant[] = [
     hometown: 'Rochester, New York',
     hometownCoordinates: cityCoordinates['Rochester, New York'],
     headshotUrl: '/images/headshots/mrs-kasha-davis.jpg',
-    silhouetteUrl: '/images/silhouettes/mrs-kasha-davis.jpg'
+    silhouetteUrl: '/images/silhouettes/mrs-kasha-davis.jpg',
+    entranceQuote: 'Hiya my honeys, I\'m home!'
   },
   {
     id: 'jasmine-masters',
@@ -1053,7 +1138,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/jasmine-masters.jpg',
-    silhouetteUrl: '/images/silhouettes/jasmine-masters.jpg'
+    silhouetteUrl: '/images/silhouettes/jasmine-masters.jpg',
+    entranceQuote: 'I\'m here! We made it bitches!'
   },
   {
     id: 'sasha-belle',
@@ -1064,7 +1150,8 @@ export const contestants: Contestant[] = [
     hometown: 'Iowa City, Iowa',
     hometownCoordinates: cityCoordinates['Iowa City, Iowa'],
     headshotUrl: '/images/headshots/sasha-belle.jpg',
-    silhouetteUrl: '/images/silhouettes/sasha-belle.jpg'
+    silhouetteUrl: '/images/silhouettes/sasha-belle.jpg',
+    entranceQuote: 'Hey it\'s me, say hello to my little friends!'
   },
   {
     id: 'tempest-dujour',
@@ -1075,7 +1162,8 @@ export const contestants: Contestant[] = [
     hometown: 'Tucson, Arizona',
     hometownCoordinates: cityCoordinates['Tucson, Arizona'],
     headshotUrl: '/images/headshots/tempest-dujour.jpg',
-    silhouetteUrl: '/images/silhouettes/tempest-dujour.jpg'
+    silhouetteUrl: '/images/silhouettes/tempest-dujour.jpg',
+    entranceQuote: 'Who\'s ready for some hot tuna casserole, \'cos Mama\'s home!'
   },
 
   // Season 8
@@ -1088,7 +1176,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/bob-the-drag-queen.jpg',
-    silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg'
+    silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg',
+    entranceQuote: '(no words)'
   },
   {
     id: 'kim-chi',
@@ -1099,7 +1188,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/kim-chi.jpg',
-    silhouetteUrl: '/images/silhouettes/kim-chi.jpg'
+    silhouetteUrl: '/images/silhouettes/kim-chi.jpg',
+    entranceQuote: 'I came to chop suey the competition'
   },
   {
     id: 'naomi-smalls',
@@ -1110,7 +1200,8 @@ export const contestants: Contestant[] = [
     hometown: 'Redlands, California',
     hometownCoordinates: cityCoordinates['Redlands, California'],
     headshotUrl: '/images/headshots/naomi-smalls.jpg',
-    silhouetteUrl: '/images/silhouettes/naomi-smalls.jpg'
+    silhouetteUrl: '/images/silhouettes/naomi-smalls.jpg',
+    entranceQuote: 'Check your lipstick before you come for me.'
   },
   {
     id: 'chi-chi-devayne',
@@ -1121,7 +1212,8 @@ export const contestants: Contestant[] = [
     hometown: 'Shreveport, Louisiana',
     hometownCoordinates: cityCoordinates['Shreveport, Louisiana'],
     headshotUrl: '/images/headshots/chi-chi-devayne.jpg',
-    silhouetteUrl: '/images/silhouettes/chi-chi-devayne.jpg'
+    silhouetteUrl: '/images/silhouettes/chi-chi-devayne.jpg',
+    entranceQuote: 'Laissez les bon temps roulez!'
   },
   {
     id: 'derrick-barry',
@@ -1132,7 +1224,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/derrick-barry.jpg',
-    silhouetteUrl: '/images/silhouettes/derrick-barry.jpg'
+    silhouetteUrl: '/images/silhouettes/derrick-barry.jpg',
+    entranceQuote: 'It\'s **** bitch'
   },
   {
     id: 'thorgy-thor',
@@ -1143,7 +1236,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/thorgy-thor.jpg',
-    silhouetteUrl: '/images/silhouettes/thorgy-thor.jpg'
+    silhouetteUrl: '/images/silhouettes/thorgy-thor.jpg',
+    entranceQuote: 'Wooh! **** with a TH and Orgy and I feel incredible!'
   },
   {
     id: 'robbie-turner',
@@ -1154,7 +1248,8 @@ export const contestants: Contestant[] = [
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
     headshotUrl: '/images/headshots/robbie-turner.jpg',
-    silhouetteUrl: '/images/silhouettes/robbie-turner.jpg'
+    silhouetteUrl: '/images/silhouettes/robbie-turner.jpg',
+    entranceQuote: 'Good morning, I didn\'t realise this was happening today'
   },
   {
     id: 'acid-betty',
@@ -1165,7 +1260,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/acid-betty.jpg',
-    silhouetteUrl: '/images/silhouettes/acid-betty.jpg'
+    silhouetteUrl: '/images/silhouettes/acid-betty.jpg',
+    entranceQuote: 'No need to adjust your TV sets, this acid trip is all real!'
   },
   {
     id: 'naysha-lopez',
@@ -1176,7 +1272,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/naysha-lopez.jpg',
-    silhouetteUrl: '/images/silhouettes/naysha-lopez.jpg'
+    silhouetteUrl: '/images/silhouettes/naysha-lopez.jpg',
+    entranceQuote: 'Ola, the beauty is here'
   },
   {
     id: 'cynthia-lee-fontaine',
@@ -1187,7 +1284,8 @@ export const contestants: Contestant[] = [
     hometown: 'Austin, Texas',
     hometownCoordinates: cityCoordinates['Austin, Texas'],
     headshotUrl: '/images/headshots/cynthia-lee-fontaine.jpg',
-    silhouetteUrl: '/images/silhouettes/cynthia-lee-fontaine.jpg'
+    silhouetteUrl: '/images/silhouettes/cynthia-lee-fontaine.jpg',
+    entranceQuote: 'How ya doin mis amores? You wanna see my cucu?'
   },
   {
     id: 'dax-exclamationpoint',
@@ -1198,7 +1296,8 @@ export const contestants: Contestant[] = [
     hometown: 'Savannah, Georgia',
     hometownCoordinates: cityCoordinates['Savannah, Georgia'],
     headshotUrl: '/images/headshots/dax-exclamationpoint.jpg',
-    silhouetteUrl: '/images/silhouettes/dax-exclamationpoint.jpg'
+    silhouetteUrl: '/images/silhouettes/dax-exclamationpoint.jpg',
+    entranceQuote: 'What\'s up nerds?'
   },
   {
     id: 'laila-mcqueen',
@@ -1209,7 +1308,8 @@ export const contestants: Contestant[] = [
     hometown: 'Gloucester, Massachusetts',
     hometownCoordinates: cityCoordinates['Gloucester, Massachusetts'],
     headshotUrl: '/images/headshots/laila-mcqueen.jpg',
-    silhouetteUrl: '/images/silhouettes/laila-mcqueen.jpg'
+    silhouetteUrl: '/images/silhouettes/laila-mcqueen.jpg',
+    entranceQuote: 'Alright ladies, let\'s turn up the juice and see what shakes loose!'
   },
 
   // Season 9
@@ -1222,7 +1322,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/sasha-velour.jpg',
-    silhouetteUrl: '/images/silhouettes/sasha-velour.jpg'
+    silhouetteUrl: '/images/silhouettes/sasha-velour.jpg',
+    entranceQuote: '(screaming)'
   },
   {
     id: 'peppermint',
@@ -1233,7 +1334,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/peppermint.jpg',
-    silhouetteUrl: '/images/silhouettes/peppermint.jpg'
+    silhouetteUrl: '/images/silhouettes/peppermint.jpg',
+    entranceQuote: 'Oh my gosh! Heyyyy!'
   },
   {
     id: 'shea-coulee',
@@ -1244,7 +1346,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/shea-coulee.jpg',
-    silhouetteUrl: '/images/silhouettes/shea-coulee.jpg'
+    silhouetteUrl: '/images/silhouettes/shea-coulee.jpg',
+    entranceQuote: 'My name\'s ****, and I didn\'t come to play, I came to slay!'
   },
   {
     id: 'trinity-taylor',
@@ -1255,7 +1358,8 @@ export const contestants: Contestant[] = [
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
     headshotUrl: '/images/headshots/trinity-taylor.jpg',
-    silhouetteUrl: '/images/silhouettes/trinity-taylor.jpg'
+    silhouetteUrl: '/images/silhouettes/trinity-taylor.jpg',
+    entranceQuote: 'The body is here bitches!'
   },
   {
     id: 'alexis-michelle',
@@ -1266,7 +1370,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/alexis-michelle.jpg',
-    silhouetteUrl: '/images/silhouettes/alexis-michelle.jpg'
+    silhouetteUrl: '/images/silhouettes/alexis-michelle.jpg',
+    entranceQuote: 'How\'d ya like them egg rolls, Mr Charles?'
   },
   {
     id: 'nina-bonina-brown',
@@ -1277,7 +1382,8 @@ export const contestants: Contestant[] = [
     hometown: 'Riverdale, Georgia',
     hometownCoordinates: cityCoordinates['Riverdale, Georgia'],
     headshotUrl: '/images/headshots/nina-bonina-brown.jpg',
-    silhouetteUrl: '/images/silhouettes/nina-bonina-brown.jpg'
+    silhouetteUrl: '/images/silhouettes/nina-bonina-brown.jpg',
+    entranceQuote: 'I\'m ****, Banana, Fofana, Osama Bin Laden Brown, boom boom boom!'
   },
   {
     id: 'valentina',
@@ -1288,7 +1394,8 @@ export const contestants: Contestant[] = [
     hometown: 'Echo Park, California',
     hometownCoordinates: cityCoordinates['Echo Park, California'],
     headshotUrl: '/images/headshots/valentina.jpg',
-    silhouetteUrl: '/images/silhouettes/valentina.jpg'
+    silhouetteUrl: '/images/silhouettes/valentina.jpg',
+    entranceQuote: 'Hello, it\'s me ****!'
   },
   {
     id: 'farrah-moan',
@@ -1299,7 +1406,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/farrah-moan.jpg',
-    silhouetteUrl: '/images/silhouettes/farrah-moan.jpg'
+    silhouetteUrl: '/images/silhouettes/farrah-moan.jpg',
+    entranceQuote: 'So this is what it looks like'
   },
   {
     id: 'aja',
@@ -1310,7 +1418,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/aja.jpg',
-    silhouetteUrl: '/images/silhouettes/aja.jpg'
+    silhouetteUrl: '/images/silhouettes/aja.jpg',
+    entranceQuote: 'Your edges are officially snatched'
   },
   {
     id: 'eureka',
@@ -1321,7 +1430,8 @@ export const contestants: Contestant[] = [
     hometown: 'Johnson City, Tennessee',
     hometownCoordinates: cityCoordinates['Johnson City, Tennessee'],
     headshotUrl: '/images/headshots/eureka.jpg',
-    silhouetteUrl: '/images/silhouettes/eureka.jpg'
+    silhouetteUrl: '/images/silhouettes/eureka.jpg',
+    entranceQuote: 'Ow, come on, give it up for the big girl! Serving pure catfish.'
   },
   {
     id: 'charlie-hides',
@@ -1332,7 +1442,8 @@ export const contestants: Contestant[] = [
     hometown: 'London, United Kingdom',
     hometownCoordinates: cityCoordinates['London, United Kingdom'],
     headshotUrl: '/images/headshots/charlie-hides.jpg',
-    silhouetteUrl: '/images/silhouettes/charlie-hides.jpg'
+    silhouetteUrl: '/images/silhouettes/charlie-hides.jpg',
+    entranceQuote: 'Hi hi hi, it\'s about to get shady up in here!'
   },
   {
     id: 'kimora-blac',
@@ -1343,7 +1454,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/kimora-blac.jpg',
-    silhouetteUrl: '/images/silhouettes/kimora-blac.jpg'
+    silhouetteUrl: '/images/silhouettes/kimora-blac.jpg',
+    entranceQuote: 'Is it me or is it hot in here?'
   },
   {
     id: 'jaymes-mansfield',
@@ -1354,7 +1466,8 @@ export const contestants: Contestant[] = [
     hometown: 'Milwaukee, Wisconsin',
     hometownCoordinates: cityCoordinates['Milwaukee, Wisconsin'],
     headshotUrl: '/images/headshots/jaymes-mansfield.jpg',
-    silhouetteUrl: '/images/silhouettes/jaymes-mansfield.jpg'
+    silhouetteUrl: '/images/silhouettes/jaymes-mansfield.jpg',
+    entranceQuote: 'Hi shapeshifters!'
   },
 
   // Season 10
@@ -1367,7 +1480,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/aquaria.jpg',
-    silhouetteUrl: '/images/silhouettes/aquaria.jpg'
+    silhouetteUrl: '/images/silhouettes/aquaria.jpg',
+    entranceQuote: 'Bonjour!'
   },
   {
     id: 'kameron-michaels',
@@ -1378,7 +1492,8 @@ export const contestants: Contestant[] = [
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
     headshotUrl: '/images/headshots/kameron-michaels.jpg',
-    silhouetteUrl: '/images/silhouettes/kameron-michaels.jpg'
+    silhouetteUrl: '/images/silhouettes/kameron-michaels.jpg',
+    entranceQuote: 'Well I auditioned for the Pit Crew, but this is gonna be way more fun!'
   },
   {
     id: 'asia-ohara',
@@ -1389,7 +1504,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
     headshotUrl: '/images/headshots/asia-ohara.jpg',
-    silhouetteUrl: '/images/silhouettes/asia-ohara.jpg'
+    silhouetteUrl: '/images/silhouettes/asia-ohara.jpg',
+    entranceQuote: 'Well guys, Texas is back in the house'
   },
   {
     id: 'miz-cracker',
@@ -1400,7 +1516,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/miz-cracker.jpg',
-    silhouetteUrl: '/images/silhouettes/miz-cracker.jpg'
+    silhouetteUrl: '/images/silhouettes/miz-cracker.jpg',
+    entranceQuote: 'Okay, it\'s time for dinner!'
   },
   {
     id: 'monet-x-change',
@@ -1411,7 +1528,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/monet-x-change.jpg',
-    silhouetteUrl: '/images/silhouettes/monet-x-change.jpg'
+    silhouetteUrl: '/images/silhouettes/monet-x-change.jpg',
+    entranceQuote: 'Oh don\'t mind me, I\'m just here to sweep up the competition girl!'
   },
   {
     id: 'the-vixen',
@@ -1422,7 +1540,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/the-vixen.jpg',
-    silhouetteUrl: '/images/silhouettes/the-vixen.jpg'
+    silhouetteUrl: '/images/silhouettes/the-vixen.jpg',
+    entranceQuote: 'I\'m just here to fight!'
   },
   {
     id: 'monique-heart',
@@ -1433,7 +1552,8 @@ export const contestants: Contestant[] = [
     hometown: 'Kansas City, Missouri',
     hometownCoordinates: cityCoordinates['Kansas City, Missouri'],
     headshotUrl: '/images/headshots/monique-heart.jpg',
-    silhouetteUrl: '/images/silhouettes/monique-heart.jpg'
+    silhouetteUrl: '/images/silhouettes/monique-heart.jpg',
+    entranceQuote: 'Ka-kitty-ka-kit-ka-ka-ka, ka-kitty-kat-kat-kow, giving you the heart of Season 10, ****, the face'
   },
   {
     id: 'blair-st-clair',
@@ -1444,7 +1564,8 @@ export const contestants: Contestant[] = [
     hometown: 'Indianapolis, Indiana',
     hometownCoordinates: cityCoordinates['Indianapolis, Indiana'],
     headshotUrl: '/images/headshots/blair-st-clair.jpg',
-    silhouetteUrl: '/images/silhouettes/blair-st-clair.jpg'
+    silhouetteUrl: '/images/silhouettes/blair-st-clair.jpg',
+    entranceQuote: 'I\'m ****, just got here this morning!'
   },
   {
     id: 'mayhem-miller',
@@ -1455,7 +1576,8 @@ export const contestants: Contestant[] = [
     hometown: 'Riverside, California',
     hometownCoordinates: cityCoordinates['Riverside, California'],
     headshotUrl: '/images/headshots/mayhem-miller.jpg',
-    silhouetteUrl: '/images/silhouettes/mayhem-miller.jpg'
+    silhouetteUrl: '/images/silhouettes/mayhem-miller.jpg',
+    entranceQuote: 'Guess who finally decided to crash the party?'
   },
   {
     id: 'dusty-ray-bottoms',
@@ -1466,7 +1588,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/dusty-ray-bottoms.jpg',
-    silhouetteUrl: '/images/silhouettes/dusty-ray-bottoms.jpg'
+    silhouetteUrl: '/images/silhouettes/dusty-ray-bottoms.jpg',
+    entranceQuote: 'Never loved ya'
   },
   {
     id: 'yuhua-hamasaki',
@@ -1477,7 +1600,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/yuhua-hamasaki.jpg',
-    silhouetteUrl: '/images/silhouettes/yuhua-hamasaki.jpg'
+    silhouetteUrl: '/images/silhouettes/yuhua-hamasaki.jpg',
+    entranceQuote: 'Can you feel the shade?'
   },
   {
     id: 'kalorie-karbdashian-williams',
@@ -1488,7 +1612,8 @@ export const contestants: Contestant[] = [
     hometown: 'Albuquerque, New Mexico',
     hometownCoordinates: cityCoordinates['Albuquerque, New Mexico'],
     headshotUrl: '/images/headshots/kalorie-karbdashian-williams.jpg',
-    silhouetteUrl: '/images/silhouettes/kalorie-karbdashian-williams.jpg'
+    silhouetteUrl: '/images/silhouettes/kalorie-karbdashian-williams.jpg',
+    entranceQuote: 'Hope you\'re ready for your all-carb, high calorie diet'
   },
   {
     id: 'vanessa-vanjie-mateo',
@@ -1499,7 +1624,8 @@ export const contestants: Contestant[] = [
     hometown: 'Tampa, Florida',
     hometownCoordinates: cityCoordinates['Tampa, Florida'],
     headshotUrl: '/images/headshots/vanessa-vanjie-mateo.jpg',
-    silhouetteUrl: '/images/silhouettes/vanessa-vanjie-mateo.jpg'
+    silhouetteUrl: '/images/silhouettes/vanessa-vanjie-mateo.jpg',
+    entranceQuote: '10s, 10s, 10s across the board!'
   },
 
   // Season 11
@@ -1512,7 +1638,8 @@ export const contestants: Contestant[] = [
     hometown: 'Denver, Colorado',
     hometownCoordinates: cityCoordinates['Denver, Colorado'],
     headshotUrl: '/images/headshots/yvie-oddly.jpg',
-    silhouetteUrl: '/images/silhouettes/yvie-oddly.jpg'
+    silhouetteUrl: '/images/silhouettes/yvie-oddly.jpg',
+    entranceQuote: 'Move over ladies, this race just took an odd turn'
   },
   {
     id: 'brooke-lynn-hytes',
@@ -1523,7 +1650,8 @@ export const contestants: Contestant[] = [
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
     headshotUrl: '/images/headshots/brooke-lynn-hytes.jpg',
-    silhouetteUrl: '/images/silhouettes/brooke-lynn-hytes.jpg'
+    silhouetteUrl: '/images/silhouettes/brooke-lynn-hytes.jpg',
+    entranceQuote: 'Never fear, the queen of the North is here!'
   },
   {
     id: 'akeria-c-davenport',
@@ -1534,7 +1662,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
     headshotUrl: '/images/headshots/akeria-c-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/akeria-c-davenport.jpg'
+    silhouetteUrl: '/images/silhouettes/akeria-c-davenport.jpg',
+    entranceQuote: 'Oh yes it\'s me, Miss **** D-A-V-E-N-P-O-R and as you can see, I\'m the motherfucking T'
   },
   {
     id: 'silky-nutmeg-ganache',
@@ -1545,7 +1674,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/silky-nutmeg-ganache.jpg',
-    silhouetteUrl: '/images/silhouettes/silky-nutmeg-ganache.jpg'
+    silhouetteUrl: '/images/silhouettes/silky-nutmeg-ganache.jpg',
+    entranceQuote: 'Munch munch, crunch crunch, **** is here to eat the lunch'
   },
   {
     id: 'nina-west',
@@ -1556,7 +1686,8 @@ export const contestants: Contestant[] = [
     hometown: 'Columbus, Ohio',
     hometownCoordinates: cityCoordinates['Columbus, Ohio'],
     headshotUrl: '/images/headshots/nina-west.jpg',
-    silhouetteUrl: '/images/silhouettes/nina-west.jpg'
+    silhouetteUrl: '/images/silhouettes/nina-west.jpg',
+    entranceQuote: 'Welcome to Season 11, it looks like things just got eleven-gendary!'
   },
   {
     id: 'shuga-cain',
@@ -1567,7 +1698,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/shuga-cain.jpg',
-    silhouetteUrl: '/images/silhouettes/shuga-cain.jpg'
+    silhouetteUrl: '/images/silhouettes/shuga-cain.jpg',
+    entranceQuote: 'Get ready y\'all, because this sugar is so sweet!'
   },
   {
     id: 'plastique-tiara',
@@ -1578,7 +1710,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
     headshotUrl: '/images/headshots/plastique-tiara.jpg',
-    silhouetteUrl: '/images/silhouettes/plastique-tiara.jpg'
+    silhouetteUrl: '/images/silhouettes/plastique-tiara.jpg',
+    entranceQuote: 'Hello, I\'m **** from Vietnam'
   },
   {
     id: 'rajah-ohara',
@@ -1589,7 +1722,8 @@ export const contestants: Contestant[] = [
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
     headshotUrl: '/images/headshots/rajah-ohara.jpg',
-    silhouetteUrl: '/images/silhouettes/rajah-ohara.jpg'
+    silhouetteUrl: '/images/silhouettes/rajah-ohara.jpg',
+    entranceQuote: 'Extra, extra, read all about it! **** is in the house, and I hope you came to play'
   },
   {
     id: 'scarlet-envy',
@@ -1600,7 +1734,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/scarlet-envy.jpg',
-    silhouetteUrl: '/images/silhouettes/scarlet-envy.jpg'
+    silhouetteUrl: '/images/silhouettes/scarlet-envy.jpg',
+    entranceQuote: 'The world wants me, and the feeling is mutual'
   },
   {
     id: 'ariel-versace',
@@ -1611,7 +1746,8 @@ export const contestants: Contestant[] = [
     hometown: 'Cherry Hill, New Jersey',
     hometownCoordinates: cityCoordinates['Cherry Hill, New Jersey'],
     headshotUrl: '/images/headshots/ariel-versace.jpg',
-    silhouetteUrl: '/images/silhouettes/ariel-versace.jpg'
+    silhouetteUrl: '/images/silhouettes/ariel-versace.jpg',
+    entranceQuote: 'Now this is what dreams are made of! Nyass!'
   },
   {
     id: 'mercedes-iman-diamond',
@@ -1622,7 +1758,8 @@ export const contestants: Contestant[] = [
     hometown: 'Minneapolis, Minnesota',
     hometownCoordinates: cityCoordinates['Minneapolis, Minnesota'],
     headshotUrl: '/images/headshots/mercedes-iman-diamond.jpg',
-    silhouetteUrl: '/images/silhouettes/mercedes-iman-diamond.jpg'
+    silhouetteUrl: '/images/silhouettes/mercedes-iman-diamond.jpg',
+    entranceQuote: '(ululating)'
   },
   {
     id: 'honey-davenport',
@@ -1633,7 +1770,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/honey-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/honey-davenport.jpg'
+    silhouetteUrl: '/images/silhouettes/honey-davenport.jpg',
+    entranceQuote: 'This honey is raw and unfiltered'
   },
   {
     id: 'kahanna-montrese',
@@ -1644,7 +1782,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/kahanna-montrese.jpg',
-    silhouetteUrl: '/images/silhouettes/kahanna-montrese.jpg'
+    silhouetteUrl: '/images/silhouettes/kahanna-montrese.jpg',
+    entranceQuote: 'Vegas is back in the house, and this time we\'re hitting the jackpot'
   },
   {
     id: 'soju',
@@ -1655,7 +1794,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/soju.jpg',
-    silhouetteUrl: '/images/silhouettes/soju.jpg'
+    silhouetteUrl: '/images/silhouettes/soju.jpg',
+    entranceQuote: '(whacks around her nunchucks)'
   },
 
   // Season 12
@@ -1668,7 +1808,8 @@ export const contestants: Contestant[] = [
     hometown: 'Milwaukee, Wisconsin',
     hometownCoordinates: cityCoordinates['Milwaukee, Wisconsin'],
     headshotUrl: '/images/headshots/jaida-essence-hall.jpg',
-    silhouetteUrl: '/images/silhouettes/jaida-essence-hall.jpg'
+    silhouetteUrl: '/images/silhouettes/jaida-essence-hall.jpg',
+    entranceQuote: 'Hey bitches! She\'s here!'
   },
   {
     id: 'crystal-methyd',
@@ -1679,7 +1820,8 @@ export const contestants: Contestant[] = [
     hometown: 'Springfield, Missouri',
     hometownCoordinates: cityCoordinates['Springfield, Missouri'],
     headshotUrl: '/images/headshots/crystal-methyd.jpg',
-    silhouetteUrl: '/images/silhouettes/crystal-methyd.jpg'
+    silhouetteUrl: '/images/silhouettes/crystal-methyd.jpg',
+    entranceQuote: 'Who\'s ready to party and play? Checkers anyone?'
   },
   {
     id: 'gigi-goode',
@@ -1690,7 +1832,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/gigi-goode.jpg',
-    silhouetteUrl: '/images/silhouettes/gigi-goode.jpg'
+    silhouetteUrl: '/images/silhouettes/gigi-goode.jpg',
+    entranceQuote: 'Ahoy'
   },
   {
     id: 'jackie-cox',
@@ -1701,7 +1844,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/jackie-cox.jpg',
-    silhouetteUrl: '/images/silhouettes/jackie-cox.jpg'
+    silhouetteUrl: '/images/silhouettes/jackie-cox.jpg',
+    entranceQuote: 'Roll call! I\'m ****, Salaam, the Persian Princess of Drag has arrived!'
   },
   {
     id: 'heidi-n-closet',
@@ -1712,7 +1856,8 @@ export const contestants: Contestant[] = [
     hometown: 'Ramseur, North Carolina',
     hometownCoordinates: cityCoordinates['Ramseur, North Carolina'],
     headshotUrl: '/images/headshots/heidi-n-closet.jpg',
-    silhouetteUrl: '/images/silhouettes/heidi-n-closet.jpg'
+    silhouetteUrl: '/images/silhouettes/heidi-n-closet.jpg',
+    entranceQuote: 'America, it\'s time to stop hiding in the closet'
   },
   {
     id: 'widow-vondu',
@@ -1723,7 +1868,8 @@ export const contestants: Contestant[] = [
     hometown: 'Kansas City, Missouri',
     hometownCoordinates: cityCoordinates['Kansas City, Missouri'],
     headshotUrl: '/images/headshots/widow-vondu.jpg',
-    silhouetteUrl: '/images/silhouettes/widow-vondu.jpg'
+    silhouetteUrl: '/images/silhouettes/widow-vondu.jpg',
+    entranceQuote: 'Relax your throat bitches, \'cos y\'all gagging'
   },
   {
     id: 'jan',
@@ -1734,7 +1880,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/jan.jpg',
-    silhouetteUrl: '/images/silhouettes/jan.jpg'
+    silhouetteUrl: '/images/silhouettes/jan.jpg',
+    entranceQuote: 'Hey y\'all, let\'s play some basketball!'
   },
   {
     id: 'brita',
@@ -1745,7 +1892,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/brita.jpg',
-    silhouetteUrl: '/images/silhouettes/brita.jpg'
+    silhouetteUrl: '/images/silhouettes/brita.jpg',
+    entranceQuote: 'Here we go, sis! Y\'all thirsty?'
   },
   {
     id: 'aiden-zhane',
@@ -1756,7 +1904,8 @@ export const contestants: Contestant[] = [
     hometown: 'Acworth, Georgia',
     hometownCoordinates: cityCoordinates['Acworth, Georgia'],
     headshotUrl: '/images/headshots/aiden-zhane.jpg',
-    silhouetteUrl: '/images/silhouettes/aiden-zhane.jpg'
+    silhouetteUrl: '/images/silhouettes/aiden-zhane.jpg',
+    entranceQuote: 'Season 12 is about to be in-zhane'
   },
   {
     id: 'nicky-doll',
@@ -1767,7 +1916,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/nicky-doll.jpg',
-    silhouetteUrl: '/images/silhouettes/nicky-doll.jpg'
+    silhouetteUrl: '/images/silhouettes/nicky-doll.jpg',
+    entranceQuote: 'Well, that was a long flight'
   },
   {
     id: 'rock-m-sakura',
@@ -1778,7 +1928,8 @@ export const contestants: Contestant[] = [
     hometown: 'San Francisco, California',
     hometownCoordinates: cityCoordinates['San Francisco, California'],
     headshotUrl: '/images/headshots/rock-m-sakura.jpg',
-    silhouetteUrl: '/images/silhouettes/rock-m-sakura.jpg'
+    silhouetteUrl: '/images/silhouettes/rock-m-sakura.jpg',
+    entranceQuote: 'All tuck and no play make **** a crazy bitch!'
   },
   {
     id: 'dahlia-sin',
@@ -1789,7 +1940,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/dahlia-sin.jpg',
-    silhouetteUrl: '/images/silhouettes/dahlia-sin.jpg'
+    silhouetteUrl: '/images/silhouettes/dahlia-sin.jpg',
+    entranceQuote: 'Are you ready to live a little, sin a lot?'
   },
 
   // Season 13
@@ -1802,7 +1954,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/symone.jpg',
-    silhouetteUrl: '/images/silhouettes/symone.jpg'
+    silhouetteUrl: '/images/silhouettes/symone.jpg',
+    entranceQuote: 'Don\'t let the smooth taste fool ya, baby!'
   },
   {
     id: 'kandy-muse',
@@ -1813,7 +1966,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/kandy-muse.jpg',
-    silhouetteUrl: '/images/silhouettes/kandy-muse.jpg'
+    silhouetteUrl: '/images/silhouettes/kandy-muse.jpg',
+    entranceQuote: 'Girl! From the hood to Hollywood!'
   },
   {
     id: 'gottmik',
@@ -1824,7 +1978,8 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/gottmik.jpg',
-    silhouetteUrl: '/images/silhouettes/gottmik.jpg'
+    silhouetteUrl: '/images/silhouettes/gottmik.jpg',
+    entranceQuote: 'Time to crash the cis-tem'
   },
   {
     id: 'rose',
@@ -1835,7 +1990,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/rose.jpg',
-    silhouetteUrl: '/images/silhouettes/rose.jpg'
+    silhouetteUrl: '/images/silhouettes/rose.jpg',
+    entranceQuote: 'Hey! Oh my god, I\'m the first one here. I could have gone to the dentist'
   },
   {
     id: 'olivia-lux',
@@ -1846,7 +2002,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/olivia-lux.jpg',
-    silhouetteUrl: '/images/silhouettes/olivia-lux.jpg'
+    silhouetteUrl: '/images/silhouettes/olivia-lux.jpg',
+    entranceQuote: '**** be a lady tonight'
   },
   {
     id: 'utica-queen',
@@ -1857,7 +2014,8 @@ export const contestants: Contestant[] = [
     hometown: 'Utica, Minnesota',
     hometownCoordinates: cityCoordinates['Utica, Minnesota'],
     headshotUrl: '/images/headshots/utica-queen.jpg',
-    silhouetteUrl: '/images/silhouettes/utica-queen.jpg'
+    silhouetteUrl: '/images/silhouettes/utica-queen.jpg',
+    entranceQuote: 'Ah-choo! She\'s sickening!'
   },
   {
     id: 'tina-burner',
@@ -1868,7 +2026,8 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/tina-burner.jpg',
-    silhouetteUrl: '/images/silhouettes/tina-burner.jpg'
+    silhouetteUrl: '/images/silhouettes/tina-burner.jpg',
+    entranceQuote: 'Didn\'t your parents ever teach you not to play with fire? Now let\'s turn it and burn it bitches!'
   },
   {
     id: 'denali',
@@ -1879,7 +2038,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/denali.jpg',
-    silhouetteUrl: '/images/silhouettes/denali.jpg'
+    silhouetteUrl: '/images/silhouettes/denali.jpg',
+    entranceQuote: 'Lemme break the ice'
   },
   {
     id: 'elliott-with-2-ts',
@@ -1890,7 +2050,8 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/elliott-with-2-ts.jpg',
-    silhouetteUrl: '/images/silhouettes/elliott-with-2-ts.jpg'
+    silhouetteUrl: '/images/silhouettes/elliott-with-2-ts.jpg',
+    entranceQuote: 'I\'m the queen you want to see, **** with Two T\'s. Okay, uh uh uh, okay? Get into it'
   },
   {
     id: 'lala-ri',
@@ -1901,7 +2062,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/lala-ri.jpg',
-    silhouetteUrl: '/images/silhouettes/lala-ri.jpg'
+    silhouetteUrl: '/images/silhouettes/lala-ri.jpg',
+    entranceQuote: 'Oh, what you say, what you say? **** is here to slay'
   },
   {
     id: 'tamisha-iman',
@@ -1912,7 +2074,8 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/tamisha-iman.jpg',
-    silhouetteUrl: '/images/silhouettes/tamisha-iman.jpg'
+    silhouetteUrl: '/images/silhouettes/tamisha-iman.jpg',
+    entranceQuote: 'Holla at me, I know you know me, holla at me, I know you know me. **** is here'
   },
   {
     id: 'joey-jay',
@@ -1923,7 +2086,8 @@ export const contestants: Contestant[] = [
     hometown: 'Phoenix, Arizona',
     hometownCoordinates: cityCoordinates['Phoenix, Arizona'],
     headshotUrl: '/images/headshots/joey-jay.jpg',
-    silhouetteUrl: '/images/silhouettes/joey-jay.jpg'
+    silhouetteUrl: '/images/silhouettes/joey-jay.jpg',
+    entranceQuote: 'Filler queen'
   },
   {
     id: 'kahmora-hall',
@@ -1934,7 +2098,8 @@ export const contestants: Contestant[] = [
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
     headshotUrl: '/images/headshots/kahmora-hall.jpg',
-    silhouetteUrl: '/images/silhouettes/kahmora-hall.jpg'
+    silhouetteUrl: '/images/silhouettes/kahmora-hall.jpg',
+    entranceQuote: 'The Mackie doll is finally out of her box'
   },
 
   // Season 14

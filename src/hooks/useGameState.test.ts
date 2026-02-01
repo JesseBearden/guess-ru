@@ -296,7 +296,7 @@ describe('useGameState Hook Tests', () => {
                 Math.abs(guessedContestant.ageAtShow - secretQueen.ageAtShow) <= 3 ? 'CLOSE' : 'WRONG',
             hometown: guessedContestant.hometown === secretQueen.hometown ? 'CORRECT' :
                      (guessedContestant.hometownCoordinates && secretQueen.hometownCoordinates &&
-                      isWithinProximity(guessedContestant.hometownCoordinates, secretQueen.hometownCoordinates, 75)) ? 'CLOSE' : 'WRONG'
+                      isWithinProximity(guessedContestant.hometownCoordinates, secretQueen.hometownCoordinates, 150)) ? 'CLOSE' : 'WRONG'
           };
           
           // Test the feedback calculation by accessing the internal calculateFeedback function
@@ -341,10 +341,10 @@ describe('useGameState Hook Tests', () => {
             expect(expectedFeedback.age).toBe('WRONG');
           }
           
-          // Hometown has CORRECT, CLOSE (within 75 miles), or WRONG
+          // Hometown has CORRECT, CLOSE (within 150 miles), or WRONG
           if (guessedContestant.hometown !== secretQueen.hometown) {
             if (guessedContestant.hometownCoordinates && secretQueen.hometownCoordinates &&
-                isWithinProximity(guessedContestant.hometownCoordinates, secretQueen.hometownCoordinates, 75)) {
+                isWithinProximity(guessedContestant.hometownCoordinates, secretQueen.hometownCoordinates, 150)) {
               expect(expectedFeedback.hometown).toBe('CLOSE');
             } else {
               expect(expectedFeedback.hometown).toBe('WRONG');

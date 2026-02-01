@@ -27,6 +27,7 @@ export interface Contestant {
   hometownCoordinates: HometownCoordinates;
   headshotUrl: string; // Full color headshot image
   silhouetteUrl: string; // Blacked-out silhouette version
+  entranceQuote?: string; // Optional entrance quote from the queen
 }
 
 export interface Guess {

@@ -35,17 +35,17 @@ export const calculateDistance = (
 };
 
 /**
- * Checks if two cities are within a specified proximity (default 75 miles)
+ * Checks if two cities are within a specified proximity (default 150 miles)
  * 
  * @param coord1 - First coordinate pair
  * @param coord2 - Second coordinate pair
- * @param proximityMiles - Maximum distance to be considered "close" (default: 75)
+ * @param proximityMiles - Maximum distance to be considered "close" (default: 150)
  * @returns true if cities are within the proximity threshold
  */
 export const isWithinProximity = (
   coord1: HometownCoordinates,
   coord2: HometownCoordinates,
-  proximityMiles: number = 75
+  proximityMiles: number = 150
 ): boolean => {
   const distance = calculateDistance(coord1, coord2);
   return distance <= proximityMiles;
