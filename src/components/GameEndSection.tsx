@@ -119,15 +119,23 @@ const GameEndSection: React.FC<GameEndSectionProps> = ({ gameState }) => {
         </div>
       </div>
 
-      {/* Queen Details (shown on loss) */}
-      {!gameState.isWon && (
-        <div className="bg-white/10 rounded-lg p-3 mb-6 backdrop-blur-sm text-left max-w-[300px] mx-auto">
-          <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Season:</strong> {gameState.secretQueen.season}</p>
-          <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Position:</strong> {gameState.secretQueen.finishingPosition}</p>
-          <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Age:</strong> {gameState.secretQueen.ageAtShow}</p>
-          <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Hometown:</strong> {gameState.secretQueen.hometown}</p>
-        </div>
-      )}
+      {/* Queen Details */}
+      <div className="bg-white/10 rounded-lg p-3 mb-6 backdrop-blur-sm text-left max-w-[300px] mx-auto">
+        {!gameState.isWon && (
+          <>
+            <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Season:</strong> {gameState.secretQueen.season}</p>
+            <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Position:</strong> {gameState.secretQueen.finishingPosition}</p>
+            <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Age:</strong> {gameState.secretQueen.ageAtShow}</p>
+            <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">Hometown:</strong> {gameState.secretQueen.hometown}</p>
+          </>
+        )}
+        {gameState.secretQueen.entranceQuote && (
+          <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">🎤 Entrance:</strong> "{gameState.secretQueen.entranceQuote}"</p>
+        )}
+        {gameState.secretQueen.snatchGameCharacter && (
+          <p className="my-1 text-sm text-white/90"><strong className="text-hot-pink">🎭 Snatch Game:</strong> {gameState.secretQueen.snatchGameCharacter}</p>
+        )}
+      </div>
 
       {/* Share Button */}
       <button 

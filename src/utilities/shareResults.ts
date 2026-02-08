@@ -89,13 +89,19 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
   // Generate pattern for each guess
   const guessPattern = gameState.guesses.map(guess => generateGuessPattern(guess));
   
+  // Count hints used
+  const hintsUsed = gameState.hintsUsed 
+    ? (gameState.hintsUsed.entranceQuote ? 1 : 0) + (gameState.hintsUsed.snatchGame ? 1 : 0)
+    : 0;
+  
   return {
     gameNumber,
     guessCount,
     totalGuesses: 8,
     timeElapsed,
     guessPattern,
-    modeKey
+    modeKey,
+    hintsUsed
   };
 };
 
@@ -106,12 +112,13 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
  * @returns Formatted text string ready for sharing
  */
 export const formatShareText = (shareResults: ShareResults, isWon: boolean): string => {
-  const { gameNumber, guessCount, totalGuesses, timeElapsed, guessPattern, modeKey } = shareResults;
+  const { gameNumber, guessCount, totalGuesses, timeElapsed, guessPattern, modeKey, hintsUsed } = shareResults;
   
-  // Header line with game number, mode icon, and result
+  // Header line with game number, mode icon, hints indicator, and result
   const resultText = isWon ? `${guessCount}/${totalGuesses}` : 'X/8';
   const modeIcon = getModeIcon(modeKey || 'default');
-  const header = `GuessRu #${gameNumber} ${modeIcon} ${resultText} ⏱️ ${timeElapsed}`;
+  const hintsIndicator = hintsUsed ? '🔍'.repeat(hintsUsed) : '';
+  const header = `GuessRu #${gameNumber} ${modeIcon}${hintsIndicator ? ' ' + hintsIndicator : ''} ${resultText} ⏱️ ${timeElapsed}`;
   
   // Empty line
   const emptyLine = '';

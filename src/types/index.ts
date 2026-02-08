@@ -44,6 +44,11 @@ export interface Guess {
   };
 }
 
+export interface HintsUsed {
+  entranceQuote: boolean;
+  snatchGame: boolean;
+}
+
 export interface GameState {
   secretQueen: Contestant;
   guesses: Guess[];
@@ -54,6 +59,7 @@ export interface GameState {
   gameDate: string;
   statsRecorded?: boolean; // Flag to prevent duplicate stats recording on refresh
   modeKey?: GameModeKey; // Which mode this game state belongs to (optional for backward compatibility)
+  hintsUsed?: HintsUsed; // Tracks which hints the player has revealed
 }
 
 export interface ShareResults {
@@ -63,6 +69,7 @@ export interface ShareResults {
   timeElapsed: string; // MM:SS format
   guessPattern: string[][]; // Array of arrays representing color patterns for each guess
   modeKey?: GameModeKey; // The game mode for displaying mode icon
+  hintsUsed?: number; // Number of hints used (0, 1, or 2)
 }
 
 export interface Statistics {

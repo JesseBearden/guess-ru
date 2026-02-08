@@ -75,7 +75,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isVisible, onClos
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-feedback-close rounded border border-text-dark flex-shrink-0" aria-hidden="true"></div>
-                <span className="text-sm"><strong>Yellow</strong> — Close (within 3 for numbers, 150 miles for hometown)</span>
+                <span className="text-sm"><strong>Yellow</strong> — Close (within 2 for numbers, 150 miles for hometown)</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-white rounded border border-text-dark flex-shrink-0" aria-hidden="true"></div>
@@ -92,18 +92,19 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isVisible, onClos
             </p>
           </div>
 
+          {/* Hints */}
+          <div>
+            <h3 className="font-bold text-sm mb-2">Hints</h3>
+            <p className="text-sm leading-relaxed">
+              Need help? Tap <strong>🎤 Entrance Quote</strong> or <strong>🎭 Snatch Game</strong> to reveal clues. Using hints adds a 🔍 to your share results.
+            </p>
+          </div>
+
           {/* Game Modes */}
           <div>
             <h3 className="font-bold text-sm mb-2">Game Modes</h3>
             <p className="text-sm leading-relaxed">
-              Click the <strong>gear icon</strong> (⚙️) in the header to open settings and adjust difficulty:
-            </p>
-            <ul className="text-sm leading-relaxed mt-2 ml-4 list-disc space-y-1">
-              <li><strong>First 10 Seasons</strong> — Limits queens to seasons 1-10</li>
-              <li><strong>Top 5 Only</strong> — Limits queens to top 5 finishers</li>
-            </ul>
-            <p className="text-sm leading-relaxed mt-2">
-              Each mode combination has its own daily queen and separate statistics!
+              Click the <strong>gear icon</strong> (⚙️) in the header to open settings and adjust difficulty.
             </p>
           </div>
 

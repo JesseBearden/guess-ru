@@ -13,6 +13,7 @@ interface UseGameStateReturn {
   gameState: GameState;
   submitGuess: (contestantId: string) => boolean;
   resetGame: () => void;
+  markHintUsed: (hintType: 'entranceQuote' | 'snatchGame') => void;
   isGameComplete: boolean;
   isGameWon: boolean;
   remainingGuesses: number;
@@ -47,9 +48,29 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
       isWon: false,
       startTime: Date.now(),
       gameDate: today,
-      modeKey
+      modeKey,
+      hintsUsed: { entranceQuote: false, snatchGame: false }
     };
   });
+
+  /**
+   * Mark a hint as used (only sets to true, never back to false)
+   */
+  const markHintUsed = useCallback((hintType: 'entranceQuote' | 'snatchGame') => {
+    setGameState(prevState => {
+      const currentHints = prevState.hintsUsed || { entranceQuote: false, snatchGame: false };
+      if (currentHints[hintType]) {
+        return prevState; // Already used, no change needed
+      }
+      return {
+        ...prevState,
+        hintsUsed: {
+          ...currentHints,
+          [hintType]: true
+        }
+      };
+    });
+  }, []);
 
   /**
    * Calculate feedback for a guess compared to the secret queen
@@ -65,7 +86,7 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
     // Season feedback
     if (guessedContestant.season === secretQueen.season) {
       feedback.season = FeedbackType.CORRECT;
-    } else if (Math.abs(guessedContestant.season - secretQueen.season) <= 3) {
+    } else if (Math.abs(guessedContestant.season - secretQueen.season) <= 2) {
       feedback.season = FeedbackType.CLOSE;
       feedback.seasonDirection = guessedContestant.season < secretQueen.season ? DirectionType.HIGHER : DirectionType.LOWER;
     } else {
@@ -75,7 +96,7 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
     // Position feedback (inverted - lower number = higher placement)
     if (guessedContestant.finishingPosition === secretQueen.finishingPosition) {
       feedback.position = FeedbackType.CORRECT;
-    } else if (Math.abs(guessedContestant.finishingPosition - secretQueen.finishingPosition) <= 3) {
+    } else if (Math.abs(guessedContestant.finishingPosition - secretQueen.finishingPosition) <= 2) {
       feedback.position = FeedbackType.CLOSE;
       // Inverted: if secret is lower number (better placement), show UP arrow
       feedback.positionDirection = guessedContestant.finishingPosition > secretQueen.finishingPosition ? DirectionType.HIGHER : DirectionType.LOWER;
@@ -87,7 +108,7 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
     // Age feedback
     if (guessedContestant.ageAtShow === secretQueen.ageAtShow) {
       feedback.age = FeedbackType.CORRECT;
-    } else if (Math.abs(guessedContestant.ageAtShow - secretQueen.ageAtShow) <= 3) {
+    } else if (Math.abs(guessedContestant.ageAtShow - secretQueen.ageAtShow) <= 2) {
       feedback.age = FeedbackType.CLOSE;
       feedback.ageDirection = guessedContestant.ageAtShow < secretQueen.ageAtShow ? DirectionType.HIGHER : DirectionType.LOWER;
     } else {
@@ -194,7 +215,8 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
       isWon: false,
       startTime: Date.now(),
       gameDate: today,
-      modeKey
+      modeKey,
+      hintsUsed: { entranceQuote: false, snatchGame: false }
     });
   }, [mode, modeKey]);
 
@@ -230,7 +252,8 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
           isWon: false,
           startTime: Date.now(),
           gameDate: today,
-          modeKey
+          modeKey,
+          hintsUsed: { entranceQuote: false, snatchGame: false }
         });
       }
     }
@@ -276,6 +299,7 @@ export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateRe
     gameState,
     submitGuess,
     resetGame,
+    markHintUsed,
     isGameComplete: gameState.isComplete,
     isGameWon: gameState.isWon,
     remainingGuesses: MAX_GUESSES - gameState.guesses.length

@@ -9,6 +9,7 @@ import GameEndSection from './components/GameEndSection';
 import InstructionsModal from './components/InstructionsModal';
 import SettingsModal from './components/SettingsModal';
 import ErrorBoundary from './components/ErrorBoundary';
+import HintButtons from './components/HintButtons';
 import { useGameState } from './hooks/useGameState';
 import { useSilhouettePreference } from './hooks/useSilhouettePreference';
 import { loadPreferences, updatePreference } from './utilities/localStorage';
@@ -21,7 +22,7 @@ function App() {
   const [gameMode, setGameMode] = useState<GameMode>(DEFAULT_GAME_MODE);
   
   // Initialize game state with current mode
-  const { gameState, submitGuess, isGameComplete } = useGameState(gameMode);
+  const { gameState, submitGuess, markHintUsed, isGameComplete } = useGameState(gameMode);
   
   // Initialize silhouette preference
   const { showSilhouette } = useSilhouettePreference();
@@ -100,21 +101,43 @@ function App() {
 
               {/* Guess Input Section with Timer - hidden when game is complete */}
               {!isGameComplete && (
-                <div className="mb-6 flex gap-3 items-stretch">
-                  <GuessInput
-                    onGuessSubmit={handleGuessSubmit}
-                    previousGuesses={gameState.guesses.map(guess => guess.contestant)}
+                <>
+                  {/* Hint Buttons + Timer row (timer hidden on small screens) */}
+                  <HintButtons
+                    entranceQuote={gameState.secretQueen.entranceQuote || ''}
+                    snatchGameCharacter={gameState.secretQueen.snatchGameCharacter || ''}
+                    hintsUsed={gameState.hintsUsed || { entranceQuote: false, snatchGame: false }}
+                    onHintUsed={markHintUsed}
                     disabled={isGameComplete}
-                    placeholder="Guess a queen..."
-                    mode={gameMode}
+                    className="mb-3 flex-1"
+                    modeKey={gameState.modeKey}
+                    timerSlot={
+                      <Timer
+                        startTime={gameState.startTime}
+                        endTime={gameState.endTime}
+                        isGameComplete={isGameComplete}
+                        className="flex-shrink-0 hidden sm:flex"
+                      />
+                    }
                   />
-                  <Timer
-                    startTime={gameState.startTime}
-                    endTime={gameState.endTime}
-                    isGameComplete={isGameComplete}
-                    className="flex-shrink-0"
-                  />
-                </div>
+                  
+                  {/* Guess Input + Timer (timer shown on small screens only) */}
+                  <div className="mb-4 flex gap-2 items-stretch">
+                    <GuessInput
+                      onGuessSubmit={handleGuessSubmit}
+                      previousGuesses={gameState.guesses.map(guess => guess.contestant)}
+                      disabled={isGameComplete}
+                      placeholder="Guess a queen..."
+                      mode={gameMode}
+                    />
+                    <Timer
+                      startTime={gameState.startTime}
+                      endTime={gameState.endTime}
+                      isGameComplete={isGameComplete}
+                      className="flex-shrink-0 sm:hidden"
+                    />
+                  </div>
+                </>
               )}
               
               {/* Guess History */}

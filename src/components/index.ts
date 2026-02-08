@@ -11,3 +11,4 @@ export { default as GameEndSection } from './GameEndSection';
 export { default as InstructionsModal } from './InstructionsModal';
 export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as LoadingSpinner } from './LoadingSpinner';
+export { default as HintButtons } from './HintButtons';
