@@ -898,7 +898,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/bianca-del-rio.webp',
     entranceQuote: 'Well well well, I hope you bitches are ready.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Judge Judy'
   },
   {
     id: 'adore-delano',
@@ -911,7 +911,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/adore-delano.webp',
     entranceQuote: 'I\'m home! Fuck yeah, I\'m the first one!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Anna Nicole Smith'
   },
   {
     id: 'courtney-act',
@@ -924,7 +924,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/courtney-act.webp',
     entranceQuote: 'Is this America\'s Next Top Model? Oh, sorry… just kidding!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Fran Drescher'
   },
   {
     id: 'darienne-lake',
@@ -937,7 +937,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/darienne-lake.webp',
     entranceQuote: 'They better widen the doorways and reinforce the runways, because the big girl\'s in the house!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Paula Deen'
   },
   {
     id: 'bendelacreme',
@@ -950,7 +950,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/bendelacreme.webp',
     entranceQuote: 'Hi everybody, it\'s me, ****! Ooh, there\'s one!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Maggie Smith'
   },
   {
     id: 'joslyn-fox',
@@ -963,7 +963,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/joslyn-fox.webp',
     entranceQuote: '(laughs)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Teresa Giudice'
   },
   {
     id: 'trinity-k-bonet',
@@ -976,7 +976,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/trinity-k-bonet.webp',
     entranceQuote: 'Hi',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Nicki Minaj'
   },
   {
     id: 'laganja-estranja',
@@ -989,7 +989,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/laganja-estranja.webp',
     entranceQuote: 'Oh, y\'all wanted a twist, ey? Come on Season *, let\'s get sickening! Yassss!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Rachel Zoe'
   },
   {
     id: 'milk',
@@ -1002,7 +1002,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/milk.webp',
     entranceQuote: '****! She does a body good, girl!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Julia Child'
   },
   {
     id: 'gia-gunn',
@@ -1015,7 +1015,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/gia-gunn.webp',
     entranceQuote: '(no words)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Kim Kardashian'
   },
   {
     id: 'april-carrion',
@@ -1028,7 +1028,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/april-carrion.webp',
     entranceQuote: 'Reporting for duty, **** is in the house!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'vivacious',
@@ -1041,7 +1041,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/vivacious.webp',
     entranceQuote: 'Mother has arrived!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'kelly-mantle',
@@ -1054,7 +1054,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kelly-mantle.webp',
     entranceQuote: 'Hey bitches, y\'all ready to rock and roll? Woooh!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'magnolia-crawford',
@@ -1067,7 +1067,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/magnolia-crawford.webp',
     entranceQuote: 'Oh wow!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 7
@@ -1082,7 +1082,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/violet-chachki.webp',
     entranceQuote: 'Ooh la la la la la la la la',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Alyssa Edwards'
   },
   {
     id: 'ginger-minj',
@@ -1095,7 +1095,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/ginger-minj.webp',
     entranceQuote: 'Hi fellas!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Adele'
   },
   {
     id: 'pearl',
@@ -1108,7 +1108,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/pearl.webp',
     entranceQuote: 'Sup',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Big Ang'
   },
   {
     id: 'kennedy-davenport',
@@ -1121,7 +1121,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kennedy-davenport.webp',
     entranceQuote: 'Well hello!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Little Richard'
   },
   {
     id: 'katya',
@@ -1134,7 +1134,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/katya.webp',
     entranceQuote: 'Давай cезон семь!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Suze Orman'
   },
   {
     id: 'trixie-mattel',
@@ -1147,7 +1147,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/trixie-mattel.webp',
     entranceQuote: 'This isn\'t Maury Povich!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'miss-fame',
@@ -1160,7 +1160,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/miss-fame.webp',
     entranceQuote: 'Greetings earth queens, I come in peace',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Donatella Versace'
   },
   {
     id: 'jaidynn-diore-fierce',
@@ -1173,7 +1173,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jaidynn-diore-fierce.webp',
     entranceQuote: 'How y\'all doing?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Raven-Symoné'
   },
   {
     id: 'max',
@@ -1186,7 +1186,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/max.webp',
     entranceQuote: 'Well, it\'s about time!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Sharon Needles'
   },
   {
     id: 'kandy-ho',
@@ -1199,7 +1199,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kandy-ho.webp',
     entranceQuote: 'I hope you got a sweet tooth, because ****\'s in the motherfucking house!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'mrs-kasha-davis',
@@ -1212,7 +1212,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/mrs-kasha-davis.webp',
     entranceQuote: 'Hiya my honeys, I\'m home!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'jasmine-masters',
@@ -1225,7 +1225,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jasmine-masters.webp',
     entranceQuote: 'I\'m here! We made it bitches!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'sasha-belle',
@@ -1238,7 +1238,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/sasha-belle.webp',
     entranceQuote: 'Hey it\'s me, say hello to my little friends!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'tempest-dujour',
@@ -1251,7 +1251,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/tempest-dujour.webp',
     entranceQuote: 'Who\'s ready for some hot tuna casserole, \'cos Mama\'s home!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 8
@@ -1266,7 +1266,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/bob-the-drag-queen.webp',
     entranceQuote: '(no words)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Uzo Aduba'
   },
   {
     id: 'kim-chi',
@@ -1279,7 +1279,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kim-chi.webp',
     entranceQuote: 'I came to chop suey the competition',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Kim Jong Un'
   },
   {
     id: 'naomi-smalls',
@@ -1292,7 +1292,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/naomi-smalls.webp',
     entranceQuote: 'Check your lipstick before you come for me.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tiffany "New York" Pollard'
   },
   {
     id: 'chi-chi-devayne',
@@ -1305,7 +1305,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/chi-chi-devayne.webp',
     entranceQuote: 'Laissez les bon temps roulez!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Eartha Kitt'
   },
   {
     id: 'derrick-barry',
@@ -1318,7 +1318,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/derrick-barry.webp',
     entranceQuote: 'It\'s **** bitch',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Britney Spears'
   },
   {
     id: 'thorgy-thor',
@@ -1329,9 +1329,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/thorgy-thor.webp',
-    entranceQuote: 'Wooh! **** with a TH and Orgy and I feel incredible!',
+    entranceQuote: 'Wooh! **** with a ** and **** and I feel incredible!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Michael Jackson'
   },
   {
     id: 'robbie-turner',
@@ -1344,7 +1344,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/robbie-turner.webp',
     entranceQuote: 'Good morning, I didn\'t realise this was happening today',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Diana Vreeland'
   },
   {
     id: 'acid-betty',
@@ -1357,7 +1357,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/acid-betty.webp',
     entranceQuote: 'No need to adjust your TV sets, this acid trip is all real!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Nancy Grace'
   },
   {
     id: 'naysha-lopez',
@@ -1370,7 +1370,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/naysha-lopez.webp',
     entranceQuote: 'Ola, the beauty is here',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'cynthia-lee-fontaine',
@@ -1383,7 +1383,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/cynthia-lee-fontaine.webp',
     entranceQuote: 'How ya doin mis amores? You wanna see my cucu?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'dax-exclamationpoint',
@@ -1396,7 +1396,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/dax-eclamationpoint.webp',
     entranceQuote: 'What\'s up nerds?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'laila-mcqueen',
@@ -1409,7 +1409,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/laila-mcqueen.webp',
     entranceQuote: 'Alright ladies, let\'s turn up the juice and see what shakes loose!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 9
@@ -1424,7 +1424,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/sasha-velour.webp',
     entranceQuote: '(screaming)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Marlene Dietrich'
   },
   {
     id: 'peppermint',
@@ -1437,7 +1437,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/peppermint.webp',
     entranceQuote: 'Oh my gosh! Heyyyy!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'NeNe Leakes'
   },
   {
     id: 'shea-coulee',
@@ -1450,7 +1450,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/shea-coulee.webp',
     entranceQuote: 'My name\'s ****, and I didn\'t come to play, I came to slay!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Naomi Campbell'
   },
   {
     id: 'trinity-taylor',
@@ -1463,7 +1463,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/trinity-taylor.webp',
     entranceQuote: 'The body is here bitches!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Amanda Lepore'
   },
   {
     id: 'alexis-michelle',
@@ -1476,7 +1476,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/alexis-michelle.webp',
     entranceQuote: 'How\'d ya like them egg rolls, Mr Charles?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Liza Minnelli'
   },
   {
     id: 'nina-bonina-brown',
@@ -1489,7 +1489,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/nina-bonina-brown.webp',
     entranceQuote: 'I\'m ****, Banana, Fofana, Osama Bin Laden Brown, boom boom boom!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Jasmine Masters'
   },
   {
     id: 'valentina',
@@ -1502,7 +1502,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/valentina.webp',
     entranceQuote: 'Hello, it\'s me ****!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Ariadna Gutiérrez'
   },
   {
     id: 'farrah-moan',
@@ -1515,7 +1515,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/farrah-moan.webp',
     entranceQuote: 'So this is what it looks like',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Gigi Gorgeous'
   },
   {
     id: 'aja',
@@ -1528,7 +1528,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/aja.webp',
     entranceQuote: 'Your edges are officially snatched',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Alyssa Edwards'
   },
   {
     id: 'eureka',
@@ -1541,7 +1541,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/eureka.webp',
     entranceQuote: 'Ow, come on, give it up for the big girl! Serving pure catfish.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'charlie-hides',
@@ -1554,7 +1554,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/charlie-hides.webp',
     entranceQuote: 'Hi hi hi, it\'s about to get shady up in here!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'kimora-blac',
@@ -1567,7 +1567,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kimora-blac.webp',
     entranceQuote: 'Is it me or is it hot in here?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'jaymes-mansfield',
@@ -1580,7 +1580,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jaymes-mansfield.webp',
     entranceQuote: 'Hi shapeshifters!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 10
@@ -1595,7 +1595,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/aquaria.webp',
     entranceQuote: 'Bonjour!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Melania Trump'
   },
   {
     id: 'kameron-michaels',
@@ -1608,7 +1608,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kameron-michaels.webp',
     entranceQuote: 'Well I auditioned for the Pit Crew, but this is gonna be way more fun!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Chyna'
   },
   {
     id: 'asia-ohara',
@@ -1621,7 +1621,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/asia-ohara.webp',
     entranceQuote: 'Well guys, Texas is back in the house',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Beyoncé'
   },
   {
     id: 'miz-cracker',
@@ -1634,7 +1634,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/miz-cracker.webp',
     entranceQuote: 'Okay, it\'s time for dinner!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Dorothy Parker'
   },
   {
     id: 'monet-x-change',
@@ -1647,7 +1647,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/money-x-change.webp',
     entranceQuote: 'Oh don\'t mind me, I\'m just here to sweep up the competition girl!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Maya Angelou'
   },
   {
     id: 'the-vixen',
@@ -1660,7 +1660,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/the-vixen.webp',
     entranceQuote: 'I\'m just here to fight!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Blue Ivy Carter'
   },
   {
     id: 'monique-heart',
@@ -1673,7 +1673,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/monique-heart.webp',
     entranceQuote: 'Ka-kitty-ka-kit-ka-ka-ka, ka-kitty-kat-kat-kow, giving you the heart of Season **, ****, the face',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Maxine Waters'
   },
   {
     id: 'blair-st-clair',
@@ -1686,7 +1686,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/blair-st-clair.webp',
     entranceQuote: 'I\'m ****, just got here this morning!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'mayhem-miller',
@@ -1699,7 +1699,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/mayhem-miller.webp',
     entranceQuote: 'Guess who finally decided to crash the party?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'dusty-ray-bottoms',
@@ -1712,7 +1712,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/dusty-ray-bottoms.webp',
     entranceQuote: 'Never loved ya',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'yuhua-hamasaki',
@@ -1725,7 +1725,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/yuhua-hamaski.webp',
     entranceQuote: 'Can you feel the shade?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'kalorie-karbdashian-williams',
@@ -1738,7 +1738,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kalorie-karbdashian-williams.webp',
     entranceQuote: 'Hope you\'re ready for your all-carb, high calorie diet',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'vanessa-vanjie-mateo',
@@ -1751,7 +1751,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/vanessa-vanjie-mateo.webp',
     entranceQuote: '10s, 10s, 10s across the board!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 11
@@ -1766,7 +1766,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/yvie-oddly.webp',
     entranceQuote: 'Move over ladies, this race just took an odd turn',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Whoopi Goldberg'
   },
   {
     id: 'brooke-lynn-hytes',
@@ -1779,7 +1779,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/brooke-lynn-hytes.webp',
     entranceQuote: 'Never fear, the queen of the North is here!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Céline Dion'
   },
   {
     id: 'akeria-c-davenport',
@@ -1792,7 +1792,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/akeria-c-davenport.webp',
     entranceQuote: 'Oh yes it\'s me, Miss **** D-A-V-E-N-P-O-R and as you can see, I\'m the motherfucking T',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tiffany Haddish'
   },
   {
     id: 'silky-nutmeg-ganache',
@@ -1805,7 +1805,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/silky-nutmeg-ganache.webp',
     entranceQuote: 'Munch munch, crunch crunch, **** is here to eat the lunch',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Ts Madison'
   },
   {
     id: 'nina-west',
@@ -1818,7 +1818,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/nina-west.webp',
     entranceQuote: 'Welcome to Season **, it looks like things just got ****-gendary!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Harvey Fierstein'
   },
   {
     id: 'shuga-cain',
@@ -1831,7 +1831,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/shuga-cain.webp',
     entranceQuote: 'Get ready y\'all, because this sugar is so sweet!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Charo'
   },
   {
     id: 'plastique-tiara',
@@ -1844,7 +1844,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/pastique-tiara.webp',
     entranceQuote: 'Hello, I\'m **** from Vietnam',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Lovely Mimi'
   },
   {
     id: 'rajah-ohara',
@@ -1857,7 +1857,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/rajah-ohara.webp',
     entranceQuote: 'Extra, extra, read all about it! **** is in the house, and I hope you came to play',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'scarlet-envy',
@@ -1870,7 +1870,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/scarlet-envy.webp',
     entranceQuote: 'The world wants me, and the feeling is mutual',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'ariel-versace',
@@ -1883,7 +1883,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/ariel-versace.webp',
     entranceQuote: 'Now this is what dreams are made of! Nyass!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'mercedes-iman-diamond',
@@ -1896,7 +1896,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/mercedes-iman-diamond.webp',
     entranceQuote: '(ululating)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'honey-davenport',
@@ -1909,7 +1909,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/honey-davenport.webp',
     entranceQuote: 'This honey is raw and unfiltered',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'kahanna-montrese',
@@ -1922,7 +1922,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kahanna-montrese.webp',
     entranceQuote: 'Vegas is back in the house, and this time we\'re hitting the jackpot',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'soju',
@@ -1935,7 +1935,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/soju.webp',
     entranceQuote: '(whacks around her nunchucks)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 12
@@ -1950,7 +1950,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jaida-essence-hall.webp',
     entranceQuote: 'Hey bitches! She\'s here!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Cardi B'
   },
   {
     id: 'crystal-methyd',
@@ -1963,7 +1963,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/crystal-methyd.webp',
     entranceQuote: 'Who\'s ready to party and play? Checkers anyone?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Poppy'
   },
   {
     id: 'gigi-goode',
@@ -1976,7 +1976,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/gigi-goode.webp',
     entranceQuote: 'Ahoy',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Maria the Robot'
   },
   {
     id: 'jackie-cox',
@@ -1989,7 +1989,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jackie-cox.webp',
     entranceQuote: 'Roll call! I\'m ****, Salaam, the Persian Princess of Drag has arrived!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Lisa Rinna'
   },
   {
     id: 'heidi-n-closet',
@@ -2002,7 +2002,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/heidi-n-closet.webp',
     entranceQuote: 'America, it\'s time to stop hiding in the closet',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Leslie Jones'
   },
   {
     id: 'widow-vondu',
@@ -2015,7 +2015,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/widow-von-du.webp',
     entranceQuote: 'Relax your throat bitches, \'cos y\'all gagging',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tina Turner / Ike Turner'
   },
   {
     id: 'jan',
@@ -2028,7 +2028,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jan.webp',
     entranceQuote: 'Hey y\'all, let\'s play some basketball!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Bernardette Peters'
   },
   {
     id: 'brita',
@@ -2041,7 +2041,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/brita.webp',
     entranceQuote: 'Here we go, sis! Y\'all thirsty?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Jennifer Holliday'
   },
   {
     id: 'aiden-zhane',
@@ -2052,9 +2052,9 @@ export const contestants: Contestant[] = [
     hometown: 'Acworth, Georgia',
     hometownCoordinates: cityCoordinates['Acworth, Georgia'],
     headshotUrl: '/images/headshots/aiden-zhane.webp',
-    entranceQuote: 'Season ** is about to be in-zhane',
+    entranceQuote: 'Season ** is about to be in-****',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Patricia Quinn'
   },
   {
     id: 'nicky-doll',
@@ -2067,7 +2067,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/nicky-doll.webp',
     entranceQuote: 'Well, that was a long flight',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'rock-m-sakura',
@@ -2080,7 +2080,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/rock-m-sakura.webp',
     entranceQuote: 'All tuck and no play make **** a crazy bitch!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'dahlia-sin',
@@ -2093,7 +2093,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/dahlia-sin.webp',
     entranceQuote: 'Are you ready to live a little, sin a lot?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 13
@@ -2108,7 +2108,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/symone.webp',
     entranceQuote: 'Don\'t let the smooth taste fool ya, baby!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Harriet Tubman'
   },
   {
     id: 'kandy-muse',
@@ -2121,7 +2121,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kandy-muse.webp',
     entranceQuote: 'Girl! From the hood to Hollywood!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Patrick Starrr'
   },
   {
     id: 'gottmik',
@@ -2134,7 +2134,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/gottmik.webp',
     entranceQuote: 'Time to crash the cis-tem',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Paris Hilton'
   },
   {
     id: 'rose',
@@ -2147,7 +2147,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/rose.webp',
     entranceQuote: 'Hey! Oh my god, I\'m the first one here. I could have gone to the dentist',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Mary, Queen of Scots'
   },
   {
     id: 'olivia-lux',
@@ -2160,7 +2160,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/olivia-lux.webp',
     entranceQuote: '**** be a lady tonight',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tabitha Brown'
   },
   {
     id: 'utica-queen',
@@ -2173,7 +2173,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/utica.webp',
     entranceQuote: 'Ah-choo! She\'s sickening!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Bob Ross'
   },
   {
     id: 'tina-burner',
@@ -2186,7 +2186,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/tina-burner.webp',
     entranceQuote: 'Didn\'t your parents ever teach you not to play with fire? Now let\'s turn it and burn it bitches!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Richard Simmons'
   },
   {
     id: 'denali',
@@ -2199,7 +2199,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/denali.webp',
     entranceQuote: 'Lemme break the ice',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Jonathan Van Ness'
   },
   {
     id: 'elliott-with-2-ts',
@@ -2212,7 +2212,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/elliott-with-2-ts.webp',
     entranceQuote: 'I\'m the queen you want to see, **** with Two T\'s. Okay, uh uh uh, okay? Get into it',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Rue McClanahan'
   },
   {
     id: 'lala-ri',
@@ -2225,7 +2225,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/lala-ri.webp',
     entranceQuote: 'Oh, what you say, what you say? **** is here to slay',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'tamisha-iman',
@@ -2238,7 +2238,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/tamisha-iman.webp',
     entranceQuote: 'Holla at me, I know you know me, holla at me, I know you know me. **** is here',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'joey-jay',
@@ -2251,7 +2251,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/joeyjay.webp',
     entranceQuote: 'Filler queen',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'kahmora-hall',
@@ -2264,7 +2264,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/kahmora-hall.webp',
     entranceQuote: 'The Mackie doll is finally out of her box',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 14
