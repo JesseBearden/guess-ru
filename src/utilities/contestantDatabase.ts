@@ -134,7 +134,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/rebecca-glasscock.webp',
     entranceQuote: 'Hello, what\'s up?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'shannel',
@@ -714,7 +714,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jinkx-monsoon.webp',
     entranceQuote: 'You know, I can hear the cackling from down the street!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Little Edie'
   },
   {
     id: 'alaska',
@@ -727,7 +727,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/alaska.webp',
     entranceQuote: '(neighs) Hiiieeeee!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Lady Bunny'
   },
   {
     id: 'roxxxy-andrews',
@@ -740,7 +740,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/roxxxy-andrews.webp',
     entranceQuote: 'Mash! Are you kidding?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tamar Braxton'
   },
   {
     id: 'detox',
@@ -753,7 +753,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/detox.webp',
     entranceQuote: 'Holy shit, we\'re here!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Ke$ha'
   },
   {
     id: 'coco-montrese',
@@ -766,7 +766,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/coco-montrese.webp',
     entranceQuote: 'Oh boys, the diva has arrived!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Janet Jackson'
   },
   {
     id: 'alyssa-edwards',
@@ -779,7 +779,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/alyssa-edwards.webp',
     entranceQuote: '(no words)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Katy Perry'
   },
   {
     id: 'ivy-winters',
@@ -792,7 +792,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/ivy-winters.webp',
     entranceQuote: 'Hey hey hey ladies! Aahhhhh!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Marilyn Monroe'
   },
   {
     id: 'jade-jolie',
@@ -805,7 +805,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/jade-jolie.webp',
     entranceQuote: 'Hey girls hey! What\'s going on pussycats?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Taylor Swift'
   },
   {
     id: 'lineysha-sparx',
@@ -818,7 +818,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/lineysha-sparx.webp',
     entranceQuote: '(no words)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Celia Cruz'
   },
   {
     id: 'honey-mahogany',
@@ -831,7 +831,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/honey-mahogany.webp',
     entranceQuote: 'Hey sisters!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'vivienne-pinay',
@@ -844,7 +844,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/vivienne-pinay.webp',
     entranceQuote: 'Hey y\'all!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'monica-beverly-hillz',
@@ -857,7 +857,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/monica-beverly-hillz.webp',
     entranceQuote: 'Hello girls.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'serena-chacha',
@@ -870,7 +870,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/serena-chacha.webp',
     entranceQuote: 'This is the best quinceanera present ever!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'penny-tration',
@@ -883,7 +883,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/penny-tration.webp',
     entranceQuote: 'Hello boys!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 6
@@ -2277,9 +2277,9 @@ export const contestants: Contestant[] = [
     hometown: 'Denver, Colorado',
     hometownCoordinates: cityCoordinates['Denver, Colorado'],
     headshotUrl: '/images/headshots/willow-pill.webp',
-    entranceQuote: '',
+    entranceQuote: 'Where am I?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Drew Barrymore'
   },
   {
     id: 'lady-camden',
@@ -2290,9 +2290,9 @@ export const contestants: Contestant[] = [
     hometown: 'Sacramento, California',
     hometownCoordinates: cityCoordinates['Sacramento, California'],
     headshotUrl: '/images/headshots/lady-camden.webp',
-    entranceQuote: '',
+    entranceQuote: 'Hello, you sexy bitches!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'William Shakespeare'
   },
   {
     id: 'angeria-paris-vanmicheals',
@@ -2303,9 +2303,9 @@ export const contestants: Contestant[] = [
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
     headshotUrl: '/images/headshots/angeria-paris-van-michaels.webp',
-    entranceQuote: '',
+    entranceQuote: 'The name\'s ****, but you can call me ****. Now, let\'s make it shake, honey!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tammie Brown'
   },
   {
     id: 'bosco',
@@ -2318,7 +2318,7 @@ export const contestants: Contestant[] = [
     headshotUrl: '/images/headshots/bosco.webp',
     entranceQuote: 'Alright, let\'s get out there today and make a difference.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Gwyneth Paltrow'
   },
   {
     id: 'daya-betty',
@@ -2329,9 +2329,9 @@ export const contestants: Contestant[] = [
     hometown: 'Springfield, Missouri',
     hometownCoordinates: cityCoordinates['Springfield, Missouri'],
     headshotUrl: '/images/headshots/daya-betty.webp',
-    entranceQuote: '',
+    entranceQuote: 'You **** be ready!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Ozzy Osbourne'
   },
   {
     id: 'deja-skye',
@@ -2342,9 +2342,9 @@ export const contestants: Contestant[] = [
     hometown: 'Fresno, California',
     hometownCoordinates: cityCoordinates['Fresno, California'],
     headshotUrl: '/images/headshots/deja-sky.webp',
-    entranceQuote: '',
+    entranceQuote: 'Alright, season 14. Let\'s get thickening!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Lil Jon'
   },
   {
     id: 'jorgeous',
@@ -2355,9 +2355,9 @@ export const contestants: Contestant[] = [
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
     headshotUrl: '/images/headshots/jorgeous.webp',
-    entranceQuote: '',
+    entranceQuote: 'Hello-tis! It is gorgeous like ****. Ow!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Ilana Glazer'
   },
   {
     id: 'jasmine-kennedie',
@@ -2368,9 +2368,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/jasmine-kennedie.webp',
-    entranceQuote: '',
+    entranceQuote: 'Oh this, y\'all? Is just the entry look.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Betsy DeVos'
   },
   {
     id: 'kerri-colby',
@@ -2381,9 +2381,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/kerri-colby.webp',
-    entranceQuote: '',
+    entranceQuote: 'I have one thing to say, baby, you already know every kiss, begins with a ****',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'maddy-morphosis',
@@ -2394,9 +2394,9 @@ export const contestants: Contestant[] = [
     hometown: 'Fayetteville, Arkansas',
     hometownCoordinates: cityCoordinates['Fayetteville, Arkansas'],
     headshotUrl: '/images/headshots/maddy-morphosis.webp',
-    entranceQuote: '',
+    entranceQuote: 'You ready to pitch a tent, America? The camp queen is here!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'orion-story',
@@ -2407,9 +2407,9 @@ export const contestants: Contestant[] = [
     hometown: 'Grand Rapids, Michigan',
     hometownCoordinates: cityCoordinates['Grand Rapids, Michigan'],
     headshotUrl: '/images/headshots/orion-story.webp',
-    entranceQuote: '',
+    entranceQuote: 'Hello, RuPaul? Yes, we\'ve been trying to reach you regarding your car\'s extended warranty? Oh, perfect, well then I just have one more question for you. Are you ready boots?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'kornbread-jete',
@@ -2420,9 +2420,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/kornbread-jete.webp',
-    entranceQuote: '',
+    entranceQuote: 'Is you hungry? \'Cause bitch, I\'m baked!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'alyssa-hunter',
@@ -2433,9 +2433,9 @@ export const contestants: Contestant[] = [
     hometown: 'Cataño, Puerto Rico',
     hometownCoordinates: cityCoordinates['Cataño, Puerto Rico'],
     headshotUrl: '/images/headshots/alyssa-hunter.webp',
-    entranceQuote: '',
+    entranceQuote: 'Hola! I hope you guys are ready to be slayed, \'cause it\'s **** season, bitches!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'june-jambalaya',
@@ -2446,9 +2446,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/june-jambalaya.webp',
-    entranceQuote: '',
+    entranceQuote: 'Grab a fork ladies, **** is served.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 15
@@ -2461,9 +2461,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/sasha-colby.webp',
-    entranceQuote: '',
+    entranceQuote: 'Period.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Jan Crouch'
   },
   {
     id: 'anetra',
@@ -2474,9 +2474,9 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/anetra.webp',
-    entranceQuote: '',
+    entranceQuote: 'What?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Gorgena Ramsey'
   },
   {
     id: 'luxx-noir-london',
@@ -2487,9 +2487,9 @@ export const contestants: Contestant[] = [
     hometown: 'East Orange, New Jersey',
     hometownCoordinates: cityCoordinates['East Orange, New Jersey'],
     headshotUrl: '/images/headshots/luxx-noir-london.webp',
-    entranceQuote: '',
+    entranceQuote: '"Gagged them a bit. For sure.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Amanda Lepore'
   },
   {
     id: 'mistress-isabelle-brooks',
@@ -2500,9 +2500,9 @@ export const contestants: Contestant[] = [
     hometown: 'Houston, Texas',
     hometownCoordinates: cityCoordinates['Houston, Texas'],
     headshotUrl: '/images/headshots/mistress-isabelle-brooks.webp',
-    entranceQuote: '',
+    entranceQuote: 'Don\'t be fooled, the camera adds 10 pounds!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Rosie O\'Donnell'
   },
   {
     id: 'loosey-laduca',
@@ -2513,9 +2513,9 @@ export const contestants: Contestant[] = [
     hometown: 'Ansonia, Connecticut',
     hometownCoordinates: cityCoordinates['Ansonia, Connecticut'],
     headshotUrl: '/images/headshots/loosey-laduca.webp',
-    entranceQuote: '',
+    entranceQuote: '"Oh ****, you\'ve got some slaying to do! Oh!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Joan Rivers'
   },
   {
     id: 'salina-estitties',
@@ -2526,9 +2526,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/salina-estitties.webp',
-    entranceQuote: '',
+    entranceQuote: 'Is this the meeting for the itty bitty **** committee? \'Cause they\'re here!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'The Virgin Mary'
   },
   {
     id: 'marcia-marcia-marcia',
@@ -2539,9 +2539,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/marcia-marcia-marcia.webp',
-    entranceQuote: '',
+    entranceQuote: 'Ow! My nose!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tim Gunn'
   },
   {
     id: 'malaysia-babydoll-foxx',
@@ -2552,9 +2552,9 @@ export const contestants: Contestant[] = [
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
     headshotUrl: '/images/headshots/malaysia-babydoll-foxx.webp',
-    entranceQuote: '',
+    entranceQuote: 'I\'m just here to **** shit up!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Saucy Santana'
   },
   {
     id: 'spice',
@@ -2565,9 +2565,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/spice.webp',
-    entranceQuote: '',
+    entranceQuote: 'Sweetie, that was my line!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Miley Cyrus'
   },
   {
     id: 'jax',
@@ -2578,9 +2578,9 @@ export const contestants: Contestant[] = [
     hometown: 'Darien, Connecticut',
     hometownCoordinates: cityCoordinates['Darien, Connecticut'],
     headshotUrl: '/images/headshots/jax.webp',
-    entranceQuote: '',
+    entranceQuote: 'Make room for your MVP, spelled ****',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Mona Lisa'
   },
   {
     id: 'aura-mayari',
@@ -2591,9 +2591,9 @@ export const contestants: Contestant[] = [
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
     headshotUrl: '/images/headshots/aura-mayari.webp',
-    entranceQuote: '',
+    entranceQuote: 'Do you feel that aura? I bet you do.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Bretman Rock'
   },
   {
     id: 'robin-fierce',
@@ -2604,9 +2604,9 @@ export const contestants: Contestant[] = [
     hometown: 'Hartford, Connecticut',
     hometownCoordinates: cityCoordinates['Hartford, Connecticut'],
     headshotUrl: '/images/headshots/robin-fierce.webp',
-    entranceQuote: '',
+    entranceQuote: 'Mirror mirror on the wall, who\'s the fiercest queen of them all? It\'s me.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Karen Huger'
   },
   {
     id: 'amethyst',
@@ -2617,9 +2617,9 @@ export const contestants: Contestant[] = [
     hometown: 'West Hartford, Connecticut',
     hometownCoordinates: cityCoordinates['West Hartford, Connecticut'],
     headshotUrl: '/images/headshots/amethyst.webp',
-    entranceQuote: '',
+    entranceQuote: 'Is this thing on?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Tan Mom'
   },
   {
     id: 'sugar',
@@ -2630,9 +2630,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/sugar.webp',
-    entranceQuote: '',
+    entranceQuote: 'Ugh, whatever!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Trisha Paytas'
   },
   {
     id: 'princess-poppy',
@@ -2643,9 +2643,9 @@ export const contestants: Contestant[] = [
     hometown: 'San Francisco, California',
     hometownCoordinates: cityCoordinates['San Francisco, California'],
     headshotUrl: '/images/headshots/princess-poppy.webp',
-    entranceQuote: '',
+    entranceQuote: 'I\'m homo... phobic.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'irene-dubois',
@@ -2656,9 +2656,9 @@ export const contestants: Contestant[] = [
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
     headshotUrl: '/images/headshots/irene-dubois.webp',
-    entranceQuote: '',
+    entranceQuote: '(sneezes) "Okay, someone\'s wearing cheap perfume. Oh wait, it\'s me!"',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 16
@@ -2671,9 +2671,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/nymphia-wind.webp',
-    entranceQuote: '',
+    entranceQuote: 'Bananas.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Jane Goodall'
   },
   {
     id: 'sapphira-cristal',
@@ -2684,9 +2684,9 @@ export const contestants: Contestant[] = [
     hometown: 'Philadelphia, Pennsylvania',
     hometownCoordinates: cityCoordinates['Philadelphia, Pennsylvania'],
     headshotUrl: '/images/headshots/sapphira-cristal.webp',
-    entranceQuote: '',
+    entranceQuote: 'Ooooh, Ooooooh! I think this place is haunted.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'James Brown'
   },
   {
     id: 'plane-jane',
@@ -2697,9 +2697,22 @@ export const contestants: Contestant[] = [
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
     headshotUrl: '/images/headshots/plane-jane.webp',
-    entranceQuote: '',
+    entranceQuote: 'Fasten your seatbelts, \'cause this **** always goes down.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Jelena Karleuša'
+  },
+  {
+    id: 'q',
+    name: 'Q',
+    season: 16,
+    finishingPosition: 4,
+    ageAtShow: 29,
+    hometown: 'Kansas City, Missouri',
+    hometownCoordinates: cityCoordinates['Kansas City, MO'],
+    headshotUrl: '/images/headshots/q.webp',
+    entranceQuote: 'Cue the music, because the show is about to start!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Amelia Earhart'
   },
   {
     id: 'morphine-love-dion',
@@ -2710,9 +2723,9 @@ export const contestants: Contestant[] = [
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
     headshotUrl: '/images/headshots/morphine-love-dion.webp',
-    entranceQuote: '',
+    entranceQuote: 'The beauty and the booty is here, a darlo todo!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Anna Sorokin'
   },
   {
     id: 'dawn',
@@ -2723,9 +2736,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/dawn.webp',
-    entranceQuote: '',
+    entranceQuote: 'Rise and shine, motherfuckers; it\'s ****.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Meghan McCain'
   },
   {
     id: 'mhiya-iman-lepaige',
@@ -2736,9 +2749,9 @@ export const contestants: Contestant[] = [
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
     headshotUrl: '/images/headshots/mhiya-iman-lepaige.webp',
-    entranceQuote: '',
+    entranceQuote: 'The \'Queen of Flips.\' I don\'t set the bar, I flips it.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Trina\'s Cousin Shaquita'
   },
   {
     id: 'plasma',
@@ -2749,9 +2762,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/plasma.webp',
-    entranceQuote: '',
+    entranceQuote: 'Darling, why give blood when you can sell... ****?',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Patti LuPone'
   },
   {
     id: 'xunami-muse',
@@ -2762,9 +2775,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/xunami-muse.webp',
-    entranceQuote: '',
+    entranceQuote: 'Yer! The natural disaster has arrived.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'The Gold Tooth Fairy'
   },
   {
     id: 'megami',
@@ -2775,9 +2788,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/megami.webp',
-    entranceQuote: '',
+    entranceQuote: 'A goddess amongst men.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'geneva-karr',
@@ -2788,9 +2801,9 @@ export const contestants: Contestant[] = [
     hometown: 'Brownsville, Texas',
     hometownCoordinates: cityCoordinates['Brownsville, Texas'],
     headshotUrl: '/images/headshots/geneva-karr.webp',
-    entranceQuote: '',
+    entranceQuote: 'Viva Mexico, \'Karr-brones\'!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'amanda-tori-meating',
@@ -2801,9 +2814,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/amanda-tori-meating.webp',
-    entranceQuote: '',
+    entranceQuote: 'Wait a second, this place doesn\'t have a bidet!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'mirage',
@@ -2814,9 +2827,9 @@ export const contestants: Contestant[] = [
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
     headshotUrl: '/images/headshots/mirage.webp',
-    entranceQuote: '',
+    entranceQuote: 'I hope you trash bags are ready to lose!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'hershii-liqcour-jete',
@@ -2827,9 +2840,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/hershii-liqcour-jete.webp',
-    entranceQuote: '',
+    entranceQuote: 'I... did not prepare for this.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 17
@@ -2842,9 +2855,9 @@ export const contestants: Contestant[] = [
     hometown: 'Cleveland, Ohio',
     hometownCoordinates: cityCoordinates['Cleveland, Ohio'],
     headshotUrl: '/images/headshots/onya-nurve.webp',
-    entranceQuote: '',
+    entranceQuote: 'Well, it do take ****.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Eddie Murphy'
   },
   {
     id: 'jewels-sparkles',
@@ -2855,9 +2868,9 @@ export const contestants: Contestant[] = [
     hometown: 'Tampa, Florida',
     hometownCoordinates: cityCoordinates['Tampa, Florida'],
     headshotUrl: '/images/headshots/jewels-sparkles.webp',
-    entranceQuote: '',
+    entranceQuote: 'Don\'t worry, I\'m not just a bitch; I\'m that bitch.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Bigfoot'
   },
   {
     id: 'lexi-love',
@@ -2868,9 +2881,9 @@ export const contestants: Contestant[] = [
     hometown: 'Louisville, Kentucky',
     hometownCoordinates: cityCoordinates['Louisville, Kentucky'],
     headshotUrl: '/images/headshots/lexi.webp',
-    entranceQuote: '',
+    entranceQuote: 'Why y\'all gagging? I haven\'t even stepped on any necks yet.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Gilbert Gottfried'
   },
   {
     id: 'sam-star',
@@ -2881,9 +2894,9 @@ export const contestants: Contestant[] = [
     hometown: 'Leeds, Alabama',
     hometownCoordinates: cityCoordinates['Leeds, Alabama'],
     headshotUrl: '/images/headshots/sam-star.webp',
-    entranceQuote: '',
+    entranceQuote: 'Well, I heard y\'all were looking for America\'s Next Drag Superstar!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Kim Gravel'
   },
   {
     id: 'suzie-toot',
@@ -2894,9 +2907,9 @@ export const contestants: Contestant[] = [
     hometown: 'Fort Lauderdale, Florida',
     hometownCoordinates: cityCoordinates['Fort Lauderdale, Florida'],
     headshotUrl: '/images/headshots/suzie-toot.webp',
-    entranceQuote: '',
+    entranceQuote: 'I\'ve always wanted my name in the papers.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Ellen Greene'
   },
   {
     id: 'lana-jarae',
@@ -2907,9 +2920,9 @@ export const contestants: Contestant[] = [
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
     headshotUrl: '/images/headshots/lana-jarae.webp',
-    entranceQuote: '',
+    entranceQuote: 'Gouda morning, Ja\'Reamers.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Rosa Parks'
   },
   {
     id: 'lydia-b-kollins',
@@ -2920,9 +2933,9 @@ export const contestants: Contestant[] = [
     hometown: 'Pittsburgh, Pennsylvania',
     hometownCoordinates: cityCoordinates['Pittsburgh, Pennsylvania'],
     headshotUrl: '/images/headshots/lydia-b-kollins.webp',
-    entranceQuote: '',
+    entranceQuote: 'Did someone say my name three times? (moans)',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'David Lynch'
   },
   {
     id: 'arrietty',
@@ -2933,9 +2946,9 @@ export const contestants: Contestant[] = [
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
     headshotUrl: '/images/headshots/arrietty.webp',
-    entranceQuote: '',
+    entranceQuote: 'Hi!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Baby Cupid'
   },
   {
     id: 'kori-king',
@@ -2946,9 +2959,9 @@ export const contestants: Contestant[] = [
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
     headshotUrl: '/images/headshots/kori-king.webp',
-    entranceQuote: '',
+    entranceQuote: '*sip* Ahhh. Good morning, kingdom!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Big Ang'
   },
   {
     id: 'acacia-forgot',
@@ -2959,9 +2972,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/acacia-forgot.webp',
-    entranceQuote: '',
+    entranceQuote: 'Totally tubular.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Trisha Paytas'
   },
   {
     id: 'crystal-envy',
@@ -2972,9 +2985,9 @@ export const contestants: Contestant[] = [
     hometown: 'Asbury Park, New Jersey',
     hometownCoordinates: cityCoordinates['Asbury Park, New Jersey'],
     headshotUrl: '/images/headshots/crystal-envy.webp',
-    entranceQuote: '',
+    entranceQuote: 'Yeah, I\'d **** me too.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'Nichole Richie'
   },
   {
     id: 'hormona-lisa',
@@ -2985,9 +2998,9 @@ export const contestants: Contestant[] = [
     hometown: 'Chattanooga, Tennessee',
     hometownCoordinates: cityCoordinates['Chattanooga, Tennessee'],
     headshotUrl: '/images/headshots/hormona-lisa.webp',
-    entranceQuote: '',
+    entranceQuote: 'Hello, loyal subjects. It is I, ****, at your service. *laugh* Wow, that was annoying.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'joella',
@@ -2998,9 +3011,9 @@ export const contestants: Contestant[] = [
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
     headshotUrl: '/images/headshots/joella.webp',
-    entranceQuote: '',
+    entranceQuote: '大家好, 大家好, welcome to the **** Dynasty, bitch!',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'lucky-starzzz',
@@ -3011,9 +3024,9 @@ export const contestants: Contestant[] = [
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
     headshotUrl: '/images/headshots/lucky-starzzz.webp',
-    entranceQuote: '',
+    entranceQuote: 'Oh, daddy, I think I stained the sheets.',
     farewellQuote: '',
-    snatchGameCharacter: ''
+    snatchGameCharacter: 'n/a'
   }
 ];
 
