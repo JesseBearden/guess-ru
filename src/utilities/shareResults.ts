@@ -109,15 +109,23 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
  * Formats share results as text for copying to clipboard
  * @param shareResults The share results data
  * @param isWon Whether the player won the game
+ * @param hintsUsedDetail Optional detail about which hints were used
  * @returns Formatted text string ready for sharing
  */
-export const formatShareText = (shareResults: ShareResults, isWon: boolean): string => {
-  const { gameNumber, guessCount, totalGuesses, timeElapsed, guessPattern, modeKey, hintsUsed } = shareResults;
+export const formatShareText = (shareResults: ShareResults, isWon: boolean, hintsUsedDetail?: { entranceQuote: boolean; snatchGame: boolean }): string => {
+  const { gameNumber, guessCount, totalGuesses, timeElapsed, guessPattern, modeKey } = shareResults;
   
   // Header line with game number, mode icon, hints indicator, and result
   const resultText = isWon ? `${guessCount}/${totalGuesses}` : 'X/8';
   const modeIcon = getModeIcon(modeKey || 'default');
-  const hintsIndicator = hintsUsed ? '🔍'.repeat(hintsUsed) : '';
+  
+  // Build hints indicator with specific icons
+  let hintsIndicator = '';
+  if (hintsUsedDetail) {
+    if (hintsUsedDetail.entranceQuote) hintsIndicator += '🎤';
+    if (hintsUsedDetail.snatchGame) hintsIndicator += '🎭';
+  }
+  
   const header = `GuessRu #${gameNumber} ${modeIcon}${hintsIndicator ? ' ' + hintsIndicator : ''} ${resultText} ⏱️ ${timeElapsed}`;
   
   // Empty line
@@ -141,7 +149,7 @@ export const formatShareText = (shareResults: ShareResults, isWon: boolean): str
 export const copyShareResults = async (gameState: GameState): Promise<boolean> => {
   try {
     const shareResults = generateShareResults(gameState);
-    const shareText = formatShareText(shareResults, gameState.isWon);
+    const shareText = formatShareText(shareResults, gameState.isWon, gameState.hintsUsed);
     
     if (navigator.clipboard && navigator.clipboard.writeText) {
       await navigator.clipboard.writeText(shareText);

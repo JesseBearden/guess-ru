@@ -96,7 +96,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isVisible, onClos
           <div>
             <h3 className="font-bold text-sm mb-2">Hints</h3>
             <p className="text-sm leading-relaxed">
-              Need help? Tap <strong>🎤 Entrance Quote</strong> or <strong>🎭 Snatch Game</strong> to reveal clues. Using hints adds a 🔍 to your share results.
+              Need help? Tap <strong>🎤 Entrance Quote</strong> or <strong>🎭 Snatch Game</strong> to reveal clues. Using hints will show up in your share results.
             </p>
           </div>
 
