@@ -105,9 +105,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Minneapolis, Minnesota',
     hometownCoordinates: cityCoordinates['Minneapolis, Minnesota'],
-    headshotUrl: '/images/headshots/bebe-zahara-benet.jpg',
-    silhouetteUrl: '/images/silhouettes/bebe-zahara-benet.jpg',
-    entranceQuote: '****, nice to meet you!'
+    headshotUrl: '/images/headshots/bebe-zahara-benet.webp',
+    entranceQuote: '****, nice to meet you!',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'nina-flowers',
@@ -117,9 +118,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Bayamón, Puerto Rico',
     hometownCoordinates: cityCoordinates['Bayamón, Puerto Rico'],
-    headshotUrl: '/images/headshots/nina-flowers.jpg',
-    silhouetteUrl: '/images/silhouettes/nina-flowers.jpg',
-    entranceQuote: 'Hi'
+    headshotUrl: '/images/headshots/nina-flowers.webp',
+    entranceQuote: 'Hi',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'rebecca-glasscock',
@@ -129,9 +131,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Fort Lauderdale, Florida',
     hometownCoordinates: cityCoordinates['Fort Lauderdale, Florida'],
-    headshotUrl: '/images/headshots/rebecca-glasscock.jpg',
-    silhouetteUrl: '/images/silhouettes/rebecca-glasscock.jpg',
-    entranceQuote: 'Hello, what\'s up?'
+    headshotUrl: '/images/headshots/rebecca-glasscock.webp',
+    entranceQuote: 'Hello, what\'s up?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'shannel',
@@ -141,9 +144,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/shannel.jpg',
-    silhouetteUrl: '/images/silhouettes/shannel.jpg',
-    entranceQuote: 'Wooh, my God! Look at this! Wow, crazy, crazy, crazy!'
+    headshotUrl: '/images/headshots/shannel.webp',
+    entranceQuote: 'Wooh, my God! Look at this! Wow, crazy, crazy, crazy!',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'ongina',
@@ -153,9 +157,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/ongina.jpg',
-    silhouetteUrl: '/images/silhouettes/ongina.jpg',
-    entranceQuote: 'Hi, you guys are fabulous'
+    headshotUrl: '/images/headshots/ongina.webp',
+    entranceQuote: 'Hi, you guys are fabulous',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'jade-s1',
@@ -165,9 +170,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/jade-s1.jpg',
-    silhouetteUrl: '/images/silhouettes/jade-s1.jpg',
-    entranceQuote: 'Hi'
+    headshotUrl: '/images/headshots/jade-s1.webp',
+    entranceQuote: 'Hi',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'akashia',
@@ -177,9 +183,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Cleveland, Ohio',
     hometownCoordinates: cityCoordinates['Cleveland, Ohio'],
-    headshotUrl: '/images/headshots/akashia.jpg',
-    silhouetteUrl: '/images/silhouettes/akashia.jpg',
-    entranceQuote: 'Ow!'
+    headshotUrl: '/images/headshots/akashia.webp',
+    entranceQuote: 'Ow!',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'tammie-brown',
@@ -189,9 +196,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Glen Burnie, Maryland',
     hometownCoordinates: cityCoordinates['Glen Burnie, Maryland'],
-    headshotUrl: '/images/headshots/tammie-brown.jpg',
-    silhouetteUrl: '/images/silhouettes/tammie-brown.jpg',
-    entranceQuote: '👍'
+    headshotUrl: '/images/headshots/tammie-brown.webp',
+    entranceQuote: '👍',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'victoria-porkchop-parker',
@@ -201,9 +209,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 39,
     hometown: 'Raleigh, North Carolina',
     hometownCoordinates: cityCoordinates['Raleigh, North Carolina'],
-    headshotUrl: '/images/headshots/victoria-porkchop-parker.jpg',
-    silhouetteUrl: '/images/silhouettes/victoria-porkchop-parker.jpg',
-    entranceQuote: 'Hey girls, what\'s going on?'
+    headshotUrl: '/images/headshots/victoria-porkchop-parker.webp',
+    entranceQuote: 'Hey girls, what\'s going on?',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 2
@@ -215,9 +224,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
-    headshotUrl: '/images/headshots/tyra-sanchez.jpg',
-    silhouetteUrl: '/images/silhouettes/tyra-sanchez.jpg',
-    entranceQuote: '(walks in)'
+    headshotUrl: '/images/headshots/tyra-sanchez.webp',
+    entranceQuote: '(walks in)',
+    farewellQuote: 'n/a',
+    snatchGameCharacter: 'Beyoncé'
   },
   {
     id: 'raven',
@@ -227,9 +237,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Riverside, California',
     hometownCoordinates: cityCoordinates['Riverside, California'],
-    headshotUrl: '/images/headshots/raven.jpg',
-    silhouetteUrl: '/images/silhouettes/raven.jpg',
-    entranceQuote: 'What\'s up bitches?'
+    headshotUrl: '/images/headshots/raven.webp',
+    entranceQuote: 'What\'s up bitches?',
+    farewellQuote: '',
+    snatchGameCharacter: 'Paris Hilton'
   },
   {
     id: 'jujubee',
@@ -239,9 +250,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
-    headshotUrl: '/images/headshots/jujubee.jpg',
-    silhouetteUrl: '/images/silhouettes/jujubee.jpg',
-    entranceQuote: 'What a sin!'
+    headshotUrl: '/images/headshots/jujubee.webp',
+    entranceQuote: 'What a sin!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Kimora Lee Simmons'
   },
   {
     id: 'tatianna',
@@ -251,9 +263,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Falls Church, Virginia',
     hometownCoordinates: cityCoordinates['Falls Church, Virginia'],
-    headshotUrl: '/images/headshots/tatianna.jpg',
-    silhouetteUrl: '/images/silhouettes/tatianna.jpg',
-    entranceQuote: '(walks in)'
+    headshotUrl: '/images/headshots/tatianna.webp',
+    entranceQuote: '(walks in)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Britney Spears'
   },
   {
     id: 'pandora-boxx',
@@ -263,9 +276,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'Rochester, New York',
     hometownCoordinates: cityCoordinates['Rochester, New York'],
-    headshotUrl: '/images/headshots/pandora-boxx.jpg',
-    silhouetteUrl: '/images/silhouettes/pandora-boxx.jpg',
-    entranceQuote: 'Hey fake ladies!'
+    headshotUrl: '/images/headshots/pandora-boxx.webp',
+    entranceQuote: 'Hey fake ladies!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Carol Channing'
   },
   {
     id: 'jessica-wild',
@@ -275,9 +289,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'San Juan, Puerto Rico',
     hometownCoordinates: cityCoordinates['San Juan, Puerto Rico'],
-    headshotUrl: '/images/headshots/jessica-wild.jpg',
-    silhouetteUrl: '/images/silhouettes/jessica-wild.jpg',
-    entranceQuote: 'Oh my God!'
+    headshotUrl: '/images/headshots/jessica-wild.webp',
+    entranceQuote: 'Oh my God!',
+    farewellQuote: '',
+    snatchGameCharacter: 'RuPaul'
   },
   {
     id: 'sahara-davenport',
@@ -287,9 +302,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/sahara-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/sahara-davenport.jpg',
-    entranceQuote: '(screaming)'
+    headshotUrl: '/images/headshots/sahara-davenport.webp',
+    entranceQuote: '(screaming)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Whitney Houston'
   },
   {
     id: 'morgan-mcmichaels',
@@ -299,9 +315,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Scotland Neck, North Carolina',
     hometownCoordinates: cityCoordinates['Scotland Neck, North Carolina'],
-    headshotUrl: '/images/headshots/morgan-mcmichaels.jpg',
-    silhouetteUrl: '/images/silhouettes/morgan-mcmichaels.jpg',
-    entranceQuote: 'Bitch!'
+    headshotUrl: '/images/headshots/morgan-mcmichaels.webp',
+    entranceQuote: 'Bitch!',
+    farewellQuote: '',
+    snatchGameCharacter: 'P!nk'
   },
   {
     id: 'sonique',
@@ -311,9 +328,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/sonique.jpg',
-    silhouetteUrl: '/images/silhouettes/sonique.jpg',
-    entranceQuote: '(walks in)'
+    headshotUrl: '/images/headshots/sonique.webp',
+    entranceQuote: '(walks in)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Lady Gaga'
   },
   {
     id: 'mystique-summers-madison',
@@ -323,9 +341,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/mystique-summers-madison.jpg',
-    silhouetteUrl: '/images/silhouettes/mystique-summers-madison.jpg',
-    entranceQuote: 'I\'m ****'
+    headshotUrl: '/images/headshots/mystique-summers-madison.webp',
+    entranceQuote: 'I\'m ****',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'nicole-paige-brooks',
@@ -335,9 +354,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 36,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/nicole-paige-brooks.jpg',
-    silhouetteUrl: '/images/silhouettes/nicole-paige-brooks.jpg',
-    entranceQuote: 'Holy shit. I\'m first'
+    headshotUrl: '/images/headshots/nicole-paige-brooks.webp',
+    entranceQuote: 'Holy shit. I\'m first',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'shangela',
@@ -347,9 +367,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Paris, Texas',
     hometownCoordinates: cityCoordinates['Paris, Texas'],
-    headshotUrl: '/images/headshots/shangela.jpg',
-    silhouetteUrl: '/images/silhouettes/shangela.jpg',
-    entranceQuote: 'Hello somebody!'
+    headshotUrl: '/images/headshots/shangela.webp',
+    entranceQuote: 'Hello somebody!',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 3
@@ -361,9 +382,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 36,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/raja.jpg',
-    silhouetteUrl: '/images/silhouettes/raja.jpg',
-    entranceQuote: '(no words)'
+    headshotUrl: '/images/headshots/raja.webp',
+    entranceQuote: '(no words)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Tyra Banks'
   },
   {
     id: 'manila-luzon',
@@ -373,9 +395,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/manila-luzon.jpg',
-    silhouetteUrl: '/images/silhouettes/manila-luzon.jpg',
-    entranceQuote: 'Hello!'
+    headshotUrl: '/images/headshots/manila-luzon.webp',
+    entranceQuote: 'Hellooo!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Imelda Marcos'
   },
   {
     id: 'alexis-mateo',
@@ -385,9 +408,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'St. Petersburg, Florida',
     hometownCoordinates: cityCoordinates['St. Petersburg, Florida'],
-    headshotUrl: '/images/headshots/alexis-mateo.jpg',
-    silhouetteUrl: '/images/silhouettes/alexis-mateo.jpg',
-    entranceQuote: 'Hey, hey, hey! How\'s everybody doing?'
+    headshotUrl: '/images/headshots/alexis-mateo.webp',
+    entranceQuote: 'Hey, hey, hey! How\'s everybody doing?',
+    farewellQuote: '',
+    snatchGameCharacter: 'Alicia Keys'
   },
   {
     id: 'yara-sofia',
@@ -397,9 +421,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Manati, Puerto Rico',
     hometownCoordinates: cityCoordinates['Manati, Puerto Rico'],
-    headshotUrl: '/images/headshots/yara-sofia.jpg',
-    silhouetteUrl: '/images/silhouettes/yara-sofia.jpg',
-    entranceQuote: 'Hi'
+    headshotUrl: '/images/headshots/yara-sofia.webp',
+    entranceQuote: 'Hi',
+    farewellQuote: '',
+    snatchGameCharacter: 'Amy Winehouse'
   },
   {
     id: 'carmen-carrera',
@@ -409,9 +434,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Elmwood Park, New Jersey',
     hometownCoordinates: cityCoordinates['Elmwood Park, New Jersey'],
-    headshotUrl: '/images/headshots/carmen-carrera.jpg',
-    silhouetteUrl: '/images/silhouettes/carmen-carrera.jpg',
-    entranceQuote: '(walks in)'
+    headshotUrl: '/images/headshots/carmen-carrera.webp',
+    entranceQuote: '(walks in)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Jennifer Lopez'
   },
   {
     id: 'delta-work',
@@ -421,9 +447,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Norwalk, California',
     hometownCoordinates: cityCoordinates['Norwalk, California'],
-    headshotUrl: '/images/headshots/delta-work.jpg',
-    silhouetteUrl: '/images/silhouettes/delta-work.jpg',
-    entranceQuote: '(walks in)'
+    headshotUrl: '/images/headshots/delta-work.webp',
+    entranceQuote: '(walks in)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Cher'
   },
   {
     id: 'stacy-layne-matthews',
@@ -433,9 +460,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Back Swamp, North Carolina',
     hometownCoordinates: cityCoordinates['Back Swamp, North Carolina'],
-    headshotUrl: '/images/headshots/stacy-layne-matthews.jpg',
-    silhouetteUrl: '/images/silhouettes/stacy-layne-matthews.jpg',
-    entranceQuote: 'Hi'
+    headshotUrl: '/images/headshots/stacy-layne-matthews.webp',
+    entranceQuote: 'Hi',
+    farewellQuote: '',
+    snatchGameCharacter: 'Mo\'Nique'
   },
   {
     id: 'mariah',
@@ -445,9 +473,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/mariah.jpg',
-    silhouetteUrl: '/images/silhouettes/mariah.jpg',
-    entranceQuote: 'Hey'
+    headshotUrl: '/images/headshots/mariah.webp',
+    entranceQuote: 'Hey',
+    farewellQuote: '',
+    snatchGameCharacter: 'Joan Crawford'
   },
   {
     id: 'india-ferrah',
@@ -457,9 +486,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Dayton, Ohio',
     hometownCoordinates: cityCoordinates['Dayton, Ohio'],
-    headshotUrl: '/images/headshots/india-ferrah.jpg',
-    silhouetteUrl: '/images/silhouettes/india-ferrah.jpg',
-    entranceQuote: 'Prison honey'
+    headshotUrl: '/images/headshots/india-ferrah.webp',
+    entranceQuote: 'Prison honey',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'mimi-imfurst',
@@ -469,9 +499,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/mimi-imfurst.jpg',
-    silhouetteUrl: '/images/silhouettes/mimi-imfurst.jpg',
-    entranceQuote: 'Welcome to my party! I brought cookies!'
+    headshotUrl: '/images/headshots/mimi-imfurst.webp',
+    entranceQuote: 'Welcome to my party! I brought cookies!',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'phoenix',
@@ -481,9 +512,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/phoenix.jpg',
-    silhouetteUrl: '/images/silhouettes/phoenix.jpg',
-    entranceQuote: 'Hi, what\'s going on?'
+    headshotUrl: '/images/headshots/phoenix.webp',
+    entranceQuote: 'Hi, what\'s going on?',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'venus-d-lite',
@@ -493,9 +525,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/venus-d-lite.jpg',
-    silhouetteUrl: '/images/silhouettes/venus-d-lite.jpg',
-    entranceQuote: 'Hello'
+    headshotUrl: '/images/headshots/venus-d-lite.webp',
+    entranceQuote: 'Hello',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 4
@@ -507,9 +540,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Pittsburgh, Pennsylvania',
     hometownCoordinates: cityCoordinates['Pittsburgh, Pennsylvania'],
-    headshotUrl: '/images/headshots/sharon-needles.jpg',
-    silhouetteUrl: '/images/silhouettes/sharon-needles.jpg',
-    entranceQuote: 'I look spooky, but I\'m really nice!'
+    headshotUrl: '/images/headshots/sharon-needles.webp',
+    entranceQuote: 'I look spooky, but I\'m really nice!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Michelle Visage'
   },
   {
     id: 'chad-michaels',
@@ -519,9 +553,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 40,
     hometown: 'San Diego, California',
     hometownCoordinates: cityCoordinates['San Diego, California'],
-    headshotUrl: '/images/headshots/chad-michaels.jpg',
-    silhouetteUrl: '/images/silhouettes/chad-michaels.jpg',
-    entranceQuote: 'Morning bitches!'
+    headshotUrl: '/images/headshots/chad-michaels.webp',
+    entranceQuote: 'Morning bitches!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Cher'
   },
   {
     id: 'phi-phi-ohara',
@@ -531,9 +566,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/phi-phi-ohara.jpg',
-    silhouetteUrl: '/images/silhouettes/phi-phi-ohara.jpg',
-    entranceQuote: 'Well, hello, hello! How are y\'all doing?'
+    headshotUrl: '/images/headshots/phi-phi-ohara.webp',
+    entranceQuote: 'Well, hello, hello! How are y\'all doing?',
+    farewellQuote: '',
+    snatchGameCharacter: 'Lady Gaga'
   },
   {
     id: 'latrice-royale',
@@ -543,9 +579,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 39,
     hometown: 'South Beach, Florida',
     hometownCoordinates: cityCoordinates['South Beach, Florida'],
-    headshotUrl: '/images/headshots/latrice-royale.jpg',
-    silhouetteUrl: '/images/silhouettes/latrice-royale.jpg',
-    entranceQuote: 'Eat it!'
+    headshotUrl: '/images/headshots/latrice-royale.webp',
+    entranceQuote: 'Eat it!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Aretha Franklin'
   },
   {
     id: 'kenya-michaels',
@@ -555,9 +592,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Dorado, Puerto Rico',
     hometownCoordinates: cityCoordinates['Dorado, Puerto Rico'],
-    headshotUrl: '/images/headshots/kenya-michaels.jpg',
-    silhouetteUrl: '/images/silhouettes/kenya-michaels.jpg',
-    entranceQuote: 'Hi girls!'
+    headshotUrl: '/images/headshots/kenya-michaels.webp',
+    entranceQuote: 'Hi girls!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Beyoncé'
   },
   {
     id: 'dida-ritz',
@@ -567,9 +605,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/dida-ritz.jpg',
-    silhouetteUrl: '/images/silhouettes/dida-ritz.jpg',
-    entranceQuote: 'Bonjour ladies!'
+    headshotUrl: '/images/headshots/dida-ritz.webp',
+    entranceQuote: 'Bonjour ladies!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Wendy Williams'
   },
   {
     id: 'willam',
@@ -579,9 +618,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/willam.jpg',
-    silhouetteUrl: '/images/silhouettes/willam.jpg',
-    entranceQuote: '(laughs)'
+    headshotUrl: '/images/headshots/willam.webp',
+    entranceQuote: '(laughs)',
+    farewellQuote: '',
+    snatchGameCharacter: 'Jessica Simpson'
   },
   {
     id: 'jiggly-caliente',
@@ -591,9 +631,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/jiggly-caliente.jpg',
-    silhouetteUrl: '/images/silhouettes/jiggly-caliente.jpg',
-    entranceQuote: 'Hi ladies!'
+    headshotUrl: '/images/headshots/jiggly-caliente.webp',
+    entranceQuote: 'Hi ladies!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Snooki'
   },
   {
     id: 'milan',
@@ -603,9 +644,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 36,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/milan.jpg',
-    silhouetteUrl: '/images/silhouettes/milan.jpg',
-    entranceQuote: 'Hey, there\'s a new girl in town! Let\'s get to business!'
+    headshotUrl: '/images/headshots/milan.webp',
+    entranceQuote: 'Hey, there\'s a new girl in town! Let\'s get to business!',
+    farewellQuote: '',
+    snatchGameCharacter: 'Diana Ross'
   },
   {
     id: 'madame-laqueer',
@@ -615,9 +657,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Carolina, Puerto Rico',
     hometownCoordinates: cityCoordinates['Carolina, Puerto Rico'],
-    headshotUrl: '/images/headshots/madame-laqueer.jpg',
-    silhouetteUrl: '/images/silhouettes/madame-laqueer.jpg',
-    entranceQuote: 'Hiya!'
+    headshotUrl: '/images/headshots/madame-laqueer.webp',
+    entranceQuote: 'Hiya!',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'the-princess',
@@ -627,9 +670,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/the-princess.jpg',
-    silhouetteUrl: '/images/silhouettes/the-princess.jpg',
-    entranceQuote: 'Hello!'
+    headshotUrl: '/images/headshots/the-princess.webp',
+    entranceQuote: 'Hello!',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'lashauwn-beyond',
@@ -639,9 +683,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Fort Lauderdale, Florida',
     hometownCoordinates: cityCoordinates['Fort Lauderdale, Florida'],
-    headshotUrl: '/images/headshots/lashauwn-beyond.jpg',
-    silhouetteUrl: '/images/silhouettes/lashauwn-beyond.jpg',
-    entranceQuote: 'Hi queen one!'
+    headshotUrl: '/images/headshots/lashauwn-beyond.webp',
+    entranceQuote: 'Hi queen one!',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
   {
     id: 'alisa-summers',
@@ -651,9 +696,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Tampa, Florida',
     hometownCoordinates: cityCoordinates['Tampa, Florida'],
-    headshotUrl: '/images/headshots/alisa-summers.jpg',
-    silhouetteUrl: '/images/silhouettes/alisa-summers.jpg',
-    entranceQuote: 'Hello, how y\'all doing?'
+    headshotUrl: '/images/headshots/alisa-summers.webp',
+    entranceQuote: 'Hello, how y\'all doing?',
+    farewellQuote: '',
+    snatchGameCharacter: 'n/a'
   },
 
   // Season 5
@@ -665,9 +711,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/jinkx-monsoon.jpg',
-    silhouetteUrl: '/images/silhouettes/jinkx-monsoon.jpg',
-    entranceQuote: 'You know, I can hear the cackling from down the street!'
+    headshotUrl: '/images/headshots/jinkx-monsoon.webp',
+    entranceQuote: 'You know, I can hear the cackling from down the street!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'alaska',
@@ -677,9 +724,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Pittsburgh, Pennsylvania',
     hometownCoordinates: cityCoordinates['Pittsburgh, Pennsylvania'],
-    headshotUrl: '/images/headshots/alaska.jpg',
-    silhouetteUrl: '/images/silhouettes/alaska.jpg',
-    entranceQuote: '(neighs) Hiiieeeee!'
+    headshotUrl: '/images/headshots/alaska.webp',
+    entranceQuote: '(neighs) Hiiieeeee!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'roxxxy-andrews',
@@ -689,9 +737,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
-    headshotUrl: '/images/headshots/roxxxy-andrews.jpg',
-    silhouetteUrl: '/images/silhouettes/roxxxy-andrews.jpg',
-    entranceQuote: 'Mash! Are you kidding?'
+    headshotUrl: '/images/headshots/roxxxy-andrews.webp',
+    entranceQuote: 'Mash! Are you kidding?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'detox',
@@ -701,9 +750,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/detox.jpg',
-    silhouetteUrl: '/images/silhouettes/detox.jpg',
-    entranceQuote: 'Holy shit, we\'re here!'
+    headshotUrl: '/images/headshots/detox.webp',
+    entranceQuote: 'Holy shit, we\'re here!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'coco-montrese',
@@ -713,9 +763,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/coco-montrese.jpg',
-    silhouetteUrl: '/images/silhouettes/coco-montrese.jpg',
-    entranceQuote: 'Oh boys, the diva has arrived!'
+    headshotUrl: '/images/headshots/coco-montrese.webp',
+    entranceQuote: 'Oh boys, the diva has arrived!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'alyssa-edwards',
@@ -725,9 +776,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Mesquite, Texas',
     hometownCoordinates: cityCoordinates['Mesquite, Texas'],
-    headshotUrl: '/images/headshots/alyssa-edwards.jpg',
-    silhouetteUrl: '/images/silhouettes/alyssa-edwards.jpg',
-    entranceQuote: '(no words)'
+    headshotUrl: '/images/headshots/alyssa-edwards.webp',
+    entranceQuote: '(no words)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'ivy-winters',
@@ -737,9 +789,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/ivy-winters.jpg',
-    silhouetteUrl: '/images/silhouettes/ivy-winters.jpg',
-    entranceQuote: 'Hey hey hey ladies! Aahhhhh!'
+    headshotUrl: '/images/headshots/ivy-winters.webp',
+    entranceQuote: 'Hey hey hey ladies! Aahhhhh!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jade-jolie',
@@ -749,9 +802,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Gainesville, Florida',
     hometownCoordinates: cityCoordinates['Gainesville, Florida'],
-    headshotUrl: '/images/headshots/jade-jolie.jpg',
-    silhouetteUrl: '/images/silhouettes/jade-jolie.jpg',
-    entranceQuote: 'Hey girls hey! What\'s going on pussycats?'
+    headshotUrl: '/images/headshots/jade-jolie.webp',
+    entranceQuote: 'Hey girls hey! What\'s going on pussycats?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lineysha-sparx',
@@ -761,9 +815,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'San Juan, Puerto Rico',
     hometownCoordinates: cityCoordinates['San Juan, Puerto Rico'],
-    headshotUrl: '/images/headshots/lineysha-sparx.jpg',
-    silhouetteUrl: '/images/silhouettes/lineysha-sparx.jpg',
-    entranceQuote: '(no words)'
+    headshotUrl: '/images/headshots/lineysha-sparx.webp',
+    entranceQuote: '(no words)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'honey-mahogany',
@@ -773,9 +828,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'San Francisco, California',
     hometownCoordinates: cityCoordinates['San Francisco, California'],
-    headshotUrl: '/images/headshots/honey-mahogany.jpg',
-    silhouetteUrl: '/images/silhouettes/honey-mahogany.jpg',
-    entranceQuote: 'Hey sisters!'
+    headshotUrl: '/images/headshots/honey-mahogany.webp',
+    entranceQuote: 'Hey sisters!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'vivienne-pinay',
@@ -785,9 +841,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/vivienne-pinay.jpg',
-    silhouetteUrl: '/images/silhouettes/vivienne-pinay.jpg',
-    entranceQuote: 'Hey y\'all!'
+    headshotUrl: '/images/headshots/vivienne-pinay.webp',
+    entranceQuote: 'Hey y\'all!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'monica-beverly-hillz',
@@ -797,9 +854,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Owensboro, Kentucky',
     hometownCoordinates: cityCoordinates['Owensboro, Kentucky'],
-    headshotUrl: '/images/headshots/monica-beverly-hillz.jpg',
-    silhouetteUrl: '/images/silhouettes/monica-beverly-hillz.jpg',
-    entranceQuote: 'Hello girls.'
+    headshotUrl: '/images/headshots/monica-beverly-hillz.webp',
+    entranceQuote: 'Hello girls.',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'serena-chacha',
@@ -809,9 +867,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Tallahassee, Florida',
     hometownCoordinates: cityCoordinates['Tallahassee, Florida'],
-    headshotUrl: '/images/headshots/serena-chacha.jpg',
-    silhouetteUrl: '/images/silhouettes/serena-chacha.jpg',
-    entranceQuote: 'This is the best quinceanera present ever!'
+    headshotUrl: '/images/headshots/serena-chacha.webp',
+    entranceQuote: 'This is the best quinceanera present ever!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'penny-tration',
@@ -821,9 +880,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 39,
     hometown: 'Cincinnati, Ohio',
     hometownCoordinates: cityCoordinates['Cincinnati, Ohio'],
-    headshotUrl: '/images/headshots/penny-tration.jpg',
-    silhouetteUrl: '/images/silhouettes/penny-tration.jpg',
-    entranceQuote: 'Hello boys!'
+    headshotUrl: '/images/headshots/penny-tration.webp',
+    entranceQuote: 'Hello boys!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 6
@@ -835,9 +895,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-    silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg',
-    entranceQuote: 'Well well well, I hope you bitches are ready.'
+    headshotUrl: '/images/headshots/bianca-del-rio.webp',
+    entranceQuote: 'Well well well, I hope you bitches are ready.',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'adore-delano',
@@ -847,9 +908,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Azusa, California',
     hometownCoordinates: cityCoordinates['Azusa, California'],
-    headshotUrl: '/images/headshots/adore-delano.jpg',
-    silhouetteUrl: '/images/silhouettes/adore-delano.jpg',
-    entranceQuote: 'I\'m home! Fuck yeah, I\'m the first one!'
+    headshotUrl: '/images/headshots/adore-delano.webp',
+    entranceQuote: 'I\'m home! Fuck yeah, I\'m the first one!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'courtney-act',
@@ -859,9 +921,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'West Hollywood, California',
     hometownCoordinates: cityCoordinates['West Hollywood, California'],
-    headshotUrl: '/images/headshots/courtney-act.jpg',
-    silhouetteUrl: '/images/silhouettes/courtney-act.jpg',
-    entranceQuote: 'Is this America\'s Next Top Model? Oh, sorry… just kidding!'
+    headshotUrl: '/images/headshots/courtney-act.webp',
+    entranceQuote: 'Is this America\'s Next Top Model? Oh, sorry… just kidding!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'darienne-lake',
@@ -871,9 +934,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 41,
     hometown: 'Rochester, New York',
     hometownCoordinates: cityCoordinates['Rochester, New York'],
-    headshotUrl: '/images/headshots/darienne-lake.jpg',
-    silhouetteUrl: '/images/silhouettes/darienne-lake.jpg',
-    entranceQuote: 'They better widen the doorways and reinforce the runways, because the big girl\'s in the house!'
+    headshotUrl: '/images/headshots/darienne-lake.webp',
+    entranceQuote: 'They better widen the doorways and reinforce the runways, because the big girl\'s in the house!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'bendelacreme',
@@ -883,9 +947,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/bendelacreme.jpg',
-    silhouetteUrl: '/images/silhouettes/bendelacreme.jpg',
-    entranceQuote: 'Hi everybody, it\'s me, ****! Ooh, there\'s one!'
+    headshotUrl: '/images/headshots/bendelacreme.webp',
+    entranceQuote: 'Hi everybody, it\'s me, ****! Ooh, there\'s one!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'joslyn-fox',
@@ -895,9 +960,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Worcester, Massachusetts',
     hometownCoordinates: cityCoordinates['Worcester, Massachusetts'],
-    headshotUrl: '/images/headshots/joslyn-fox.jpg',
-    silhouetteUrl: '/images/silhouettes/joslyn-fox.jpg',
-    entranceQuote: '(laughs)'
+    headshotUrl: '/images/headshots/joslyn-fox.webp',
+    entranceQuote: '(laughs)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'trinity-k-bonet',
@@ -907,9 +973,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/trinity-k-bonet.jpg',
-    silhouetteUrl: '/images/silhouettes/trinity-k-bonet.jpg',
-    entranceQuote: 'Hi'
+    headshotUrl: '/images/headshots/trinity-k-bonet.webp',
+    entranceQuote: 'Hi',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'laganja-estranja',
@@ -919,9 +986,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/laganja-estranja.jpg',
-    silhouetteUrl: '/images/silhouettes/laganja-estranja.jpg',
-    entranceQuote: 'Oh, y\'all wanted a twist, ey? Come on Season 6, let\'s get sickening! Yassss!'
+    headshotUrl: '/images/headshots/laganja-estranja.webp',
+    entranceQuote: 'Oh, y\'all wanted a twist, ey? Come on Season *, let\'s get sickening! Yassss!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'milk',
@@ -931,9 +999,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/milk.jpg',
-    silhouetteUrl: '/images/silhouettes/milk.jpg',
-    entranceQuote: '****! She does a body good, girl!'
+    headshotUrl: '/images/headshots/milk.webp',
+    entranceQuote: '****! She does a body good, girl!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'gia-gunn',
@@ -943,9 +1012,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/gia-gunn.jpg',
-    silhouetteUrl: '/images/silhouettes/gia-gunn.jpg',
-    entranceQuote: '(no words)'
+    headshotUrl: '/images/headshots/gia-gunn.webp',
+    entranceQuote: '(no words)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'april-carrion',
@@ -955,9 +1025,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Guaynabo, Puerto Rico',
     hometownCoordinates: cityCoordinates['Guaynabo, Puerto Rico'],
-    headshotUrl: '/images/headshots/april-carrion.jpg',
-    silhouetteUrl: '/images/silhouettes/april-carrion.jpg',
-    entranceQuote: 'Reporting for duty, **** is in the house!'
+    headshotUrl: '/images/headshots/april-carrion.webp',
+    entranceQuote: 'Reporting for duty, **** is in the house!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'vivacious',
@@ -967,33 +1038,36 @@ export const contestants: Contestant[] = [
     ageAtShow: 40,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/vivacious.jpg',
-    silhouetteUrl: '/images/silhouettes/vivacious.jpg',
-    entranceQuote: 'Mother has arrived!'
+    headshotUrl: '/images/headshots/vivacious.webp',
+    entranceQuote: 'Mother has arrived!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kelly-mantle',
     name: 'Kelly Mantle',
     season: 6,
-    finishingPosition: 13,
+    finishingPosition: 14,
     ageAtShow: 37,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/kelly-mantle.jpg',
-    silhouetteUrl: '/images/silhouettes/kelly-mantle.jpg',
-    entranceQuote: 'Hey bitches, y\'all ready to rock and roll? Woooh!'
+    headshotUrl: '/images/headshots/kelly-mantle.webp',
+    entranceQuote: 'Hey bitches, y\'all ready to rock and roll? Woooh!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'magnolia-crawford',
     name: 'Magnolia Crawford',
     season: 6,
-    finishingPosition: 14,
+    finishingPosition: 13,
     ageAtShow: 27,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/magnolia-crawford.jpg',
-    silhouetteUrl: '/images/silhouettes/magnolia-crawford.jpg',
-    entranceQuote: 'Oh wow!'
+    headshotUrl: '/images/headshots/magnolia-crawford.webp',
+    entranceQuote: 'Oh wow!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 7
@@ -1005,9 +1079,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/violet-chachki.jpg',
-    silhouetteUrl: '/images/silhouettes/violet-chachki.jpg',
-    entranceQuote: 'Ooh la la la la la la la la'
+    headshotUrl: '/images/headshots/violet-chachki.webp',
+    entranceQuote: 'Ooh la la la la la la la la',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'ginger-minj',
@@ -1017,9 +1092,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
-    headshotUrl: '/images/headshots/ginger-minj.jpg',
-    silhouetteUrl: '/images/silhouettes/ginger-minj.jpg',
-    entranceQuote: 'Hi fellas!'
+    headshotUrl: '/images/headshots/ginger-minj.webp',
+    entranceQuote: 'Hi fellas!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'pearl',
@@ -1029,9 +1105,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/pearl.jpg',
-    silhouetteUrl: '/images/silhouettes/pearl.jpg',
-    entranceQuote: 'Sup'
+    headshotUrl: '/images/headshots/pearl.webp',
+    entranceQuote: 'Sup',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kennedy-davenport',
@@ -1041,9 +1118,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
-    headshotUrl: '/images/headshots/kennedy-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/kennedy-davenport.jpg',
-    entranceQuote: 'Well hello!'
+    headshotUrl: '/images/headshots/kennedy-davenport.webp',
+    entranceQuote: 'Well hello!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'katya',
@@ -1053,9 +1131,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
-    headshotUrl: '/images/headshots/katya.jpg',
-    silhouetteUrl: '/images/silhouettes/katya.jpg',
-    entranceQuote: 'Давай cезон семь!'
+    headshotUrl: '/images/headshots/katya.webp',
+    entranceQuote: 'Давай cезон семь!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'trixie-mattel',
@@ -1065,9 +1144,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Milwaukee, Wisconsin',
     hometownCoordinates: cityCoordinates['Milwaukee, Wisconsin'],
-    headshotUrl: '/images/headshots/trixie-mattel.jpg',
-    silhouetteUrl: '/images/silhouettes/trixie-mattel.jpg',
-    entranceQuote: 'This isn\'t Maury Povich!'
+    headshotUrl: '/images/headshots/trixie-mattel.webp',
+    entranceQuote: 'This isn\'t Maury Povich!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'miss-fame',
@@ -1077,9 +1157,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/miss-fame.jpg',
-    silhouetteUrl: '/images/silhouettes/miss-fame.jpg',
-    entranceQuote: 'Greetings earth queens, I come in peace'
+    headshotUrl: '/images/headshots/miss-fame.webp',
+    entranceQuote: 'Greetings earth queens, I come in peace',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jaidynn-diore-fierce',
@@ -1089,9 +1170,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
-    headshotUrl: '/images/headshots/jaidynn-diore-fierce.jpg',
-    silhouetteUrl: '/images/silhouettes/jaidynn-diore-fierce.jpg',
-    entranceQuote: 'How y\'all doing?'
+    headshotUrl: '/images/headshots/jaidynn-diore-fierce.webp',
+    entranceQuote: 'How y\'all doing?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'max',
@@ -1101,9 +1183,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'Hudson, Wisconsin',
     hometownCoordinates: cityCoordinates['Hudson, Wisconsin'],
-    headshotUrl: '/images/headshots/max.jpg',
-    silhouetteUrl: '/images/silhouettes/max.jpg',
-    entranceQuote: 'Well, it\'s about time!'
+    headshotUrl: '/images/headshots/max.webp',
+    entranceQuote: 'Well, it\'s about time!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kandy-ho',
@@ -1113,9 +1196,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Cayey, Puerto Rico',
     hometownCoordinates: cityCoordinates['Cayey, Puerto Rico'],
-    headshotUrl: '/images/headshots/kandy-ho.jpg',
-    silhouetteUrl: '/images/silhouettes/kandy-ho.jpg',
-    entranceQuote: 'I hope you got a sweet tooth, because ****\'s in the motherfucking house!'
+    headshotUrl: '/images/headshots/kandy-ho.webp',
+    entranceQuote: 'I hope you got a sweet tooth, because ****\'s in the motherfucking house!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'mrs-kasha-davis',
@@ -1125,9 +1209,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 43,
     hometown: 'Rochester, New York',
     hometownCoordinates: cityCoordinates['Rochester, New York'],
-    headshotUrl: '/images/headshots/mrs-kasha-davis.jpg',
-    silhouetteUrl: '/images/silhouettes/mrs-kasha-davis.jpg',
-    entranceQuote: 'Hiya my honeys, I\'m home!'
+    headshotUrl: '/images/headshots/mrs-kasha-davis.webp',
+    entranceQuote: 'Hiya my honeys, I\'m home!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jasmine-masters',
@@ -1137,9 +1222,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/jasmine-masters.jpg',
-    silhouetteUrl: '/images/silhouettes/jasmine-masters.jpg',
-    entranceQuote: 'I\'m here! We made it bitches!'
+    headshotUrl: '/images/headshots/jasmine-masters.webp',
+    entranceQuote: 'I\'m here! We made it bitches!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'sasha-belle',
@@ -1149,9 +1235,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Iowa City, Iowa',
     hometownCoordinates: cityCoordinates['Iowa City, Iowa'],
-    headshotUrl: '/images/headshots/sasha-belle.jpg',
-    silhouetteUrl: '/images/silhouettes/sasha-belle.jpg',
-    entranceQuote: 'Hey it\'s me, say hello to my little friends!'
+    headshotUrl: '/images/headshots/sasha-belle.webp',
+    entranceQuote: 'Hey it\'s me, say hello to my little friends!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'tempest-dujour',
@@ -1161,9 +1248,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 46,
     hometown: 'Tucson, Arizona',
     hometownCoordinates: cityCoordinates['Tucson, Arizona'],
-    headshotUrl: '/images/headshots/tempest-dujour.jpg',
-    silhouetteUrl: '/images/silhouettes/tempest-dujour.jpg',
-    entranceQuote: 'Who\'s ready for some hot tuna casserole, \'cos Mama\'s home!'
+    headshotUrl: '/images/headshots/tempest-dujour.webp',
+    entranceQuote: 'Who\'s ready for some hot tuna casserole, \'cos Mama\'s home!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 8
@@ -1175,9 +1263,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/bob-the-drag-queen.jpg',
-    silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg',
-    entranceQuote: '(no words)'
+    headshotUrl: '/images/headshots/bob-the-drag-queen.webp',
+    entranceQuote: '(no words)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kim-chi',
@@ -1187,9 +1276,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/kim-chi.jpg',
-    silhouetteUrl: '/images/silhouettes/kim-chi.jpg',
-    entranceQuote: 'I came to chop suey the competition'
+    headshotUrl: '/images/headshots/kim-chi.webp',
+    entranceQuote: 'I came to chop suey the competition',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'naomi-smalls',
@@ -1199,9 +1289,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Redlands, California',
     hometownCoordinates: cityCoordinates['Redlands, California'],
-    headshotUrl: '/images/headshots/naomi-smalls.jpg',
-    silhouetteUrl: '/images/silhouettes/naomi-smalls.jpg',
-    entranceQuote: 'Check your lipstick before you come for me.'
+    headshotUrl: '/images/headshots/naomi-smalls.webp',
+    entranceQuote: 'Check your lipstick before you come for me.',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'chi-chi-devayne',
@@ -1211,9 +1302,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Shreveport, Louisiana',
     hometownCoordinates: cityCoordinates['Shreveport, Louisiana'],
-    headshotUrl: '/images/headshots/chi-chi-devayne.jpg',
-    silhouetteUrl: '/images/silhouettes/chi-chi-devayne.jpg',
-    entranceQuote: 'Laissez les bon temps roulez!'
+    headshotUrl: '/images/headshots/chi-chi-devayne.webp',
+    entranceQuote: 'Laissez les bon temps roulez!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'derrick-barry',
@@ -1223,9 +1315,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/derrick-barry.jpg',
-    silhouetteUrl: '/images/silhouettes/derrick-barry.jpg',
-    entranceQuote: 'It\'s **** bitch'
+    headshotUrl: '/images/headshots/derrick-barry.webp',
+    entranceQuote: 'It\'s **** bitch',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'thorgy-thor',
@@ -1235,9 +1328,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/thorgy-thor.jpg',
-    silhouetteUrl: '/images/silhouettes/thorgy-thor.jpg',
-    entranceQuote: 'Wooh! **** with a TH and Orgy and I feel incredible!'
+    headshotUrl: '/images/headshots/thorgy-thor.webp',
+    entranceQuote: 'Wooh! **** with a TH and Orgy and I feel incredible!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'robbie-turner',
@@ -1247,9 +1341,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/robbie-turner.jpg',
-    silhouetteUrl: '/images/silhouettes/robbie-turner.jpg',
-    entranceQuote: 'Good morning, I didn\'t realise this was happening today'
+    headshotUrl: '/images/headshots/robbie-turner.webp',
+    entranceQuote: 'Good morning, I didn\'t realise this was happening today',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'acid-betty',
@@ -1259,9 +1354,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/acid-betty.jpg',
-    silhouetteUrl: '/images/silhouettes/acid-betty.jpg',
-    entranceQuote: 'No need to adjust your TV sets, this acid trip is all real!'
+    headshotUrl: '/images/headshots/acid-betty.webp',
+    entranceQuote: 'No need to adjust your TV sets, this acid trip is all real!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'naysha-lopez',
@@ -1271,9 +1367,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/naysha-lopez.jpg',
-    silhouetteUrl: '/images/silhouettes/naysha-lopez.jpg',
-    entranceQuote: 'Ola, the beauty is here'
+    headshotUrl: '/images/headshots/naysha-lopez.webp',
+    entranceQuote: 'Ola, the beauty is here',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'cynthia-lee-fontaine',
@@ -1283,9 +1380,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Austin, Texas',
     hometownCoordinates: cityCoordinates['Austin, Texas'],
-    headshotUrl: '/images/headshots/cynthia-lee-fontaine.jpg',
-    silhouetteUrl: '/images/silhouettes/cynthia-lee-fontaine.jpg',
-    entranceQuote: 'How ya doin mis amores? You wanna see my cucu?'
+    headshotUrl: '/images/headshots/cynthia-lee-fontaine.webp',
+    entranceQuote: 'How ya doin mis amores? You wanna see my cucu?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'dax-exclamationpoint',
@@ -1295,9 +1393,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Savannah, Georgia',
     hometownCoordinates: cityCoordinates['Savannah, Georgia'],
-    headshotUrl: '/images/headshots/dax-exclamationpoint.jpg',
-    silhouetteUrl: '/images/silhouettes/dax-exclamationpoint.jpg',
-    entranceQuote: 'What\'s up nerds?'
+    headshotUrl: '/images/headshots/dax-eclamationpoint.webp',
+    entranceQuote: 'What\'s up nerds?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'laila-mcqueen',
@@ -1307,9 +1406,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'Gloucester, Massachusetts',
     hometownCoordinates: cityCoordinates['Gloucester, Massachusetts'],
-    headshotUrl: '/images/headshots/laila-mcqueen.jpg',
-    silhouetteUrl: '/images/silhouettes/laila-mcqueen.jpg',
-    entranceQuote: 'Alright ladies, let\'s turn up the juice and see what shakes loose!'
+    headshotUrl: '/images/headshots/laila-mcqueen.webp',
+    entranceQuote: 'Alright ladies, let\'s turn up the juice and see what shakes loose!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 9
@@ -1321,9 +1421,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/sasha-velour.jpg',
-    silhouetteUrl: '/images/silhouettes/sasha-velour.jpg',
-    entranceQuote: '(screaming)'
+    headshotUrl: '/images/headshots/sasha-velour.webp',
+    entranceQuote: '(screaming)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'peppermint',
@@ -1333,9 +1434,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/peppermint.jpg',
-    silhouetteUrl: '/images/silhouettes/peppermint.jpg',
-    entranceQuote: 'Oh my gosh! Heyyyy!'
+    headshotUrl: '/images/headshots/peppermint.webp',
+    entranceQuote: 'Oh my gosh! Heyyyy!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'shea-coulee',
@@ -1345,9 +1447,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/shea-coulee.jpg',
-    silhouetteUrl: '/images/silhouettes/shea-coulee.jpg',
-    entranceQuote: 'My name\'s ****, and I didn\'t come to play, I came to slay!'
+    headshotUrl: '/images/headshots/shea-coulee.webp',
+    entranceQuote: 'My name\'s ****, and I didn\'t come to play, I came to slay!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'trinity-taylor',
@@ -1357,9 +1460,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Orlando, Florida',
     hometownCoordinates: cityCoordinates['Orlando, Florida'],
-    headshotUrl: '/images/headshots/trinity-taylor.jpg',
-    silhouetteUrl: '/images/silhouettes/trinity-taylor.jpg',
-    entranceQuote: 'The body is here bitches!'
+    headshotUrl: '/images/headshots/trinity-taylor.webp',
+    entranceQuote: 'The body is here bitches!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'alexis-michelle',
@@ -1369,9 +1473,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/alexis-michelle.jpg',
-    silhouetteUrl: '/images/silhouettes/alexis-michelle.jpg',
-    entranceQuote: 'How\'d ya like them egg rolls, Mr Charles?'
+    headshotUrl: '/images/headshots/alexis-michelle.webp',
+    entranceQuote: 'How\'d ya like them egg rolls, Mr Charles?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'nina-bonina-brown',
@@ -1381,9 +1486,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Riverdale, Georgia',
     hometownCoordinates: cityCoordinates['Riverdale, Georgia'],
-    headshotUrl: '/images/headshots/nina-bonina-brown.jpg',
-    silhouetteUrl: '/images/silhouettes/nina-bonina-brown.jpg',
-    entranceQuote: 'I\'m ****, Banana, Fofana, Osama Bin Laden Brown, boom boom boom!'
+    headshotUrl: '/images/headshots/nina-bonina-brown.webp',
+    entranceQuote: 'I\'m ****, Banana, Fofana, Osama Bin Laden Brown, boom boom boom!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'valentina',
@@ -1393,9 +1499,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Echo Park, California',
     hometownCoordinates: cityCoordinates['Echo Park, California'],
-    headshotUrl: '/images/headshots/valentina.jpg',
-    silhouetteUrl: '/images/silhouettes/valentina.jpg',
-    entranceQuote: 'Hello, it\'s me ****!'
+    headshotUrl: '/images/headshots/valentina.webp',
+    entranceQuote: 'Hello, it\'s me ****!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'farrah-moan',
@@ -1405,9 +1512,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/farrah-moan.jpg',
-    silhouetteUrl: '/images/silhouettes/farrah-moan.jpg',
-    entranceQuote: 'So this is what it looks like'
+    headshotUrl: '/images/headshots/farrah-moan.webp',
+    entranceQuote: 'So this is what it looks like',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'aja',
@@ -1417,9 +1525,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/aja.jpg',
-    silhouetteUrl: '/images/silhouettes/aja.jpg',
-    entranceQuote: 'Your edges are officially snatched'
+    headshotUrl: '/images/headshots/aja.webp',
+    entranceQuote: 'Your edges are officially snatched',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'eureka',
@@ -1429,9 +1538,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Johnson City, Tennessee',
     hometownCoordinates: cityCoordinates['Johnson City, Tennessee'],
-    headshotUrl: '/images/headshots/eureka.jpg',
-    silhouetteUrl: '/images/silhouettes/eureka.jpg',
-    entranceQuote: 'Ow, come on, give it up for the big girl! Serving pure catfish.'
+    headshotUrl: '/images/headshots/eureka.webp',
+    entranceQuote: 'Ow, come on, give it up for the big girl! Serving pure catfish.',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'charlie-hides',
@@ -1441,9 +1551,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 52,
     hometown: 'London, United Kingdom',
     hometownCoordinates: cityCoordinates['London, United Kingdom'],
-    headshotUrl: '/images/headshots/charlie-hides.jpg',
-    silhouetteUrl: '/images/silhouettes/charlie-hides.jpg',
-    entranceQuote: 'Hi hi hi, it\'s about to get shady up in here!'
+    headshotUrl: '/images/headshots/charlie-hides.webp',
+    entranceQuote: 'Hi hi hi, it\'s about to get shady up in here!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kimora-blac',
@@ -1453,9 +1564,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/kimora-blac.jpg',
-    silhouetteUrl: '/images/silhouettes/kimora-blac.jpg',
-    entranceQuote: 'Is it me or is it hot in here?'
+    headshotUrl: '/images/headshots/kimora-blac.webp',
+    entranceQuote: 'Is it me or is it hot in here?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jaymes-mansfield',
@@ -1465,9 +1577,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Milwaukee, Wisconsin',
     hometownCoordinates: cityCoordinates['Milwaukee, Wisconsin'],
-    headshotUrl: '/images/headshots/jaymes-mansfield.jpg',
-    silhouetteUrl: '/images/silhouettes/jaymes-mansfield.jpg',
-    entranceQuote: 'Hi shapeshifters!'
+    headshotUrl: '/images/headshots/jaymes-mansfield.webp',
+    entranceQuote: 'Hi shapeshifters!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 10
@@ -1479,9 +1592,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/aquaria.jpg',
-    silhouetteUrl: '/images/silhouettes/aquaria.jpg',
-    entranceQuote: 'Bonjour!'
+    headshotUrl: '/images/headshots/aquaria.webp',
+    entranceQuote: 'Bonjour!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kameron-michaels',
@@ -1491,9 +1605,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
-    headshotUrl: '/images/headshots/kameron-michaels.jpg',
-    silhouetteUrl: '/images/silhouettes/kameron-michaels.jpg',
-    entranceQuote: 'Well I auditioned for the Pit Crew, but this is gonna be way more fun!'
+    headshotUrl: '/images/headshots/kameron-michaels.webp',
+    entranceQuote: 'Well I auditioned for the Pit Crew, but this is gonna be way more fun!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'asia-ohara',
@@ -1503,9 +1618,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 35,
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
-    headshotUrl: '/images/headshots/asia-ohara.jpg',
-    silhouetteUrl: '/images/silhouettes/asia-ohara.jpg',
-    entranceQuote: 'Well guys, Texas is back in the house'
+    headshotUrl: '/images/headshots/asia-ohara.webp',
+    entranceQuote: 'Well guys, Texas is back in the house',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'miz-cracker',
@@ -1515,9 +1631,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/miz-cracker.jpg',
-    silhouetteUrl: '/images/silhouettes/miz-cracker.jpg',
-    entranceQuote: 'Okay, it\'s time for dinner!'
+    headshotUrl: '/images/headshots/miz-cracker.webp',
+    entranceQuote: 'Okay, it\'s time for dinner!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'monet-x-change',
@@ -1527,9 +1644,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/monet-x-change.jpg',
-    silhouetteUrl: '/images/silhouettes/monet-x-change.jpg',
-    entranceQuote: 'Oh don\'t mind me, I\'m just here to sweep up the competition girl!'
+    headshotUrl: '/images/headshots/money-x-change.webp',
+    entranceQuote: 'Oh don\'t mind me, I\'m just here to sweep up the competition girl!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'the-vixen',
@@ -1539,9 +1657,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/the-vixen.jpg',
-    silhouetteUrl: '/images/silhouettes/the-vixen.jpg',
-    entranceQuote: 'I\'m just here to fight!'
+    headshotUrl: '/images/headshots/the-vixen.webp',
+    entranceQuote: 'I\'m just here to fight!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'monique-heart',
@@ -1551,9 +1670,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Kansas City, Missouri',
     hometownCoordinates: cityCoordinates['Kansas City, Missouri'],
-    headshotUrl: '/images/headshots/monique-heart.jpg',
-    silhouetteUrl: '/images/silhouettes/monique-heart.jpg',
-    entranceQuote: 'Ka-kitty-ka-kit-ka-ka-ka, ka-kitty-kat-kat-kow, giving you the heart of Season 10, ****, the face'
+    headshotUrl: '/images/headshots/monique-heart.webp',
+    entranceQuote: 'Ka-kitty-ka-kit-ka-ka-ka, ka-kitty-kat-kat-kow, giving you the heart of Season **, ****, the face',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'blair-st-clair',
@@ -1563,9 +1683,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'Indianapolis, Indiana',
     hometownCoordinates: cityCoordinates['Indianapolis, Indiana'],
-    headshotUrl: '/images/headshots/blair-st-clair.jpg',
-    silhouetteUrl: '/images/silhouettes/blair-st-clair.jpg',
-    entranceQuote: 'I\'m ****, just got here this morning!'
+    headshotUrl: '/images/headshots/blair-st-clair.webp',
+    entranceQuote: 'I\'m ****, just got here this morning!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'mayhem-miller',
@@ -1575,9 +1696,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 35,
     hometown: 'Riverside, California',
     hometownCoordinates: cityCoordinates['Riverside, California'],
-    headshotUrl: '/images/headshots/mayhem-miller.jpg',
-    silhouetteUrl: '/images/silhouettes/mayhem-miller.jpg',
-    entranceQuote: 'Guess who finally decided to crash the party?'
+    headshotUrl: '/images/headshots/mayhem-miller.webp',
+    entranceQuote: 'Guess who finally decided to crash the party?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'dusty-ray-bottoms',
@@ -1587,9 +1709,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/dusty-ray-bottoms.jpg',
-    silhouetteUrl: '/images/silhouettes/dusty-ray-bottoms.jpg',
-    entranceQuote: 'Never loved ya'
+    headshotUrl: '/images/headshots/dusty-ray-bottoms.webp',
+    entranceQuote: 'Never loved ya',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'yuhua-hamasaki',
@@ -1599,9 +1722,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/yuhua-hamasaki.jpg',
-    silhouetteUrl: '/images/silhouettes/yuhua-hamasaki.jpg',
-    entranceQuote: 'Can you feel the shade?'
+    headshotUrl: '/images/headshots/yuhua-hamaski.webp',
+    entranceQuote: 'Can you feel the shade?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kalorie-karbdashian-williams',
@@ -1611,9 +1735,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Albuquerque, New Mexico',
     hometownCoordinates: cityCoordinates['Albuquerque, New Mexico'],
-    headshotUrl: '/images/headshots/kalorie-karbdashian-williams.jpg',
-    silhouetteUrl: '/images/silhouettes/kalorie-karbdashian-williams.jpg',
-    entranceQuote: 'Hope you\'re ready for your all-carb, high calorie diet'
+    headshotUrl: '/images/headshots/kalorie-karbdashian-williams.webp',
+    entranceQuote: 'Hope you\'re ready for your all-carb, high calorie diet',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'vanessa-vanjie-mateo',
@@ -1623,9 +1748,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Tampa, Florida',
     hometownCoordinates: cityCoordinates['Tampa, Florida'],
-    headshotUrl: '/images/headshots/vanessa-vanjie-mateo.jpg',
-    silhouetteUrl: '/images/silhouettes/vanessa-vanjie-mateo.jpg',
-    entranceQuote: '10s, 10s, 10s across the board!'
+    headshotUrl: '/images/headshots/vanessa-vanjie-mateo.webp',
+    entranceQuote: '10s, 10s, 10s across the board!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 11
@@ -1637,9 +1763,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Denver, Colorado',
     hometownCoordinates: cityCoordinates['Denver, Colorado'],
-    headshotUrl: '/images/headshots/yvie-oddly.jpg',
-    silhouetteUrl: '/images/silhouettes/yvie-oddly.jpg',
-    entranceQuote: 'Move over ladies, this race just took an odd turn'
+    headshotUrl: '/images/headshots/yvie-oddly.webp',
+    entranceQuote: 'Move over ladies, this race just took an odd turn',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'brooke-lynn-hytes',
@@ -1649,9 +1776,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
-    headshotUrl: '/images/headshots/brooke-lynn-hytes.jpg',
-    silhouetteUrl: '/images/silhouettes/brooke-lynn-hytes.jpg',
-    entranceQuote: 'Never fear, the queen of the North is here!'
+    headshotUrl: '/images/headshots/brooke-lynn-hytes.webp',
+    entranceQuote: 'Never fear, the queen of the North is here!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'akeria-c-davenport',
@@ -1661,9 +1789,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
-    headshotUrl: '/images/headshots/akeria-c-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/akeria-c-davenport.jpg',
-    entranceQuote: 'Oh yes it\'s me, Miss **** D-A-V-E-N-P-O-R and as you can see, I\'m the motherfucking T'
+    headshotUrl: '/images/headshots/akeria-c-davenport.webp',
+    entranceQuote: 'Oh yes it\'s me, Miss **** D-A-V-E-N-P-O-R and as you can see, I\'m the motherfucking T',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'silky-nutmeg-ganache',
@@ -1673,9 +1802,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/silky-nutmeg-ganache.jpg',
-    silhouetteUrl: '/images/silhouettes/silky-nutmeg-ganache.jpg',
-    entranceQuote: 'Munch munch, crunch crunch, **** is here to eat the lunch'
+    headshotUrl: '/images/headshots/silky-nutmeg-ganache.webp',
+    entranceQuote: 'Munch munch, crunch crunch, **** is here to eat the lunch',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'nina-west',
@@ -1685,9 +1815,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 39,
     hometown: 'Columbus, Ohio',
     hometownCoordinates: cityCoordinates['Columbus, Ohio'],
-    headshotUrl: '/images/headshots/nina-west.jpg',
-    silhouetteUrl: '/images/silhouettes/nina-west.jpg',
-    entranceQuote: 'Welcome to Season 11, it looks like things just got eleven-gendary!'
+    headshotUrl: '/images/headshots/nina-west.webp',
+    entranceQuote: 'Welcome to Season **, it looks like things just got ****-gendary!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'shuga-cain',
@@ -1697,9 +1828,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 40,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/shuga-cain.jpg',
-    silhouetteUrl: '/images/silhouettes/shuga-cain.jpg',
-    entranceQuote: 'Get ready y\'all, because this sugar is so sweet!'
+    headshotUrl: '/images/headshots/shuga-cain.webp',
+    entranceQuote: 'Get ready y\'all, because this sugar is so sweet!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'plastique-tiara',
@@ -1709,9 +1841,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
-    headshotUrl: '/images/headshots/plastique-tiara.jpg',
-    silhouetteUrl: '/images/silhouettes/plastique-tiara.jpg',
-    entranceQuote: 'Hello, I\'m **** from Vietnam'
+    headshotUrl: '/images/headshots/pastique-tiara.webp',
+    entranceQuote: 'Hello, I\'m **** from Vietnam',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'rajah-ohara',
@@ -1721,9 +1854,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'Dallas, Texas',
     hometownCoordinates: cityCoordinates['Dallas, Texas'],
-    headshotUrl: '/images/headshots/rajah-ohara.jpg',
-    silhouetteUrl: '/images/silhouettes/rajah-ohara.jpg',
-    entranceQuote: 'Extra, extra, read all about it! **** is in the house, and I hope you came to play'
+    headshotUrl: '/images/headshots/rajah-ohara.webp',
+    entranceQuote: 'Extra, extra, read all about it! **** is in the house, and I hope you came to play',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'scarlet-envy',
@@ -1733,9 +1867,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/scarlet-envy.jpg',
-    silhouetteUrl: '/images/silhouettes/scarlet-envy.jpg',
-    entranceQuote: 'The world wants me, and the feeling is mutual'
+    headshotUrl: '/images/headshots/scarlet-envy.webp',
+    entranceQuote: 'The world wants me, and the feeling is mutual',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'ariel-versace',
@@ -1745,9 +1880,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Cherry Hill, New Jersey',
     hometownCoordinates: cityCoordinates['Cherry Hill, New Jersey'],
-    headshotUrl: '/images/headshots/ariel-versace.jpg',
-    silhouetteUrl: '/images/silhouettes/ariel-versace.jpg',
-    entranceQuote: 'Now this is what dreams are made of! Nyass!'
+    headshotUrl: '/images/headshots/ariel-versace.webp',
+    entranceQuote: 'Now this is what dreams are made of! Nyass!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'mercedes-iman-diamond',
@@ -1757,9 +1893,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Minneapolis, Minnesota',
     hometownCoordinates: cityCoordinates['Minneapolis, Minnesota'],
-    headshotUrl: '/images/headshots/mercedes-iman-diamond.jpg',
-    silhouetteUrl: '/images/silhouettes/mercedes-iman-diamond.jpg',
-    entranceQuote: '(ululating)'
+    headshotUrl: '/images/headshots/mercedes-iman-diamond.webp',
+    entranceQuote: '(ululating)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'honey-davenport',
@@ -1769,9 +1906,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/honey-davenport.jpg',
-    silhouetteUrl: '/images/silhouettes/honey-davenport.jpg',
-    entranceQuote: 'This honey is raw and unfiltered'
+    headshotUrl: '/images/headshots/honey-davenport.webp',
+    entranceQuote: 'This honey is raw and unfiltered',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kahanna-montrese',
@@ -1781,9 +1919,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/kahanna-montrese.jpg',
-    silhouetteUrl: '/images/silhouettes/kahanna-montrese.jpg',
-    entranceQuote: 'Vegas is back in the house, and this time we\'re hitting the jackpot'
+    headshotUrl: '/images/headshots/kahanna-montrese.webp',
+    entranceQuote: 'Vegas is back in the house, and this time we\'re hitting the jackpot',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'soju',
@@ -1793,9 +1932,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/soju.jpg',
-    silhouetteUrl: '/images/silhouettes/soju.jpg',
-    entranceQuote: '(whacks around her nunchucks)'
+    headshotUrl: '/images/headshots/soju.webp',
+    entranceQuote: '(whacks around her nunchucks)',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 12
@@ -1807,9 +1947,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Milwaukee, Wisconsin',
     hometownCoordinates: cityCoordinates['Milwaukee, Wisconsin'],
-    headshotUrl: '/images/headshots/jaida-essence-hall.jpg',
-    silhouetteUrl: '/images/silhouettes/jaida-essence-hall.jpg',
-    entranceQuote: 'Hey bitches! She\'s here!'
+    headshotUrl: '/images/headshots/jaida-essence-hall.webp',
+    entranceQuote: 'Hey bitches! She\'s here!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'crystal-methyd',
@@ -1819,9 +1960,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Springfield, Missouri',
     hometownCoordinates: cityCoordinates['Springfield, Missouri'],
-    headshotUrl: '/images/headshots/crystal-methyd.jpg',
-    silhouetteUrl: '/images/silhouettes/crystal-methyd.jpg',
-    entranceQuote: 'Who\'s ready to party and play? Checkers anyone?'
+    headshotUrl: '/images/headshots/crystal-methyd.webp',
+    entranceQuote: 'Who\'s ready to party and play? Checkers anyone?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'gigi-goode',
@@ -1831,9 +1973,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/gigi-goode.jpg',
-    silhouetteUrl: '/images/silhouettes/gigi-goode.jpg',
-    entranceQuote: 'Ahoy'
+    headshotUrl: '/images/headshots/gigi-goode.webp',
+    entranceQuote: 'Ahoy',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jackie-cox',
@@ -1843,9 +1986,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/jackie-cox.jpg',
-    silhouetteUrl: '/images/silhouettes/jackie-cox.jpg',
-    entranceQuote: 'Roll call! I\'m ****, Salaam, the Persian Princess of Drag has arrived!'
+    headshotUrl: '/images/headshots/jackie-cox.webp',
+    entranceQuote: 'Roll call! I\'m ****, Salaam, the Persian Princess of Drag has arrived!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'heidi-n-closet',
@@ -1855,9 +1999,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Ramseur, North Carolina',
     hometownCoordinates: cityCoordinates['Ramseur, North Carolina'],
-    headshotUrl: '/images/headshots/heidi-n-closet.jpg',
-    silhouetteUrl: '/images/silhouettes/heidi-n-closet.jpg',
-    entranceQuote: 'America, it\'s time to stop hiding in the closet'
+    headshotUrl: '/images/headshots/heidi-n-closet.webp',
+    entranceQuote: 'America, it\'s time to stop hiding in the closet',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'widow-vondu',
@@ -1867,9 +2012,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Kansas City, Missouri',
     hometownCoordinates: cityCoordinates['Kansas City, Missouri'],
-    headshotUrl: '/images/headshots/widow-vondu.jpg',
-    silhouetteUrl: '/images/silhouettes/widow-vondu.jpg',
-    entranceQuote: 'Relax your throat bitches, \'cos y\'all gagging'
+    headshotUrl: '/images/headshots/widow-von-du.webp',
+    entranceQuote: 'Relax your throat bitches, \'cos y\'all gagging',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jan',
@@ -1879,9 +2025,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/jan.jpg',
-    silhouetteUrl: '/images/silhouettes/jan.jpg',
-    entranceQuote: 'Hey y\'all, let\'s play some basketball!'
+    headshotUrl: '/images/headshots/jan.webp',
+    entranceQuote: 'Hey y\'all, let\'s play some basketball!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'brita',
@@ -1891,9 +2038,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/brita.jpg',
-    silhouetteUrl: '/images/silhouettes/brita.jpg',
-    entranceQuote: 'Here we go, sis! Y\'all thirsty?'
+    headshotUrl: '/images/headshots/brita.webp',
+    entranceQuote: 'Here we go, sis! Y\'all thirsty?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'aiden-zhane',
@@ -1903,9 +2051,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Acworth, Georgia',
     hometownCoordinates: cityCoordinates['Acworth, Georgia'],
-    headshotUrl: '/images/headshots/aiden-zhane.jpg',
-    silhouetteUrl: '/images/silhouettes/aiden-zhane.jpg',
-    entranceQuote: 'Season 12 is about to be in-zhane'
+    headshotUrl: '/images/headshots/aiden-zhane.webp',
+    entranceQuote: 'Season ** is about to be in-zhane',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'nicky-doll',
@@ -1915,9 +2064,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/nicky-doll.jpg',
-    silhouetteUrl: '/images/silhouettes/nicky-doll.jpg',
-    entranceQuote: 'Well, that was a long flight'
+    headshotUrl: '/images/headshots/nicky-doll.webp',
+    entranceQuote: 'Well, that was a long flight',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'rock-m-sakura',
@@ -1927,9 +2077,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'San Francisco, California',
     hometownCoordinates: cityCoordinates['San Francisco, California'],
-    headshotUrl: '/images/headshots/rock-m-sakura.jpg',
-    silhouetteUrl: '/images/silhouettes/rock-m-sakura.jpg',
-    entranceQuote: 'All tuck and no play make **** a crazy bitch!'
+    headshotUrl: '/images/headshots/rock-m-sakura.webp',
+    entranceQuote: 'All tuck and no play make **** a crazy bitch!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'dahlia-sin',
@@ -1939,9 +2090,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/dahlia-sin.jpg',
-    silhouetteUrl: '/images/silhouettes/dahlia-sin.jpg',
-    entranceQuote: 'Are you ready to live a little, sin a lot?'
+    headshotUrl: '/images/headshots/dahlia-sin.webp',
+    entranceQuote: 'Are you ready to live a little, sin a lot?',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 13
@@ -1953,9 +2105,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/symone.jpg',
-    silhouetteUrl: '/images/silhouettes/symone.jpg',
-    entranceQuote: 'Don\'t let the smooth taste fool ya, baby!'
+    headshotUrl: '/images/headshots/symone.webp',
+    entranceQuote: 'Don\'t let the smooth taste fool ya, baby!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kandy-muse',
@@ -1965,9 +2118,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/kandy-muse.jpg',
-    silhouetteUrl: '/images/silhouettes/kandy-muse.jpg',
-    entranceQuote: 'Girl! From the hood to Hollywood!'
+    headshotUrl: '/images/headshots/kandy-muse.webp',
+    entranceQuote: 'Girl! From the hood to Hollywood!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'gottmik',
@@ -1977,9 +2131,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/gottmik.jpg',
-    silhouetteUrl: '/images/silhouettes/gottmik.jpg',
-    entranceQuote: 'Time to crash the cis-tem'
+    headshotUrl: '/images/headshots/gottmik.webp',
+    entranceQuote: 'Time to crash the cis-tem',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'rose',
@@ -1989,9 +2144,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/rose.jpg',
-    silhouetteUrl: '/images/silhouettes/rose.jpg',
-    entranceQuote: 'Hey! Oh my god, I\'m the first one here. I could have gone to the dentist'
+    headshotUrl: '/images/headshots/rose.webp',
+    entranceQuote: 'Hey! Oh my god, I\'m the first one here. I could have gone to the dentist',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'olivia-lux',
@@ -2001,9 +2157,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/olivia-lux.jpg',
-    silhouetteUrl: '/images/silhouettes/olivia-lux.jpg',
-    entranceQuote: '**** be a lady tonight'
+    headshotUrl: '/images/headshots/olivia-lux.webp',
+    entranceQuote: '**** be a lady tonight',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'utica-queen',
@@ -2013,9 +2170,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Utica, Minnesota',
     hometownCoordinates: cityCoordinates['Utica, Minnesota'],
-    headshotUrl: '/images/headshots/utica-queen.jpg',
-    silhouetteUrl: '/images/silhouettes/utica-queen.jpg',
-    entranceQuote: 'Ah-choo! She\'s sickening!'
+    headshotUrl: '/images/headshots/utica.webp',
+    entranceQuote: 'Ah-choo! She\'s sickening!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'tina-burner',
@@ -2025,9 +2183,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 39,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/tina-burner.jpg',
-    silhouetteUrl: '/images/silhouettes/tina-burner.jpg',
-    entranceQuote: 'Didn\'t your parents ever teach you not to play with fire? Now let\'s turn it and burn it bitches!'
+    headshotUrl: '/images/headshots/tina-burner.webp',
+    entranceQuote: 'Didn\'t your parents ever teach you not to play with fire? Now let\'s turn it and burn it bitches!',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'denali',
@@ -2037,9 +2196,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/denali.jpg',
-    silhouetteUrl: '/images/silhouettes/denali.jpg',
-    entranceQuote: 'Lemme break the ice'
+    headshotUrl: '/images/headshots/denali.webp',
+    entranceQuote: 'Lemme break the ice',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'elliott-with-2-ts',
@@ -2049,9 +2209,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/elliott-with-2-ts.jpg',
-    silhouetteUrl: '/images/silhouettes/elliott-with-2-ts.jpg',
-    entranceQuote: 'I\'m the queen you want to see, **** with Two T\'s. Okay, uh uh uh, okay? Get into it'
+    headshotUrl: '/images/headshots/elliott-with-2-ts.webp',
+    entranceQuote: 'I\'m the queen you want to see, **** with Two T\'s. Okay, uh uh uh, okay? Get into it',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lala-ri',
@@ -2061,9 +2222,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/lala-ri.jpg',
-    silhouetteUrl: '/images/silhouettes/lala-ri.jpg',
-    entranceQuote: 'Oh, what you say, what you say? **** is here to slay'
+    headshotUrl: '/images/headshots/lala-ri.webp',
+    entranceQuote: 'Oh, what you say, what you say? **** is here to slay',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'tamisha-iman',
@@ -2073,9 +2235,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 49,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/tamisha-iman.jpg',
-    silhouetteUrl: '/images/silhouettes/tamisha-iman.jpg',
-    entranceQuote: 'Holla at me, I know you know me, holla at me, I know you know me. **** is here'
+    headshotUrl: '/images/headshots/tamisha-iman.webp',
+    entranceQuote: 'Holla at me, I know you know me, holla at me, I know you know me. **** is here',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'joey-jay',
@@ -2085,9 +2248,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Phoenix, Arizona',
     hometownCoordinates: cityCoordinates['Phoenix, Arizona'],
-    headshotUrl: '/images/headshots/joey-jay.jpg',
-    silhouetteUrl: '/images/silhouettes/joey-jay.jpg',
-    entranceQuote: 'Filler queen'
+    headshotUrl: '/images/headshots/joeyjay.webp',
+    entranceQuote: 'Filler queen',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kahmora-hall',
@@ -2097,9 +2261,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Chicago, Illinois',
     hometownCoordinates: cityCoordinates['Chicago, Illinois'],
-    headshotUrl: '/images/headshots/kahmora-hall.jpg',
-    silhouetteUrl: '/images/silhouettes/kahmora-hall.jpg',
-    entranceQuote: 'The Mackie doll is finally out of her box'
+    headshotUrl: '/images/headshots/kahmora-hall.webp',
+    entranceQuote: 'The Mackie doll is finally out of her box',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 14
@@ -2111,8 +2276,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Denver, Colorado',
     hometownCoordinates: cityCoordinates['Denver, Colorado'],
-    headshotUrl: '/images/headshots/willow-pill.jpg',
-    silhouetteUrl: '/images/silhouettes/willow-pill.jpg'
+    headshotUrl: '/images/headshots/willow-pill.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lady-camden',
@@ -2122,8 +2289,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Sacramento, California',
     hometownCoordinates: cityCoordinates['Sacramento, California'],
-    headshotUrl: '/images/headshots/lady-camden.jpg',
-    silhouetteUrl: '/images/silhouettes/lady-camden.jpg'
+    headshotUrl: '/images/headshots/lady-camden.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'angeria-paris-vanmicheals',
@@ -2133,8 +2302,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Atlanta, Georgia',
     hometownCoordinates: cityCoordinates['Atlanta, Georgia'],
-    headshotUrl: '/images/headshots/angeria-paris-vanmicheals.jpg',
-    silhouetteUrl: '/images/silhouettes/angeria-paris-vanmicheals.jpg'
+    headshotUrl: '/images/headshots/angeria-paris-van-michaels.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'bosco',
@@ -2144,8 +2315,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/bosco.jpg',
-    silhouetteUrl: '/images/silhouettes/bosco.jpg'
+    headshotUrl: '/images/headshots/bosco.webp',
+    entranceQuote: 'Alright, let\'s get out there today and make a difference.',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'daya-betty',
@@ -2155,8 +2328,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Springfield, Missouri',
     hometownCoordinates: cityCoordinates['Springfield, Missouri'],
-    headshotUrl: '/images/headshots/daya-betty.jpg',
-    silhouetteUrl: '/images/silhouettes/daya-betty.jpg'
+    headshotUrl: '/images/headshots/daya-betty.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'deja-skye',
@@ -2166,8 +2341,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Fresno, California',
     hometownCoordinates: cityCoordinates['Fresno, California'],
-    headshotUrl: '/images/headshots/deja-skye.jpg',
-    silhouetteUrl: '/images/silhouettes/deja-skye.jpg'
+    headshotUrl: '/images/headshots/deja-sky.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jorgeous',
@@ -2177,8 +2354,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 21,
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
-    headshotUrl: '/images/headshots/jorgeous.jpg',
-    silhouetteUrl: '/images/silhouettes/jorgeous.jpg'
+    headshotUrl: '/images/headshots/jorgeous.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jasmine-kennedie',
@@ -2188,8 +2367,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/jasmine-kennedie.jpg',
-    silhouetteUrl: '/images/silhouettes/jasmine-kennedie.jpg'
+    headshotUrl: '/images/headshots/jasmine-kennedie.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kerri-colby',
@@ -2199,8 +2380,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/kerri-colby.jpg',
-    silhouetteUrl: '/images/silhouettes/kerri-colby.jpg'
+    headshotUrl: '/images/headshots/kerri-colby.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'maddy-morphosis',
@@ -2210,8 +2393,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Fayetteville, Arkansas',
     hometownCoordinates: cityCoordinates['Fayetteville, Arkansas'],
-    headshotUrl: '/images/headshots/maddy-morphosis.jpg',
-    silhouetteUrl: '/images/silhouettes/maddy-morphosis.jpg'
+    headshotUrl: '/images/headshots/maddy-morphosis.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'orion-story',
@@ -2221,8 +2406,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Grand Rapids, Michigan',
     hometownCoordinates: cityCoordinates['Grand Rapids, Michigan'],
-    headshotUrl: '/images/headshots/orion-story.jpg',
-    silhouetteUrl: '/images/silhouettes/orion-story.jpg'
+    headshotUrl: '/images/headshots/orion-story.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kornbread-jete',
@@ -2232,8 +2419,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/kornbread-jete.jpg',
-    silhouetteUrl: '/images/silhouettes/kornbread-jete.jpg'
+    headshotUrl: '/images/headshots/kornbread-jete.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'alyssa-hunter',
@@ -2243,8 +2432,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Cataño, Puerto Rico',
     hometownCoordinates: cityCoordinates['Cataño, Puerto Rico'],
-    headshotUrl: '/images/headshots/alyssa-hunter.jpg',
-    silhouetteUrl: '/images/silhouettes/alyssa-hunter.jpg'
+    headshotUrl: '/images/headshots/alyssa-hunter.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'june-jambalaya',
@@ -2254,8 +2445,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/june-jambalaya.jpg',
-    silhouetteUrl: '/images/silhouettes/june-jambalaya.jpg'
+    headshotUrl: '/images/headshots/june-jambalaya.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 15
@@ -2267,8 +2460,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 37,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/sasha-colby.jpg',
-    silhouetteUrl: '/images/silhouettes/sasha-colby.jpg'
+    headshotUrl: '/images/headshots/sasha-colby.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'anetra',
@@ -2278,8 +2473,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/anetra.jpg',
-    silhouetteUrl: '/images/silhouettes/anetra.jpg'
+    headshotUrl: '/images/headshots/anetra.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'luxx-noir-london',
@@ -2289,8 +2486,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'East Orange, New Jersey',
     hometownCoordinates: cityCoordinates['East Orange, New Jersey'],
-    headshotUrl: '/images/headshots/luxx-noir-london.jpg',
-    silhouetteUrl: '/images/silhouettes/luxx-noir-london.jpg'
+    headshotUrl: '/images/headshots/luxx-noir-london.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'mistress-isabelle-brooks',
@@ -2300,8 +2499,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Houston, Texas',
     hometownCoordinates: cityCoordinates['Houston, Texas'],
-    headshotUrl: '/images/headshots/mistress-isabelle-brooks.jpg',
-    silhouetteUrl: '/images/silhouettes/mistress-isabelle-brooks.jpg'
+    headshotUrl: '/images/headshots/mistress-isabelle-brooks.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'loosey-laduca',
@@ -2311,8 +2512,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Ansonia, Connecticut',
     hometownCoordinates: cityCoordinates['Ansonia, Connecticut'],
-    headshotUrl: '/images/headshots/loosey-laduca.jpg',
-    silhouetteUrl: '/images/silhouettes/loosey-laduca.jpg'
+    headshotUrl: '/images/headshots/loosey-laduca.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'salina-estitties',
@@ -2322,8 +2525,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/salina-estitties.jpg',
-    silhouetteUrl: '/images/silhouettes/salina-estitties.jpg'
+    headshotUrl: '/images/headshots/salina-estitties.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'marcia-marcia-marcia',
@@ -2333,8 +2538,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/marcia-marcia-marcia.jpg',
-    silhouetteUrl: '/images/silhouettes/marcia-marcia-marcia.jpg'
+    headshotUrl: '/images/headshots/marcia-marcia-marcia.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'malaysia-babydoll-foxx',
@@ -2344,8 +2551,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 32,
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
-    headshotUrl: '/images/headshots/malaysia-babydoll-foxx.jpg',
-    silhouetteUrl: '/images/silhouettes/malaysia-babydoll-foxx.jpg'
+    headshotUrl: '/images/headshots/malaysia-babydoll-foxx.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'spice',
@@ -2355,8 +2564,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/spice.jpg',
-    silhouetteUrl: '/images/silhouettes/spice.jpg'
+    headshotUrl: '/images/headshots/spice.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jax',
@@ -2366,8 +2577,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Darien, Connecticut',
     hometownCoordinates: cityCoordinates['Darien, Connecticut'],
-    headshotUrl: '/images/headshots/jax.jpg',
-    silhouetteUrl: '/images/silhouettes/jax.jpg'
+    headshotUrl: '/images/headshots/jax.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'aura-mayari',
@@ -2377,8 +2590,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Nashville, Tennessee',
     hometownCoordinates: cityCoordinates['Nashville, Tennessee'],
-    headshotUrl: '/images/headshots/aura-mayari.jpg',
-    silhouetteUrl: '/images/silhouettes/aura-mayari.jpg'
+    headshotUrl: '/images/headshots/aura-mayari.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'robin-fierce',
@@ -2388,8 +2603,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Hartford, Connecticut',
     hometownCoordinates: cityCoordinates['Hartford, Connecticut'],
-    headshotUrl: '/images/headshots/robin-fierce.jpg',
-    silhouetteUrl: '/images/silhouettes/robin-fierce.jpg'
+    headshotUrl: '/images/headshots/robin-fierce.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'amethyst',
@@ -2399,8 +2616,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'West Hartford, Connecticut',
     hometownCoordinates: cityCoordinates['West Hartford, Connecticut'],
-    headshotUrl: '/images/headshots/amethyst.jpg',
-    silhouetteUrl: '/images/silhouettes/amethyst.jpg'
+    headshotUrl: '/images/headshots/amethyst.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'sugar',
@@ -2410,8 +2629,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/sugar.jpg',
-    silhouetteUrl: '/images/silhouettes/sugar.jpg'
+    headshotUrl: '/images/headshots/sugar.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'princess-poppy',
@@ -2421,8 +2642,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'San Francisco, California',
     hometownCoordinates: cityCoordinates['San Francisco, California'],
-    headshotUrl: '/images/headshots/princess-poppy.jpg',
-    silhouetteUrl: '/images/silhouettes/princess-poppy.jpg'
+    headshotUrl: '/images/headshots/princess-poppy.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'irene-dubois',
@@ -2432,8 +2655,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/irene-dubois.jpg',
-    silhouetteUrl: '/images/silhouettes/irene-dubois.jpg'
+    headshotUrl: '/images/headshots/irene-dubois.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 16
@@ -2445,8 +2670,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/nymphia-wind.jpg',
-    silhouetteUrl: '/images/silhouettes/nymphia-wind.jpg'
+    headshotUrl: '/images/headshots/nymphia-wind.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'sapphira-cristal',
@@ -2456,8 +2683,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Philadelphia, Pennsylvania',
     hometownCoordinates: cityCoordinates['Philadelphia, Pennsylvania'],
-    headshotUrl: '/images/headshots/sapphira-cristal.jpg',
-    silhouetteUrl: '/images/silhouettes/sapphira-cristal.jpg'
+    headshotUrl: '/images/headshots/sapphira-cristal.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'plane-jane',
@@ -2467,19 +2696,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
-    headshotUrl: '/images/headshots/plane-jane.jpg',
-    silhouetteUrl: '/images/silhouettes/plane-jane.jpg'
-  },
-  {
-    id: 'q',
-    name: 'Q',
-    season: 16,
-    finishingPosition: 4,
-    ageAtShow: 26,
-    hometown: 'Kansas City, Missouri',
-    hometownCoordinates: cityCoordinates['Kansas City, Missouri'],
-    headshotUrl: '/images/headshots/q.jpg',
-    silhouetteUrl: '/images/silhouettes/q.jpg'
+    headshotUrl: '/images/headshots/plane-jane.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'morphine-love-dion',
@@ -2489,8 +2709,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
-    headshotUrl: '/images/headshots/morphine-love-dion.jpg',
-    silhouetteUrl: '/images/silhouettes/morphine-love-dion.jpg'
+    headshotUrl: '/images/headshots/morphine-love-dion.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'dawn',
@@ -2500,8 +2722,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/dawn.jpg',
-    silhouetteUrl: '/images/silhouettes/dawn.jpg'
+    headshotUrl: '/images/headshots/dawn.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'mhiya-iman-lepaige',
@@ -2511,8 +2735,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
-    headshotUrl: '/images/headshots/mhiya-iman-lepaige.jpg',
-    silhouetteUrl: '/images/silhouettes/mhiya-iman-lepaige.jpg'
+    headshotUrl: '/images/headshots/mhiya-iman-lepaige.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'plasma',
@@ -2522,8 +2748,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/plasma.jpg',
-    silhouetteUrl: '/images/silhouettes/plasma.jpg'
+    headshotUrl: '/images/headshots/plasma.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'xunami-muse',
@@ -2533,8 +2761,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/xunami-muse.jpg',
-    silhouetteUrl: '/images/silhouettes/xunami-muse.jpg'
+    headshotUrl: '/images/headshots/xunami-muse.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'megami',
@@ -2544,8 +2774,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 33,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/megami.jpg',
-    silhouetteUrl: '/images/silhouettes/megami.jpg'
+    headshotUrl: '/images/headshots/megami.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'geneva-karr',
@@ -2555,8 +2787,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Brownsville, Texas',
     hometownCoordinates: cityCoordinates['Brownsville, Texas'],
-    headshotUrl: '/images/headshots/geneva-karr.jpg',
-    silhouetteUrl: '/images/silhouettes/geneva-karr.jpg'
+    headshotUrl: '/images/headshots/geneva-karr.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'amanda-tori-meating',
@@ -2566,8 +2800,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/amanda-tori-meating.jpg',
-    silhouetteUrl: '/images/silhouettes/amanda-tori-meating.jpg'
+    headshotUrl: '/images/headshots/amanda-tori-meating.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'mirage',
@@ -2577,8 +2813,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 29,
     hometown: 'Las Vegas, Nevada',
     hometownCoordinates: cityCoordinates['Las Vegas, Nevada'],
-    headshotUrl: '/images/headshots/mirage.jpg',
-    silhouetteUrl: '/images/silhouettes/mirage.jpg'
+    headshotUrl: '/images/headshots/mirage.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'hershii-liqcour-jete',
@@ -2588,8 +2826,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/hershii-liqcour-jete.jpg',
-    silhouetteUrl: '/images/silhouettes/hershii-liqcour-jete.jpg'
+    headshotUrl: '/images/headshots/hershii-liqcour-jete.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
 
   // Season 17
@@ -2601,8 +2841,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 31,
     hometown: 'Cleveland, Ohio',
     hometownCoordinates: cityCoordinates['Cleveland, Ohio'],
-    headshotUrl: '/images/headshots/onya-nurve.jpg',
-    silhouetteUrl: '/images/silhouettes/onya-nurve.jpg'
+    headshotUrl: '/images/headshots/onya-nurve.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'jewels-sparkles',
@@ -2612,8 +2854,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Tampa, Florida',
     hometownCoordinates: cityCoordinates['Tampa, Florida'],
-    headshotUrl: '/images/headshots/jewels-sparkles.jpg',
-    silhouetteUrl: '/images/silhouettes/jewels-sparkles.jpg'
+    headshotUrl: '/images/headshots/jewels-sparkles.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lexi-love',
@@ -2623,8 +2867,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 34,
     hometown: 'Louisville, Kentucky',
     hometownCoordinates: cityCoordinates['Louisville, Kentucky'],
-    headshotUrl: '/images/headshots/lexi-love.jpg',
-    silhouetteUrl: '/images/silhouettes/lexi-love.jpg'
+    headshotUrl: '/images/headshots/lexi.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'sam-star',
@@ -2634,8 +2880,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Leeds, Alabama',
     hometownCoordinates: cityCoordinates['Leeds, Alabama'],
-    headshotUrl: '/images/headshots/sam-star.jpg',
-    silhouetteUrl: '/images/silhouettes/sam-star.jpg'
+    headshotUrl: '/images/headshots/sam-star.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'suzie-toot',
@@ -2645,8 +2893,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Fort Lauderdale, Florida',
     hometownCoordinates: cityCoordinates['Fort Lauderdale, Florida'],
-    headshotUrl: '/images/headshots/suzie-toot.jpg',
-    silhouetteUrl: '/images/silhouettes/suzie-toot.jpg'
+    headshotUrl: '/images/headshots/suzie-toot.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lana-jarae',
@@ -2656,8 +2906,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 22,
     hometown: 'New York, New York',
     hometownCoordinates: cityCoordinates['New York, New York'],
-    headshotUrl: '/images/headshots/lana-jarae.jpg',
-    silhouetteUrl: '/images/silhouettes/lana-jarae.jpg'
+    headshotUrl: '/images/headshots/lana-jarae.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lydia-b-kollins',
@@ -2667,8 +2919,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 23,
     hometown: 'Pittsburgh, Pennsylvania',
     hometownCoordinates: cityCoordinates['Pittsburgh, Pennsylvania'],
-    headshotUrl: '/images/headshots/lydia-b-kollins.jpg',
-    silhouetteUrl: '/images/silhouettes/lydia-b-kollins.jpg'
+    headshotUrl: '/images/headshots/lydia-b-kollins.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'arrietty',
@@ -2678,8 +2932,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Seattle, Washington',
     hometownCoordinates: cityCoordinates['Seattle, Washington'],
-    headshotUrl: '/images/headshots/arrietty.jpg',
-    silhouetteUrl: '/images/silhouettes/arrietty.jpg'
+    headshotUrl: '/images/headshots/arrietty.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'kori-king',
@@ -2689,8 +2945,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 24,
     hometown: 'Boston, Massachusetts',
     hometownCoordinates: cityCoordinates['Boston, Massachusetts'],
-    headshotUrl: '/images/headshots/kori-king.jpg',
-    silhouetteUrl: '/images/silhouettes/kori-king.jpg'
+    headshotUrl: '/images/headshots/kori-king.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'acacia-forgot',
@@ -2700,8 +2958,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 28,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/acacia-forgot.jpg',
-    silhouetteUrl: '/images/silhouettes/acacia-forgot.jpg'
+    headshotUrl: '/images/headshots/acacia-forgot.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'crystal-envy',
@@ -2711,8 +2971,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 27,
     hometown: 'Asbury Park, New Jersey',
     hometownCoordinates: cityCoordinates['Asbury Park, New Jersey'],
-    headshotUrl: '/images/headshots/crystal-envy.jpg',
-    silhouetteUrl: '/images/silhouettes/crystal-envy.jpg'
+    headshotUrl: '/images/headshots/crystal-envy.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'hormona-lisa',
@@ -2722,8 +2984,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 30,
     hometown: 'Chattanooga, Tennessee',
     hometownCoordinates: cityCoordinates['Chattanooga, Tennessee'],
-    headshotUrl: '/images/headshots/hormona-lisa.jpg',
-    silhouetteUrl: '/images/silhouettes/hormona-lisa.jpg'
+    headshotUrl: '/images/headshots/hormona-lisa.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'joella',
@@ -2733,8 +2997,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 25,
     hometown: 'Los Angeles, California',
     hometownCoordinates: cityCoordinates['Los Angeles, California'],
-    headshotUrl: '/images/headshots/joella.jpg',
-    silhouetteUrl: '/images/silhouettes/joella.jpg'
+    headshotUrl: '/images/headshots/joella.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   },
   {
     id: 'lucky-starzzz',
@@ -2744,8 +3010,10 @@ export const contestants: Contestant[] = [
     ageAtShow: 26,
     hometown: 'Miami, Florida',
     hometownCoordinates: cityCoordinates['Miami, Florida'],
-    headshotUrl: '/images/headshots/lucky-starzzz.jpg',
-    silhouetteUrl: '/images/silhouettes/lucky-starzzz.jpg'
+    headshotUrl: '/images/headshots/lucky-starzzz.webp',
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   }
 ];
 

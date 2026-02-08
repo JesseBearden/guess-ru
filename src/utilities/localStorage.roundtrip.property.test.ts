@@ -25,7 +25,9 @@ const contestantArb = fc.record({
     longitude: fc.integer({ min: -180, max: 180 })
   }),
   headshotUrl: fc.webUrl(),
-  silhouetteUrl: fc.webUrl()
+  entranceQuote: fc.string(),
+  farewellQuote: fc.string(),
+  snatchGameCharacter: fc.string()
 });
 
 // Feedback without optional undefined fields (JSON.stringify removes undefined)

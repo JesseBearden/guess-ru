@@ -13,7 +13,9 @@ const mockContestant1 = {
   hometown: 'New York, New York',
   hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
   headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-  silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const mockContestant2 = {
@@ -25,7 +27,9 @@ const mockContestant2 = {
   hometown: 'New York, New York',
   hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
   headshotUrl: '/images/headshots/bob-the-drag-queen.jpg',
-  silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const mockContestant3 = {
@@ -37,7 +41,9 @@ const mockContestant3 = {
   hometown: 'Milwaukee, Wisconsin',
   hometownCoordinates: { latitude: 43.0389, longitude: -87.9065 },
   headshotUrl: '/images/headshots/trixie-mattel.jpg',
-  silhouetteUrl: '/images/silhouettes/trixie-mattel.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const createMockGuess = (contestant: any, feedback: any): Guess => ({

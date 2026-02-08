@@ -31,7 +31,9 @@ const contestantArb = fc.record({
     longitude: fc.double({ min: -180, max: 180 })
   }),
   headshotUrl: fc.webUrl(),
-  silhouetteUrl: fc.webUrl()
+  entranceQuote: fc.option(fc.string(), { nil: undefined }),
+  farewellQuote: fc.option(fc.string(), { nil: undefined }),
+  snatchGameCharacter: fc.option(fc.string(), { nil: undefined })
 });
 
 const feedbackArb = fc.record({
@@ -95,7 +97,9 @@ const losingGameStateArb = completedGameStateArb.map(state => ({
       hometown: 'Test City',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: 'https://example.com/headshot.jpg',
-      silhouetteUrl: 'https://example.com/silhouette.jpg'
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: ''
     },
     feedback: {
       season: FeedbackType.WRONG,
@@ -243,7 +247,9 @@ describe('Feature: guessru-game, Property 18: Statistics Tracking Accuracy', () 
                 hometown: 'Secret City',
                 hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
                 headshotUrl: 'https://example.com/secret.jpg',
-                silhouetteUrl: 'https://example.com/secret-silhouette.jpg'
+                entranceQuote: '',
+                farewellQuote: '',
+                snatchGameCharacter: ''
               },
               guesses: [{ 
                 contestant: {
@@ -255,7 +261,9 @@ describe('Feature: guessru-game, Property 18: Statistics Tracking Accuracy', () 
                   hometown: 'Guess City',
                   hometownCoordinates: { latitude: 34.0522, longitude: -118.2437 },
                   headshotUrl: 'https://example.com/guess.jpg',
-                  silhouetteUrl: 'https://example.com/guess-silhouette.jpg'
+                  entranceQuote: '',
+                  farewellQuote: '',
+                  snatchGameCharacter: ''
                 }, 
                 feedback: {
                   season: isWin ? FeedbackType.CORRECT : FeedbackType.WRONG,

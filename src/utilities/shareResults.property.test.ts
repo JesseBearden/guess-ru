@@ -32,7 +32,9 @@ const contestantArb = fc.record({
     longitude: fc.double({ min: -180, max: 180 })
   }),
   headshotUrl: fc.webUrl(),
-  silhouetteUrl: fc.webUrl()
+  entranceQuote: fc.string(),
+  farewellQuote: fc.string(),
+  snatchGameCharacter: fc.string()
 });
 
 const feedbackArb = fc.record({
@@ -96,7 +98,9 @@ const losingGameStateArb = completedGameStateArb.map(state => ({
       hometown: 'Test City',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: 'https://example.com/test.jpg',
-      silhouetteUrl: 'https://example.com/test-silhouette.jpg'
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: ''
     },
     feedback: {
       season: FeedbackType.WRONG,

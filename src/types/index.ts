@@ -26,8 +26,9 @@ export interface Contestant {
   hometown: string;
   hometownCoordinates: HometownCoordinates;
   headshotUrl: string; // Full color headshot image
-  silhouetteUrl: string; // Blacked-out silhouette version
   entranceQuote?: string; // Optional entrance quote from the queen
+  farewellQuote?: string; // Optional farewell/elimination quote
+  snatchGameCharacter?: string; // Who they played in Snatch Game
 }
 
 export interface Guess {

@@ -12,7 +12,9 @@ describe('Type System Tests', () => {
       hometown: 'Test City',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: 'https://example.com/headshot.jpg',
-      silhouetteUrl: 'https://example.com/silhouette.jpg',
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: '',
     };
 
     expect(contestant.id).toBe('test-1');
@@ -24,7 +26,6 @@ describe('Type System Tests', () => {
     expect(contestant.hometownCoordinates.latitude).toBe(40.7128);
     expect(contestant.hometownCoordinates.longitude).toBe(-74.0060);
     expect(contestant.headshotUrl).toBe('https://example.com/headshot.jpg');
-    expect(contestant.silhouetteUrl).toBe('https://example.com/silhouette.jpg');
   });
 
   test('Statistics interface should accept valid data', () => {
@@ -54,7 +55,9 @@ describe('Type System Tests', () => {
       hometown: 'Test City',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: 'https://example.com/headshot.jpg',
-      silhouetteUrl: 'https://example.com/silhouette.jpg',
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: '',
     };
 
     const gameState: GameState = {
@@ -93,8 +96,7 @@ describe('Property-Based Tests', () => {
           latitude: fc.double({ min: -90, max: 90 }),
           longitude: fc.double({ min: -180, max: 180 })
         }),
-        headshotUrl: fc.webUrl(),
-        silhouetteUrl: fc.webUrl()
+        headshotUrl: fc.webUrl()
       }),
       (contestantData: any) => {
         const contestant: Contestant = contestantData;
@@ -104,7 +106,6 @@ describe('Property-Based Tests', () => {
         expect(contestant.name).toBeTruthy();
         expect(contestant.hometown).toBeTruthy();
         expect(contestant.headshotUrl).toBeTruthy();
-        expect(contestant.silhouetteUrl).toBeTruthy();
         
         // Validate hometown coordinates are present
         expect(contestant.hometownCoordinates).toBeTruthy();
@@ -125,7 +126,6 @@ describe('Property-Based Tests', () => {
         
         // Validate URLs are properly formatted
         expect(contestant.headshotUrl).toMatch(/^https?:\/\/.+/);
-        expect(contestant.silhouetteUrl).toMatch(/^https?:\/\/.+/);
         
         return true;
       }

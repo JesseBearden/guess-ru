@@ -175,7 +175,9 @@ describe('Game Modes Integration Tests', () => {
             hometown: 'Test City',
             hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
             headshotUrl: '/test.jpg',
-            silhouetteUrl: '/test-silhouette.jpg'
+            entranceQuote: '',
+            farewellQuote: '',
+            snatchGameCharacter: ''
           },
           feedback: {
             season: FeedbackType.WRONG,
@@ -310,7 +312,9 @@ describe('Game Modes Integration Tests', () => {
             hometown: 'Test City',
             hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
             headshotUrl: '/test.jpg',
-            silhouetteUrl: '/test-silhouette.jpg'
+            entranceQuote: '',
+            farewellQuote: '',
+            snatchGameCharacter: ''
           },
           feedback: {
             season: i === guessCount - 1 && isWon ? FeedbackType.CORRECT : FeedbackType.WRONG,

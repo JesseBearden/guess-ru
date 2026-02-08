@@ -13,7 +13,9 @@ const mockContestant = {
   hometown: 'New York, New York',
   hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
   headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-  silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const createMockGuess = (feedback: any): Guess => ({

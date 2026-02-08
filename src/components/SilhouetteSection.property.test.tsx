@@ -26,7 +26,9 @@ const mockContestantArbitrary = fc.record({
     longitude: fc.double({ min: -180, max: 180 })
   }),
   headshotUrl: fc.constant('https://example.com/headshot.jpg'),
-  silhouetteUrl: fc.constant('https://example.com/silhouette.jpg')
+  entranceQuote: fc.constant(''),
+  farewellQuote: fc.constant(''),
+  snatchGameCharacter: fc.constant('')
 });
 
 describe('Property 21: Headshot Reveal Behavior', () => {
@@ -79,9 +81,9 @@ describe('Property 21: Headshot Reveal Behavior', () => {
             />
           );
 
-          // Property: Silhouette image should be present when visible
-          const silhouetteImage = container.querySelector('img[src="' + secretQueen.silhouetteUrl + '"]');
-          expect(silhouetteImage).toBeInTheDocument();
+          // Property: Headshot image should be present when visible (used as silhouette with CSS filter)
+          const headshotImage = container.querySelector('img[src="' + secretQueen.headshotUrl + '"]');
+          expect(headshotImage).toBeInTheDocument();
 
           return true;
         }
@@ -106,12 +108,8 @@ describe('Property 21: Headshot Reveal Behavior', () => {
 
           const headshotImage = container.querySelector('img[src="' + secretQueen.headshotUrl + '"]');
 
-          // Property: Headshot image should only be present when game is won
-          if (isGameWon) {
-            expect(headshotImage).toBeInTheDocument();
-          } else {
-            expect(headshotImage).not.toBeInTheDocument();
-          }
+          // Property: Headshot image should always be present (shown as silhouette or revealed)
+          expect(headshotImage).toBeInTheDocument();
 
           return true;
         }
@@ -133,9 +131,9 @@ describe('Property 21: Headshot Reveal Behavior', () => {
             />
           );
 
-          // Property: Initially no headshot when game not won
+          // Property: Headshot image should always be present (used as silhouette with CSS filter)
           let headshotImage = container.querySelector('img[src="' + secretQueen.headshotUrl + '"]');
-          expect(headshotImage).not.toBeInTheDocument();
+          expect(headshotImage).toBeInTheDocument();
 
           // Change to game won state
           rerender(
@@ -146,7 +144,7 @@ describe('Property 21: Headshot Reveal Behavior', () => {
             />
           );
 
-          // Property: Headshot should appear when game is won
+          // Property: Headshot should still be present when game is won
           headshotImage = container.querySelector('img[src="' + secretQueen.headshotUrl + '"]');
           expect(headshotImage).toBeInTheDocument();
 
@@ -159,9 +157,9 @@ describe('Property 21: Headshot Reveal Behavior', () => {
             />
           );
 
-          // Property: Headshot should disappear when game is not won
+          // Property: Headshot should still be present (shown as silhouette)
           headshotImage = container.querySelector('img[src="' + secretQueen.headshotUrl + '"]');
-          expect(headshotImage).not.toBeInTheDocument();
+          expect(headshotImage).toBeInTheDocument();
 
           return true;
         }

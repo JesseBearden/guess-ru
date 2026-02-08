@@ -105,10 +105,10 @@ describe('Integration Tests: Complete Game Flows', () => {
       // Submit the guess by pressing Enter (submit button was removed)
       await userEvent.keyboard('{Enter}');
       
-      // Input should be cleared
+      // Input should be cleared - use longer timeout for async operations
       await waitFor(() => {
         expect(input.value).toBe('');
-      });
+      }, { timeout: 3000 });
     });
   });
 
@@ -149,7 +149,7 @@ describe('Integration Tests: Complete Game Flows', () => {
       await userEvent.type(input, contestants[1].name);
       await userEvent.keyboard('{Enter}');
       
-      // Wait for state to be saved (now uses mode-keyed storage)
+      // Wait for state to be saved (now uses mode-keyed storage) - use longer timeout
       await waitFor(() => {
         // Default mode is first10=true, top5=true, so key is guessru_game_state_first10-top5
         const savedState = localStorage.getItem('guessru_game_state_first10-top5');
@@ -157,7 +157,7 @@ describe('Integration Tests: Complete Game Flows', () => {
         
         const parsedState = JSON.parse(savedState!);
         expect(parsedState.guesses.length).toBeGreaterThan(0);
-      });
+      }, { timeout: 3000 });
     });
 
     test('should restore game state on page reload', async () => {

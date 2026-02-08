@@ -17,7 +17,9 @@ jest.mock('../utilities/contestantDatabase', () => {
       hometown: 'New York, New York',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-      silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: ''
     },
     {
       id: 'bob-the-drag-queen',
@@ -28,7 +30,9 @@ jest.mock('../utilities/contestantDatabase', () => {
       hometown: 'New York, New York',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: '/images/headshots/bob-the-drag-queen.jpg',
-      silhouetteUrl: '/images/silhouettes/bob-the-drag-queen.jpg'
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: ''
     }
   ];
   
@@ -75,7 +79,9 @@ describe('GuessInput Component', () => {
     hometown: 'New York, New York',
     hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
     headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-    silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   };
 
   beforeEach(() => {
@@ -483,7 +489,9 @@ describe('Property 5: Guess Validation and Processing', () => {
       hometown: 'New York, New York',
       hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
       headshotUrl: '/images/headshots/bianca-del-rio.jpg',
-      silhouetteUrl: '/images/silhouettes/bianca-del-rio.jpg'
+      entranceQuote: '',
+      farewellQuote: '',
+      snatchGameCharacter: ''
     };
 
     fc.assert(

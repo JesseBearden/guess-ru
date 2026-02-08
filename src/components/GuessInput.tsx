@@ -52,7 +52,7 @@ const GuessInput: React.FC<GuessInputProps> = ({
   const validateContestant = (contestant: Contestant): boolean => {
     if (!contestant) return false;
     if (!contestant.id || !contestant.name) return false;
-    if (!contestant.hometown || !contestant.headshotUrl || !contestant.silhouetteUrl) return false;
+    if (!contestant.hometown || !contestant.headshotUrl) return false;
     if (contestant.season < 1 || contestant.season > 17) return false;
     if (contestant.ageAtShow < 18 || contestant.ageAtShow > 70) return false;
     if (contestant.finishingPosition < 1) return false;

@@ -55,14 +55,14 @@ const GameEndSection: React.FC<GameEndSectionProps> = ({ gameState }) => {
       role="region"
       aria-label="Game results"
     >
-      <h2 className={`text-2xl font-bold mb-4 ${gameState.isWon ? 'text-gold' : 'text-red-300'}`}>
-        {gameState.isWon ? '🎉 Congratulations!' : '😔 Game Over'}
+      <h2 className={`text-2xl font-bold mb-2 ${gameState.isWon ? 'text-gold' : 'text-red-300'}`}>
+        {gameState.isWon ? '🎉 Condragulations!' : '😔 Game Over'}
       </h2>
 
       {gameState.isWon ? (
         <>
           {/* Celebration Animation */}
-          <div className="relative h-[40px] overflow-hidden mb-4">
+          <div className="relative h-[40px] overflow-hidden mb-2">
             {[0, 1, 2, 3, 4].map((i) => (
               <div 
                 key={i}
@@ -76,8 +76,7 @@ const GameEndSection: React.FC<GameEndSectionProps> = ({ gameState }) => {
             ))}
           </div>
           
-          <p className="text-xl text-white mb-2">You guessed it! 🌟</p>
-          <p className="text-3xl font-bold text-white drop-shadow-lg mb-4">{gameState.secretQueen.name}</p>
+          <p className="text-3xl font-bold text-white drop-shadow-lg mb-2">{gameState.secretQueen.name}</p>
         </>
       ) : (
         <>
@@ -99,7 +98,11 @@ const GameEndSection: React.FC<GameEndSectionProps> = ({ gameState }) => {
           }`}
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            target.src = '/placeholder-queen.png';
+            // Prevent infinite loop by only setting fallback once
+            if (!target.dataset.fallback) {
+              target.dataset.fallback = 'true';
+              target.style.display = 'none';
+            }
           }}
         />
       </div>

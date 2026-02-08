@@ -33,7 +33,9 @@ const mockContestant = {
   hometown: 'Test City',
   hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 },
   headshotUrl: 'https://example.com/headshot.jpg',
-  silhouetteUrl: 'https://example.com/silhouette.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const mockStatistics: Statistics = {

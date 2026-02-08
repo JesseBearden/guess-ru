@@ -29,7 +29,9 @@ jest.mock('../utilities/dailyQueenSelection', () => ({
     ageAtShow: 28,
     hometown: 'Minneapolis, Minnesota',
     headshotUrl: '/images/headshots/bebe-zahara-benet.jpg',
-    silhouetteUrl: '/images/silhouettes/bebe-zahara-benet.jpg'
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   }),
   getPacificDateString: () => '2024-01-15'
 }));

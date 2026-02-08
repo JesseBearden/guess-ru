@@ -68,28 +68,14 @@ const SilhouetteSection: React.FC<SilhouetteSectionProps> = ({
           </div>
         ) : (
           <div className="relative w-full h-full">
-            {/* Silhouette image - always loaded first */}
+            {/* Headshot image - shown as silhouette until game is won */}
             <img
-              src={secretQueen.silhouetteUrl}
-              alt={isGameWon ? '' : 'Queen silhouette hint'}
-              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 z-[1] ${showHeadshot ? 'opacity-0' : 'opacity-100'}`}
+              src={secretQueen.headshotUrl}
+              alt={isGameWon ? `${secretQueen.name} headshot` : 'Queen silhouette hint'}
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-500 ${showHeadshot ? '' : 'brightness-0'}`}
               onLoad={handleImageLoad}
               onError={handleImageError}
-              aria-hidden={showHeadshot}
             />
-            
-            {/* Headshot image - only shown when game is won */}
-            {isGameWon && (
-              <img
-                src={secretQueen.headshotUrl}
-                alt={`${secretQueen.name} headshot`}
-                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 z-[2] ${showHeadshot ? 'opacity-100' : 'opacity-0'}`}
-                onError={() => {
-                  // If headshot fails to load, keep showing silhouette
-                  console.warn('Headshot failed to load, keeping silhouette');
-                }}
-              />
-            )}
           </div>
         )}
         

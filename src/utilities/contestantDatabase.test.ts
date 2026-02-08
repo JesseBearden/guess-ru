@@ -33,7 +33,9 @@ describe('Contestant Database Tests', () => {
         expect(contestant.ageAtShow).toBeGreaterThanOrEqual(18);
         expect(contestant.hometown).toBeTruthy();
         expect(contestant.headshotUrl).toBeTruthy();
-        expect(contestant.silhouetteUrl).toBeTruthy();
+        // entranceQuote should be defined (even if empty string)
+        expect(contestant.entranceQuote).toBeDefined();
+        // farewellQuote and snatchGameCharacter are optional and may be undefined
       });
     });
 
@@ -60,7 +62,6 @@ describe('Contestant Database Tests', () => {
     test('should have proper URL formats', () => {
       contestants.forEach(contestant => {
         expect(contestant.headshotUrl).toMatch(/\.(jpg|jpeg|png|webp)$/i);
-        expect(contestant.silhouetteUrl).toMatch(/\.(jpg|jpeg|png|webp)$/i);
       });
     });
   });

@@ -12,7 +12,9 @@ const mockContestant: Contestant = {
   hometown: 'Test City, Test State',
   hometownCoordinates: { latitude: 40.7128, longitude: -74.0060 }, // NYC coordinates
   headshotUrl: '/images/headshots/test-contestant.jpg',
-  silhouetteUrl: '/images/silhouettes/test-contestant.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const mockContestant2: Contestant = {
@@ -24,7 +26,9 @@ const mockContestant2: Contestant = {
   hometown: 'Test City 2, Test State',
   hometownCoordinates: { latitude: 34.0522, longitude: -118.2437 }, // LA coordinates
   headshotUrl: '/images/headshots/test-contestant-2.jpg',
-  silhouetteUrl: '/images/silhouettes/test-contestant-2.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 const mockContestant3: Contestant = {
@@ -36,7 +40,9 @@ const mockContestant3: Contestant = {
   hometown: 'Test City 3, Test State',
   hometownCoordinates: { latitude: 41.8781, longitude: -87.6298 }, // Chicago coordinates
   headshotUrl: '/images/headshots/test-contestant-3.jpg',
-  silhouetteUrl: '/images/silhouettes/test-contestant-3.jpg'
+  entranceQuote: '',
+  farewellQuote: '',
+  snatchGameCharacter: ''
 };
 
 // Create array of mock contestants for property tests
@@ -57,7 +63,9 @@ const mockContestants: Contestant[] = [
       longitude: -80 - (i % 40) 
     },
     headshotUrl: `/images/headshots/test-contestant-${i + 4}.jpg`,
-    silhouetteUrl: `/images/silhouettes/test-contestant-${i + 4}.jpg`
+    entranceQuote: '',
+    farewellQuote: '',
+    snatchGameCharacter: ''
   }))
 ];
 
