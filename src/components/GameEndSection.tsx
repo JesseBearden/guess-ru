@@ -77,12 +77,32 @@ const GameEndSection: React.FC<GameEndSectionProps> = ({ gameState }) => {
           </div>
           
           <p className="text-3xl font-bold text-white drop-shadow-lg mb-2">{gameState.secretQueen.name}</p>
+          {gameState.secretQueen.instagramHandle && (
+            <a
+              href={`https://www.instagram.com/${gameState.secretQueen.instagramHandle}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm text-white/80 hover:text-white transition-colors mb-2"
+            >
+              📸 @{gameState.secretQueen.instagramHandle}
+            </a>
+          )}
         </>
       ) : (
         <>
           <p className="text-lg text-white/80 mb-2">Better luck tomorrow! 💪</p>
           <p className="text-sm text-white/60 mb-1">The answer was:</p>
           <p className="text-3xl font-bold text-white drop-shadow-lg mb-4">{gameState.secretQueen.name}</p>
+          {gameState.secretQueen.instagramHandle && (
+            <a
+              href={`https://www.instagram.com/${gameState.secretQueen.instagramHandle}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm text-white/80 hover:text-white transition-colors mb-4"
+            >
+              📸 @{gameState.secretQueen.instagramHandle}
+            </a>
+          )}
         </>
       )}
 

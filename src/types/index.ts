@@ -29,6 +29,7 @@ export interface Contestant {
   entranceQuote?: string; // Optional entrance quote from the queen
   farewellQuote?: string; // Optional farewell/elimination quote
   snatchGameCharacter?: string; // Who they played in Snatch Game
+  instagramHandle?: string; // Instagram handle (without @)
 }
 
 export interface Guess {
