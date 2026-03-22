@@ -1,4 +1,4 @@
-import { GameState, Statistics, GameMode, GameModeKey, DEFAULT_GAME_MODE } from '../types/index';
+import { GameState, Statistics, GameModeKey, DEFAULT_GAME_MODE } from '../types/index';
 import { getPacificDateString } from './dailyQueenSelection';
 
 // Storage keys
@@ -11,15 +11,15 @@ const STORAGE_KEYS = {
 
 // Helper to get mode-specific storage key
 const getModeStorageKey = (baseKey: string, modeKey: GameModeKey): string => {
-  if (modeKey === 'default') return baseKey;
-  return `${baseKey}_${modeKey}`;
+  if (modeKey === 'easy') return `${baseKey}_easy`;
+  return `${baseKey}_standard`;
 };
 
 // Preferences interface
 export interface Preferences {
   hasSeenInstructions: boolean;
   showSilhouette: boolean;
-  currentMode?: GameMode;
+  currentMode?: GameModeKey;
 }
 
 // Default values
@@ -96,7 +96,7 @@ function safeRemoveItem(key: string): boolean {
  * @param gameState The game state to save
  * @param modeKey Optional mode key, defaults to 'default'
  */
-export function saveGameState(gameState: GameState, modeKey: GameModeKey = 'default'): boolean {
+export function saveGameState(gameState: GameState, modeKey: GameModeKey = 'easy'): boolean {
   const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
   return safeSetItem(storageKey, { ...gameState, modeKey });
 }
@@ -106,7 +106,7 @@ export function saveGameState(gameState: GameState, modeKey: GameModeKey = 'defa
  * Returns null if no valid game state found or if it's from a different day
  * @param modeKey Optional mode key, defaults to 'default'
  */
-export function loadGameState(modeKey: GameModeKey = 'default'): GameState | null {
+export function loadGameState(modeKey: GameModeKey = 'easy'): GameState | null {
   const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
   const stored = safeGetItem(storageKey);
   if (!stored) {
@@ -133,7 +133,7 @@ export function loadGameState(modeKey: GameModeKey = 'default'): GameState | nul
  * Clear game state from localStorage
  * @param modeKey Optional mode key, defaults to 'default'
  */
-export function clearGameState(modeKey: GameModeKey = 'default'): boolean {
+export function clearGameState(modeKey: GameModeKey = 'easy'): boolean {
   const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);
   return safeRemoveItem(storageKey);
 }
@@ -143,7 +143,7 @@ export function clearGameState(modeKey: GameModeKey = 'default'): boolean {
  * @param statistics The statistics to save
  * @param modeKey Optional mode key, defaults to 'default'
  */
-export function saveStatistics(statistics: Statistics, modeKey: GameModeKey = 'default'): boolean {
+export function saveStatistics(statistics: Statistics, modeKey: GameModeKey = 'easy'): boolean {
   const storageKey = getModeStorageKey(STORAGE_KEYS.STATISTICS, modeKey);
   return safeSetItem(storageKey, statistics);
 }
@@ -152,7 +152,7 @@ export function saveStatistics(statistics: Statistics, modeKey: GameModeKey = 'd
  * Load statistics from localStorage
  * @param modeKey Optional mode key, defaults to 'default'
  */
-export function loadStatistics(modeKey: GameModeKey = 'default'): Statistics {
+export function loadStatistics(modeKey: GameModeKey = 'easy'): Statistics {
   const storageKey = getModeStorageKey(STORAGE_KEYS.STATISTICS, modeKey);
   const stored = safeGetItem(storageKey);
   return safeParseJSON(stored, DEFAULT_STATISTICS);
@@ -167,10 +167,25 @@ export function savePreferences(preferences: Preferences): boolean {
 
 /**
  * Load preferences from localStorage
+ * Handles migration from old GameMode object format to new GameModeKey string format
  */
 export function loadPreferences(): Preferences {
   const stored = safeGetItem(STORAGE_KEYS.PREFERENCES);
-  return safeParseJSON(stored, DEFAULT_PREFERENCES);
+  const prefs = safeParseJSON(stored, DEFAULT_PREFERENCES);
+  
+  // Migrate old GameMode object format to new GameModeKey string
+  if (prefs.currentMode && typeof prefs.currentMode !== 'string') {
+    // Old format was { firstTenSeasons: boolean, topFiveOnly: boolean }
+    prefs.currentMode = 'easy'; // Map old default to new easy mode
+    savePreferences(prefs);
+  }
+  
+  // Validate currentMode is a valid GameModeKey
+  if (prefs.currentMode !== 'easy' && prefs.currentMode !== 'standard') {
+    prefs.currentMode = DEFAULT_GAME_MODE;
+  }
+  
+  return prefs;
 }
 
 /**
@@ -187,16 +202,45 @@ export function updatePreference<K extends keyof Preferences>(
 
 /**
  * Perform daily cleanup of old game data
+ * Also handles one-time migration from old 4-mode system to new 2-mode system
  * Should be called on app initialization
  */
 export function performDailyCleanup(): void {
+  // One-time migration from old mode keys to new ones
+  const migrated = safeGetItem('guessru_modes_migrated');
+  if (!migrated) {
+    // Migrate old statistics: first10-top5 -> easy, default -> standard
+    const oldEasyStats = safeGetItem('guessru_statistics_first10-top5');
+    const oldStandardStats = safeGetItem('guessru_statistics');
+    
+    if (oldEasyStats && !safeGetItem('guessru_statistics_easy')) {
+      try { localStorage.setItem('guessru_statistics_easy', oldEasyStats); } catch {}
+    }
+    if (oldStandardStats && !safeGetItem('guessru_statistics_standard')) {
+      try { localStorage.setItem('guessru_statistics_standard', oldStandardStats); } catch {}
+    }
+    
+    // Migrate old game states similarly
+    const oldEasyGame = safeGetItem('guessru_game_state_first10-top5');
+    const oldStandardGame = safeGetItem('guessru_game_state');
+    
+    if (oldEasyGame && !safeGetItem('guessru_game_state_easy')) {
+      try { localStorage.setItem('guessru_game_state_easy', oldEasyGame); } catch {}
+    }
+    if (oldStandardGame && !safeGetItem('guessru_game_state_standard')) {
+      try { localStorage.setItem('guessru_game_state_standard', oldStandardGame); } catch {}
+    }
+    
+    safeSetItem('guessru_modes_migrated', 'true');
+  }
+
   const today = getPacificDateString();
   const lastCleanup = safeGetItem(STORAGE_KEYS.LAST_CLEANUP);
 
   // If we haven't cleaned up today, perform cleanup
   if (lastCleanup !== today) {
     // Clean up game states for all modes
-    const modeKeys: GameModeKey[] = ['default', 'first10', 'top5', 'first10-top5'];
+    const modeKeys: GameModeKey[] = ['easy', 'standard'];
     
     for (const modeKey of modeKeys) {
       const storageKey = getModeStorageKey(STORAGE_KEYS.GAME_STATE, modeKey);

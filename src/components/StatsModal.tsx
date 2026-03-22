@@ -10,14 +10,12 @@ interface StatsModalProps {
 
 // Mode display labels for the dropdown
 const MODE_LABELS: Record<GameModeKey, string> = {
-  'default': 'All Queens',
-  'first10': 'First 10 Seasons',
-  'top5': 'Top 5 Only',
-  'first10-top5': 'First 10 + Top 5'
+  'easy': 'Easy Mode',
+  'standard': 'Standard Mode'
 };
 
 // All available mode keys for the dropdown
-const ALL_MODE_KEYS: GameModeKey[] = ['default', 'first10', 'top5', 'first10-top5'];
+const ALL_MODE_KEYS: GameModeKey[] = ['easy', 'standard'];
 
 const StatsModal: React.FC<StatsModalProps> = ({ currentModeKey, isVisible, onClose }) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);

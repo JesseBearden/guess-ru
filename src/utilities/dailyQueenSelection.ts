@@ -1,4 +1,4 @@
-import { Contestant, GameMode, getModeKey, DEFAULT_GAME_MODE } from '../types';
+import { Contestant, GameModeKey, getModeFilters, DEFAULT_GAME_MODE } from '../types';
 import { contestants, getContestantsByMode } from './contestantDatabase';
 
 /**
@@ -80,9 +80,10 @@ export const getDaysSinceEpoch = (date: Date = new Date()): number => {
  * @param mode Optional game mode, defaults to DEFAULT_GAME_MODE
  * @returns The contestant who is the secret queen for the given date and mode
  */
-export const getDailyQueen = (date: Date = new Date(), mode: GameMode = DEFAULT_GAME_MODE): Contestant => {
+export const getDailyQueen = (date: Date = new Date(), mode: GameModeKey = DEFAULT_GAME_MODE): Contestant => {
   // Get contestants filtered by mode
-  const modeContestants = getContestantsByMode(mode.firstTenSeasons, mode.topFiveOnly);
+  const filters = getModeFilters(mode);
+  const modeContestants = getContestantsByMode(filters.firstTenSeasons, filters.topSevenOnly);
   
   if (modeContestants.length === 0) {
     throw new Error('No contestants available for the selected game mode');
@@ -91,12 +92,8 @@ export const getDailyQueen = (date: Date = new Date(), mode: GameMode = DEFAULT_
   const daysSinceEpoch = getDaysSinceEpoch(date);
   
   // Create a mode-specific offset to ensure different modes get different queens
-  // This uses a simple hash based on the mode key
-  const modeKey = getModeKey(mode);
   let modeOffset = 0;
-  if (modeKey === 'first10') modeOffset = 7;
-  else if (modeKey === 'top5') modeOffset = 13;
-  else if (modeKey === 'first10-top5') modeOffset = 23;
+  if (mode === 'easy') modeOffset = 23;
   
   const queenIndex = (daysSinceEpoch + modeOffset) % modeContestants.length;
   

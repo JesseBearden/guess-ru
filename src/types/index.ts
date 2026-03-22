@@ -81,39 +81,14 @@ export interface Statistics {
   winDistribution: number[]; // Index represents guess number (0-7 for guesses 1-8)
 }
 
-// Game Mode types
-export interface GameMode {
-  firstTenSeasons: boolean;  // Limit to seasons 1-10
-  topFiveOnly: boolean;      // Limit to top 5 finishers
+// Game Mode types - simplified to Easy/Standard toggle
+export type GameModeKey = 'easy' | 'standard';
+
+// Easy = Top 7 from first 10 seasons, Standard = all queens all seasons
+export const DEFAULT_GAME_MODE: GameModeKey = 'easy';
+
+// Helper to get filtering params from mode key
+export function getModeFilters(mode: GameModeKey): { firstTenSeasons: boolean; topSevenOnly: boolean } {
+  if (mode === 'easy') return { firstTenSeasons: true, topSevenOnly: true };
+  return { firstTenSeasons: false, topSevenOnly: false };
 }
-
-// Mode key for storage (e.g., "default", "first10", "top5", "first10-top5")
-export type GameModeKey = 'default' | 'first10' | 'top5' | 'first10-top5';
-
-// Helper function to get mode key from GameMode
-export function getModeKey(mode: GameMode): GameModeKey {
-  if (mode.firstTenSeasons && mode.topFiveOnly) return 'first10-top5';
-  if (mode.firstTenSeasons) return 'first10';
-  if (mode.topFiveOnly) return 'top5';
-  return 'default';
-}
-
-// Helper function to get GameMode from key
-export function getModeFromKey(key: GameModeKey): GameMode {
-  switch (key) {
-    case 'first10-top5':
-      return { firstTenSeasons: true, topFiveOnly: true };
-    case 'first10':
-      return { firstTenSeasons: true, topFiveOnly: false };
-    case 'top5':
-      return { firstTenSeasons: false, topFiveOnly: true };
-    default:
-      return { firstTenSeasons: false, topFiveOnly: false };
-  }
-}
-
-// Default mode for new players (easiest mode)
-export const DEFAULT_GAME_MODE: GameMode = {
-  firstTenSeasons: true,
-  topFiveOnly: true
-};

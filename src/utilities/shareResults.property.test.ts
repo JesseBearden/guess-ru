@@ -143,8 +143,8 @@ describe('Feature: guessru-game, Property 20: Share Results Formatting', () => {
           expect(lines.length).toBeGreaterThanOrEqual(4); // Header + empty + patterns + empty + link
           
           // Verify header format (now includes mode icon between game number and result)
-          // Mode icons: 👑 (default), 🔟 (first10), 🔝 (top5), 🔟🔝 (first10-top5)
-          const headerRegex = /^GuessRu #\d+ [👑🔟🔝]+ (X\/8|\d+\/8) ⏱️ \d{2}:\d{2}$/;
+          // Mode icons: 👑 (standard), ⭐ (easy)
+          const headerRegex = /^GuessRu #\d+ [👑⭐]+ (X\/8|\d+\/8) ⏱️ \d{2}:\d{2}$/;
           expect(lines[0]).toMatch(headerRegex);
           
           // Verify empty line after header

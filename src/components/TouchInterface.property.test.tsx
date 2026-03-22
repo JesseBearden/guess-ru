@@ -135,14 +135,15 @@ describe('Property 13: Touch Interface Sizing', () => {
               <Header 
                 onShowInstructions={() => {}} 
                 onShowStats={() => {}}
-                onShowSettings={() => {}} 
+                gameMode={'easy'}
+                onModeChange={() => {}}
               />
             );
             
             const buttons = container.querySelectorAll('button');
             
-            // Should have at least 3 buttons (info, settings, and stats)
-            expect(buttons.length).toBeGreaterThanOrEqual(3);
+            // Should have at least 4 buttons (info, stats, easy toggle, standard toggle)
+            expect(buttons.length).toBeGreaterThanOrEqual(4);
             
             // Check each button has minimum touch target classes
             buttons.forEach((button, index) => {
@@ -292,7 +293,7 @@ describe('Property 13: Touch Interface Sizing', () => {
           (isVisible) => {
             const { container } = render(
               <StatsModal 
-                currentModeKey="default"
+                currentModeKey="easy"
                 isVisible={isVisible} 
                 onClose={() => {}} 
               />
@@ -351,7 +352,7 @@ describe('Property 13: Touch Interface Sizing', () => {
             switch (componentType) {
               case 'header':
                 ({ container } = render(
-                  <Header onShowInstructions={() => {}} onShowStats={() => {}} onShowSettings={() => {}} />
+                  <Header onShowInstructions={() => {}} onShowStats={() => {}} gameMode={'easy'} onModeChange={() => {}} />
                 ));
                 break;
               case 'silhouette-toggle':

@@ -3260,19 +3260,17 @@ export const getRandomContestant = (): Contestant => {
 /**
  * Filter contestants by game mode settings
  * @param firstTenSeasons - If true, only include seasons 1-10
- * @param topFiveOnly - If true, only include contestants who placed in top 5
+ * @param topSevenOnly - If true, only include contestants who placed in top 7
  */
 export const getContestantsByMode = (
   firstTenSeasons: boolean,
-  topFiveOnly: boolean
+  topSevenOnly: boolean
 ): Contestant[] => {
   return contestants.filter(contestant => {
-    // Filter by season if firstTenSeasons is enabled
     if (firstTenSeasons && contestant.season > 10) {
       return false;
     }
-    // Filter by position if topFiveOnly is enabled
-    if (topFiveOnly && contestant.finishingPosition > 5) {
+    if (topSevenOnly && contestant.finishingPosition > 7) {
       return false;
     }
     return true;
@@ -3285,10 +3283,10 @@ export const getContestantsByMode = (
 export const getContestantsByNameAndMode = (
   name: string,
   firstTenSeasons: boolean,
-  topFiveOnly: boolean
+  topSevenOnly: boolean
 ): Contestant[] => {
   const searchTerm = name.toLowerCase();
-  return getContestantsByMode(firstTenSeasons, topFiveOnly).filter(contestant =>
+  return getContestantsByMode(firstTenSeasons, topSevenOnly).filter(contestant =>
     contestant.name.toLowerCase().includes(searchTerm)
   );
 };

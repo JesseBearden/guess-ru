@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, KeyboardEvent } from 'react';
-import { Contestant, GameMode, DEFAULT_GAME_MODE } from '../types';
+import { Contestant, GameModeKey, DEFAULT_GAME_MODE, getModeFilters } from '../types';
 import { getContestantsByNameAndMode, getContestantsByMode } from '../utilities/contestantDatabase';
 
 interface GuessInputProps {
@@ -7,7 +7,7 @@ interface GuessInputProps {
   previousGuesses: Contestant[];
   disabled?: boolean;
   placeholder?: string;
-  mode?: GameMode;
+  mode?: GameModeKey;
 }
 
 const GuessInput: React.FC<GuessInputProps> = ({
@@ -35,11 +35,12 @@ const GuessInput: React.FC<GuessInputProps> = ({
       return;
     }
 
-    const matches = getContestantsByNameAndMode(inputValue.trim(), mode.firstTenSeasons, mode.topFiveOnly);
+    const filters = getModeFilters(mode);
+    const matches = getContestantsByNameAndMode(inputValue.trim(), filters.firstTenSeasons, filters.topSevenOnly);
     setFilteredContestants(matches);
     setShowDropdown(matches.length > 0);
     setSelectedIndex(-1);
-  }, [inputValue, mode.firstTenSeasons, mode.topFiveOnly]);
+  }, [inputValue, mode]);
 
   // Clear error when input changes
   useEffect(() => {
@@ -113,7 +114,8 @@ const GuessInput: React.FC<GuessInputProps> = ({
     }
 
     // Find exact match first (within mode-filtered contestants)
-    const modeContestants = getContestantsByMode(mode.firstTenSeasons, mode.topFiveOnly);
+    const submitFilters = getModeFilters(mode);
+    const modeContestants = getContestantsByMode(submitFilters.firstTenSeasons, submitFilters.topSevenOnly);
     const exactMatch = modeContestants.find(
       contestant => contestant.name.toLowerCase() === trimmedInput.toLowerCase()
     );

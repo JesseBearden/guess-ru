@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { GameState, Contestant, Guess, FeedbackType, DirectionType, GameMode, getModeKey, DEFAULT_GAME_MODE } from '../types';
+import { GameState, Contestant, Guess, FeedbackType, DirectionType, GameModeKey, DEFAULT_GAME_MODE } from '../types';
 import { getDailyQueen, getPacificDateString } from '../utilities/dailyQueenSelection';
 import { getContestantById } from '../utilities/contestantDatabase';
 import { saveGameState, loadGameState, performDailyCleanup } from '../utilities/localStorage';
@@ -24,8 +24,8 @@ interface UseGameStateReturn {
  * Handles guess submission, validation, feedback calculation, and win/loss conditions
  * @param mode Optional game mode, defaults to DEFAULT_GAME_MODE
  */
-export const useGameState = (mode: GameMode = DEFAULT_GAME_MODE): UseGameStateReturn => {
-  const modeKey = getModeKey(mode);
+export const useGameState = (mode: GameModeKey = DEFAULT_GAME_MODE): UseGameStateReturn => {
+  const modeKey = mode;
   
   const [gameState, setGameState] = useState<GameState>(() => {
     // Perform daily cleanup first

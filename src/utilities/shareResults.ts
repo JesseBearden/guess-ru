@@ -9,14 +9,10 @@ import { getGameNumber } from './dailyQueenSelection';
  */
 const getModeIcon = (modeKey: GameModeKey): string => {
   switch (modeKey) {
-    case 'default':
+    case 'standard':
       return '👑'; // All queens - hardest mode gets the crown
-    case 'first10':
-      return '🔟'; // First 10 seasons only
-    case 'top5':
-      return '🔝'; // Top 5 only
-    case 'first10-top5':
-      return '🔟🔝'; // Both filters
+    case 'easy':
+      return '⭐'; // Easy mode
     default:
       return '';
   }
@@ -84,7 +80,7 @@ export const generateShareResults = (gameState: GameState): ShareResults => {
   const gameNumber = getGameNumber(gameDate);
   const guessCount = gameState.guesses.length;
   const timeElapsed = formatElapsedTime(gameState.startTime, gameState.endTime);
-  const modeKey = gameState.modeKey || 'default';
+  const modeKey = (gameState.modeKey === 'easy' || gameState.modeKey === 'standard') ? gameState.modeKey : 'easy';
   
   // Generate pattern for each guess
   const guessPattern = gameState.guesses.map(guess => generateGuessPattern(guess));
@@ -117,7 +113,7 @@ export const formatShareText = (shareResults: ShareResults, isWon: boolean, hint
   
   // Header line with game number, mode icon, hints indicator, and result
   const resultText = isWon ? `${guessCount}/${totalGuesses}` : 'X/8';
-  const modeIcon = getModeIcon(modeKey || 'default');
+  const modeIcon = getModeIcon(modeKey || 'easy');
   
   // Build hints indicator with specific icons
   let hintsIndicator = '';

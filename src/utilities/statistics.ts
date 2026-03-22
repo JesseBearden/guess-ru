@@ -12,7 +12,7 @@ export function updateStatistics(gameState: GameState): Statistics {
   }
 
   // Use the mode key from game state, or default
-  const modeKey: GameModeKey = gameState.modeKey || 'default';
+  const modeKey: GameModeKey = (gameState.modeKey === 'easy' || gameState.modeKey === 'standard') ? gameState.modeKey : 'easy';
   const currentStats = loadStatistics(modeKey);
   const newStats: Statistics = { ...currentStats };
 
@@ -85,7 +85,7 @@ export function getMostCommonWinGuessCount(statistics: Statistics): number | nul
  * @param modeKey Optional mode key, defaults to 'default'
  * @returns Default statistics object
  */
-export function resetStatistics(modeKey: GameModeKey = 'default'): Statistics {
+export function resetStatistics(modeKey: GameModeKey = 'easy'): Statistics {
   const defaultStats: Statistics = {
     gamesPlayed: 0,
     gamesWon: 0,
@@ -103,6 +103,6 @@ export function resetStatistics(modeKey: GameModeKey = 'default'): Statistics {
  * @param modeKey Optional mode key, defaults to 'default'
  * @returns Current statistics object
  */
-export function getCurrentStatistics(modeKey: GameModeKey = 'default'): Statistics {
+export function getCurrentStatistics(modeKey: GameModeKey = 'easy'): Statistics {
   return loadStatistics(modeKey);
 }

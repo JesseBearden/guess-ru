@@ -7,19 +7,17 @@ import Timer from './components/Timer';
 import StatsModal from './components/StatsModal';
 import GameEndSection from './components/GameEndSection';
 import InstructionsModal from './components/InstructionsModal';
-import SettingsModal from './components/SettingsModal';
 import ErrorBoundary from './components/ErrorBoundary';
 import HintButtons from './components/HintButtons';
 import { useGameState } from './hooks/useGameState';
 import { useSilhouettePreference } from './hooks/useSilhouettePreference';
 import { loadPreferences, updatePreference } from './utilities/localStorage';
-import { GameMode, DEFAULT_GAME_MODE, getModeKey } from './types';
+import { GameModeKey, DEFAULT_GAME_MODE } from './types';
 
 function App() {
   const [showInstructions, setShowInstructions] = useState(false);
   const [showStats, setShowStats] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [gameMode, setGameMode] = useState<GameMode>(DEFAULT_GAME_MODE);
+  const [gameMode, setGameMode] = useState<GameModeKey>(DEFAULT_GAME_MODE);
   
   // Initialize game state with current mode
   const { gameState, submitGuess, markHintUsed, isGameComplete } = useGameState(gameMode);
@@ -41,15 +39,10 @@ function App() {
 
   const handleCloseInstructions = () => {
     setShowInstructions(false);
-    // Mark that user has seen instructions
     updatePreference('hasSeenInstructions', true);
   };
 
-  const handleShowInstructions = () => {
-    setShowInstructions(true);
-  };
-
-  const handleModeChange = (newMode: GameMode) => {
+  const handleModeChange = (newMode: GameModeKey) => {
     setGameMode(newMode);
     updatePreference('currentMode', newMode);
   };
@@ -61,7 +54,6 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen flex flex-col">
-        {/* Skip link for keyboard navigation */}
         <a 
           href="#main-content" 
           className="skip-link"
@@ -71,9 +63,10 @@ function App() {
         </a>
         
         <Header 
-          onShowInstructions={handleShowInstructions}
+          onShowInstructions={() => setShowInstructions(true)}
           onShowStats={() => setShowStats(true)}
-          onShowSettings={() => setShowSettings(true)}
+          gameMode={gameMode}
+          onModeChange={handleModeChange}
         />
         
         <main 
@@ -84,12 +77,10 @@ function App() {
         >
           <ErrorBoundary>
             <div className="bg-[#f5f0e8] rounded-xl p-6 shadow-heavy">
-              {/* Game End Section - shown inline when game is complete */}
               {isGameComplete && (
                 <GameEndSection gameState={gameState} />
               )}
 
-              {/* Silhouette Section - hidden when game is complete (headshot shown in GameEndSection) */}
               {showSilhouette && !isGameComplete && (
                 <SilhouetteSection
                   secretQueen={gameState.secretQueen}
@@ -99,10 +90,8 @@ function App() {
                 />
               )}
 
-              {/* Guess Input Section with Timer - hidden when game is complete */}
               {!isGameComplete && (
                 <>
-                  {/* Hint Buttons + Timer row (timer hidden on small screens) */}
                   <HintButtons
                     entranceQuote={gameState.secretQueen.entranceQuote || ''}
                     snatchGameCharacter={gameState.secretQueen.snatchGameCharacter || ''}
@@ -121,7 +110,6 @@ function App() {
                     }
                   />
                   
-                  {/* Guess Input + Timer (timer shown on small screens only) */}
                   <div className="mb-4 flex gap-2 items-stretch">
                     <GuessInput
                       onGuessSubmit={handleGuessSubmit}
@@ -140,28 +128,19 @@ function App() {
                 </>
               )}
               
-              {/* Guess History */}
               <GuessHistory guesses={gameState.guesses} />
             </div>
           </ErrorBoundary>
         </main>
 
-        {/* Modal overlay system */}
         <InstructionsModal
           isVisible={showInstructions}
           onClose={handleCloseInstructions}
         />
 
-        <SettingsModal
-          isVisible={showSettings}
-          onClose={() => setShowSettings(false)}
-          mode={gameMode}
-          onModeChange={handleModeChange}
-        />
-
         {showStats && (
           <StatsModal
-            currentModeKey={getModeKey(gameMode)}
+            currentModeKey={gameMode}
             isVisible={showStats}
             onClose={() => setShowStats(false)}
           />
