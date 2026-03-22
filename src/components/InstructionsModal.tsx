@@ -100,14 +100,6 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isVisible, onClos
             </p>
           </div>
 
-          {/* Game Modes */}
-          <div>
-            <h3 className="font-bold text-sm mb-2">Game Modes</h3>
-            <p className="text-sm leading-relaxed">
-              Click the <strong>gear icon</strong> (⚙️) in the header to open settings and adjust difficulty.
-            </p>
-          </div>
-
           {/* Footer */}
           <div className="text-center pt-2 border-t border-text-dark/30">
             <p className="text-xs text-text-dark/70 italic m-0">New queen daily at midnight PT</p>
