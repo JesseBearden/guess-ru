@@ -100,6 +100,14 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isVisible, onClos
             </p>
           </div>
 
+          {/* Difficulty */}
+          <div>
+            <h3 className="font-bold text-sm mb-2">Difficulty</h3>
+            <p className="text-sm leading-relaxed">
+              <strong>Easy</strong> — Top 7 queens from Seasons 1–10.<br /><strong>Standard</strong> — All queens, all seasons.
+            </p>
+          </div>
+
           {/* Footer */}
           <div className="text-center pt-2 border-t border-text-dark/30">
             <p className="text-xs text-text-dark/70 italic m-0">New queen daily at midnight PT</p>
