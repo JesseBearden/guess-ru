@@ -80,6 +80,34 @@ export const getDaysSinceEpoch = (date: Date = new Date()): number => {
  * @param mode Optional game mode, defaults to DEFAULT_GAME_MODE
  * @returns The contestant who is the secret queen for the given date and mode
  */
+/**
+ * Seeded pseudo-random number generator (mulberry32)
+ * Returns a function that produces deterministic floats in [0, 1)
+ */
+const seededRng = (seed: number) => {
+  let s = seed;
+  return () => {
+    s |= 0; s = s + 0x6D2B79F5 | 0;
+    let t = Math.imul(s ^ s >>> 15, 1 | s);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+};
+
+/**
+ * Deterministically shuffles an array using a fixed seed.
+ * The same seed always produces the same order.
+ */
+const deterministicShuffle = <T>(arr: T[], seed: number): T[] => {
+  const result = [...arr];
+  const rng = seededRng(seed);
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+};
+
 export const getDailyQueen = (date: Date = new Date(), mode: GameModeKey = DEFAULT_GAME_MODE): Contestant => {
   // Get contestants filtered by mode
   const filters = getModeFilters(mode);
@@ -91,13 +119,15 @@ export const getDailyQueen = (date: Date = new Date(), mode: GameModeKey = DEFAU
   
   const daysSinceEpoch = getDaysSinceEpoch(date);
   
-  // Create a mode-specific offset to ensure different modes get different queens
-  let modeOffset = 0;
-  if (mode === 'easy') modeOffset = 23;
+  // Shuffle the contestant list with a fixed seed so the order is scrambled
+  // across seasons but stays consistent for all players on the same day.
+  // Different modes use different seeds to avoid picking the same queen.
+  const modeSeed = mode === 'easy' ? 0xDEADBEEF : 0xCAFEBABE;
+  const shuffled = deterministicShuffle(modeContestants, modeSeed);
   
-  const queenIndex = (daysSinceEpoch + modeOffset) % modeContestants.length;
+  const queenIndex = daysSinceEpoch % shuffled.length;
   
-  return modeContestants[queenIndex];
+  return shuffled[queenIndex];
 };
 
 /**
